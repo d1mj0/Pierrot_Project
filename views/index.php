@@ -23,5 +23,6 @@
         <?php else: echo "Aucun véhicule de disponible.";endif; ?>
     </section>
 
+    
     </body>
 </html>
