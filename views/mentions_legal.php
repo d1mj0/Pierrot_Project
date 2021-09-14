@@ -1,11 +1,6 @@
 <?php
 
-    require_once('../src/controllers/UserController.php'); 
-
-    if(!empty($_GET['mail']) && !empty($_GET['pass'])){
-        $userController = new UserController(NULL, $_GET['pass'], NULL, NULL, $_GET['mail'], NULL, NULL);
-        $userController->login();
-    }
+  
 
     require_once('./templates/header.php');
 ?>

@@ -2,9 +2,9 @@
 
 class Database{
 
-    private $host = "localhost"; // On peut préciser 127.0.0.1 qui est un équivalent de localhost.
-
-    private $dbname = "projet"; 
+    private $host = "localhost"; 
+    
+    private $dbname = "admin_db"; 
 
     private $username = "root";
 
