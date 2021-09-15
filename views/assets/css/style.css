@@ -1,0 +1,12 @@
+a{
+    text-decoration:none;
+}
+
+
+header {
+    background-image: url(../img/Eversion_1000px.svg) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px 70%;
+    height: 350px;
+}
