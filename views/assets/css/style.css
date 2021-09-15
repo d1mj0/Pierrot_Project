@@ -1,8 +1,9 @@
 a {
     text-decoration: none;
+    
 }
 
-
+/*<---------------------------------------------Header--------------------------------------------->*/
 .parent-img{
     position: relative;
     
@@ -19,7 +20,7 @@ a {
 }
 
 .nav-container{
-    
+    padding: 6px;
     z-index: 1;
     background-color:#5a5a5a ;
     
@@ -38,8 +39,38 @@ a {
 .nav-link_menu a{
     color: #ffffff;
     text-decoration: none;
+    font-size:18px;
+    font-weight: bold;
     
 }
 
+.nav-link_menu a:hover{
+    color: #7a2b2b;
+}
 
 
+/*<---------------------------------------------Footer--------------------------------------------->*/
+
+.border{
+    padding: 18px;
+    z-index: 1;
+    background-color:#5a5a5a ;
+}
+
+.footer-row{
+    background-color:#3c3c3c ;
+    padding: 5%;
+}
+
+.footer-link_menu{
+    padding: 1%;
+}
+
+.footer-link_menu a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-link_menu a:hover{
+    color: #7a2b2b;
+}

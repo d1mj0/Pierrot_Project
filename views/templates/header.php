@@ -21,7 +21,6 @@
     <header>
     <div class="parent-img">
         <img src="../views/assets/img/design_header.svg" class="parent-img-responsive" />
-        <img src="../views/assets/img/title_header.svg" class="child-img"/>
     </div>
 
         
