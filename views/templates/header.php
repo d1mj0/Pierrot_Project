@@ -22,7 +22,7 @@
             <ul>
                 <li class="link_menu"><a href="index.php">Accueil</a></li>
                 <li class="link_menu"><a href="pensee_globale.php">Pensée globale</a></li>
-                <li class="link_menu"><a href="a_propos">à propos</a></li> 
+                <li class="link_menu"><a href="a_propos.php">à propos</a></li> 
                 <li class="link_menu"><a href="travaux_et_publications.php">Travaux et publications</a></li>
             </ul>
         </nav>
