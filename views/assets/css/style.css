@@ -26,28 +26,55 @@ a {
     
 }
 
-.nav-link_menu.col-lg-2{
-    justify-content: space-evenly;
-    
-}
 
-.nav-link_menu{
+nav{
     background-color:#5a5a5a ;
-    
+    justify-content: space-evenly;   
 }
 
-.nav-link_menu a{
+#navbarText {
+    justify-content: space-evenly; 
+}
+
+.navbar-toggler, .navbar-toggler{
     color: #ffffff;
+
+}
+
+.nav-item a{
+    color: #662222;
     text-decoration: none;
     font-size:18px;
     font-weight: bold;
     
 }
 
-.nav-link_menu a:hover{
+.nav-item a:hover{
     color: #7a2b2b;
+    text-decoration: none;
+
 }
 
+@media screen and (max-width: 480px) { 
+    nav ul { display: none; }
+    nav select { display: inline-block; }
+}
+
+/* Width Covers 481px-768px */
+@media screen and (min-width: 768px) {
+    body {
+      
+    }
+
+}
+
+/* Width Covers 769px-1025px (and greater) */
+@media screen and (min-width: 1025px) {
+  body {
+    
+  }
+
+}
 
 /*<---------------------------------------------Footer--------------------------------------------->*/
 
