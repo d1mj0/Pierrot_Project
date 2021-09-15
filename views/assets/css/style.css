@@ -2,15 +2,6 @@ a {
     text-decoration: none;
 }
 
-/*header {
-    background-image: url(../img/design\ header.svg) ;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 0px 70%;
-    height: 350px;
-    
-}
-*/
 
 .parent-img{
     position: relative;
@@ -23,8 +14,7 @@ a {
 
 .child-img{
     position: absolute;
-    bottom: 0px;
-    left: 0;
+    left: 15%;
     right: 0;
 }
 
@@ -42,6 +32,14 @@ a {
 
 .nav-link_menu{
     background-color:#5a5a5a ;
+    
 }
+
+.nav-link_menu a{
+    color: #ffffff;
+    text-decoration: none;
+    
+}
+
 
 
