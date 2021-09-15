@@ -1,6 +1,6 @@
 <?php
-
- 
+    //Variable avec le titre de la page
+    $title = "Contact";
     require_once('./templates/header.php');
 ?>
 

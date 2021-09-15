@@ -1,7 +1,6 @@
 <?php
-
-    
-
+    //Variable avec le titre de la page;
+    $title = "A propos";
     require_once('./templates/header.php');
 ?>
 

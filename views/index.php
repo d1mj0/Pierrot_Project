@@ -1,10 +1,6 @@
 <?php
-    session_start();
-    require_once('../src/controllers/CarController.php');
-
-
-    $car = new CarController(NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-    $cars = $car->listCars();
+    //Variable avec le titre de la page
+    $title = "Acceuil";
     require_once('./templates/header.php');
 ?>
     <section class="s_cars">

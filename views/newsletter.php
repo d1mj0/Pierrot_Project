@@ -1,6 +1,6 @@
 <?php
-
-
+    //Variable avec le titre de la page
+    $title = "Newsletter";
     require_once('./templates/header.php');
 ?>
 
