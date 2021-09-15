@@ -23,7 +23,7 @@
                 <ul class="row">
                     <li class="nav-link_menu-col-sm10-md-10-mx-auto-lg-2"><a href="index.php">Accueil</a></li>
                     <li class="nav-link_menu-col-sm10-md-10-mx-auto-lg-2"><a href="pensee_globale.php">Pensée globale</a></li>
-                    <li class="nav-link_menu-col-sm10-md-10-mx-auto-lg-2"><a href="a_propos">à propos</a></li> 
+                    <li class="nav-link_menu-col-sm10-md-10-mx-auto-lg-2"><a href="a_propos.php">à propos</a></li> 
                     <li class="nav-link_menu-col-sm10-md-10-mx-auto-lg-2"><a href="travaux_et_publications.php">Travaux et publications</a></li>
                 </ul>
             </div>
