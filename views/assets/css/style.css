@@ -29,25 +29,24 @@ a {
 
 nav{
     background-color:#5a5a5a ;
-    justify-content: space-evenly;   
+    
 }
 
-#navbarText {
-    justify-content: space-evenly; 
+nav ul{
+    justify-content: space-evenly;
 }
 
-.navbar-toggler, .navbar-toggler{
-    color: #ffffff;
 
-}
+
 
 .nav-item a{
     color: #662222;
     text-decoration: none;
     font-size:18px;
     font-weight: bold;
-    
 }
+
+
 
 .nav-item a:hover{
     color: #7a2b2b;

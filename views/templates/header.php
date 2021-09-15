@@ -28,21 +28,21 @@
         
         <nav class="nav-container navbar-expand-md navbar-light">
             <button class="navbar-toggler align-center" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+              <span class="navbar-toggler-icon "></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link_menu col-lg-2 mx-auto" href="index.php">Accueil</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link_menu col-lg-2 mx-auto" href="pensee_globale.php">Pensée globale<span class="sr-only">(current)</span></a>
+            
+                <ul class="navbar-nav collapse navbar-collapse" id="navbarText">
+                    <li class="nav-item">
+                        <a class="nav-link_menu col-lg-4 mx-auto" href="index.php">Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link_menu col-lg-2 mx-auto" href="a_propos.php">&#xC0; propos</a> 
+                        <a class="nav-link_menu col-lg-4 mx-auto" href="pensee_globale.php">Pensée globale<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link_menu col-lg-4 mx-auto" href="a_propos.php">&#xC0; propos</a> 
                     </li>
                     <li class="nav-item">    
-                        <a class="nav-link_menu col-lg-2 mx-auto" href="travaux_et_publications.php">Travaux et publications</a>
+                        <a class="nav-link_menu col-lg-4 mx-auto" href="travaux_et_publications.php">Travaux et publications</a>
                     </li>
                 </ul>
             
