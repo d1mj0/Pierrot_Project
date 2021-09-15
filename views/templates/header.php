@@ -29,7 +29,7 @@
                 <div class="row">
                     <div class="nav-link_menu col-sm10 col-md-10  col-lg-2 mx-auto"><a href="index.php">Accueil</a></div>
                     <div class="nav-link_menu col-sm10 col-md-10  col-lg-2 mx-auto"><a href="pensee_globale.php">Pensée globale</a></div>
-                    <div class="nav-link_menu col-sm10 col-md-10  col-lg-2 mx-auto"><a href="a_propos.php">à propos</a></div> 
+                    <div class="nav-link_menu col-sm10 col-md-10  col-lg-2 mx-auto"><a href="a_propos.php">&#xC0; propos</a></div> 
                     <div class="nav-link_menu col-sm10 col-md-10  col-lg-2 mx-auto"><a href="travaux_et_publications.php">Travaux et publications</a></div>
                 </div>
             </div>
