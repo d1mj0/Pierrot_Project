@@ -1,11 +1,11 @@
-<?php
+    <?php
     //Variable avec le titre de la page
     $title = "Accueil";
     require_once('./templates/header.php');
-?>
+    ?>
 
-    <body>
-        <section id="pensee_globale">
+    <main>
+    <section id="pensee_globale">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-md-lg-xl">
@@ -68,12 +68,10 @@
                 </div>
             </div>
         </section>
+    </main>
+        
 
-
-<?php
-    
-    require_once('./templates/footer.php');
-?>
-
-    
-    
+    <?php
+    //Appel template footer
+    require_once("./templates/footer.php");
+    ?>

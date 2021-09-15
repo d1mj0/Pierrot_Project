@@ -1,21 +1,17 @@
-<?php
+    <?php
     //Variable avec le titre de la page
     $title = "Contact";
+    //Appel template header
     require_once('./templates/header.php');
-?>
+    ?>
 
-    <section>
-        <form action="login.php" method="get">
-            <label for="mail">Email</label>
-            <input type="email" id="mail" name="mail">
+    <main>
+        <section>
 
-            <label for="pass">Mot de passe</label>
-            <input type="password" id="pass" name="pass" minlength="5">
-        
+        </section>
+    </main>
 
-
-            <button>Se connecter</button>
-        </form>
-    </section>
-    </body>
-</html>
+    <?php
+    //Appel template footer
+    require_once("./templates/footer.php");
+    ?>
