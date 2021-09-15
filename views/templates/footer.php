@@ -8,4 +8,4 @@
                 <li class="link_menu"><a href="mentions_legales.php">Mentions legales</a></li>         
             </ul>
     </footer>
-    
+</html>
