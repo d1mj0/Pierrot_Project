@@ -5,10 +5,25 @@
     require_once("./templates/header.php");
     ?>
 
-    <main>
+<main>
+        <br>
+        <br>
         <section>
-
+            <div class="container">
+                    <div class="row">
+                        <div class="title col-12">
+                            <h2>Sites Amis</h2>
+                        </div>
+                    </div>
+            </div>
+                        <div class="col-sm-md-lg-xl">
+                            <img src="" alt="">
+                        </div>
+                    </div>
+                </div>                             
         </section>
+        <br>
+        <br>
     </main>
 
     <?php

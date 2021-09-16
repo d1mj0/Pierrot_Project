@@ -5,10 +5,58 @@
     require_once('./templates/header.php');
     ?>
 
-    <main>
+<main>
+        <br>
+        <br>
         <section>
-
+            <div class="container">
+                    <div class="row">
+                        <div class="title col-12">
+                            <h2>Travaux et Publications</h2>
+                        </div>
+                    </div>
+            <br>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <a href=""><img src="" alt=""></a>
+                    </div>
+                    <div class="col-lg-8">
+                        <a href=""><h2>Travaux et publications</h2></a>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo inventore cupiditate harum ex, hic suscipit explicabo 
+                                ipsum exercitationem eligendi illum quis in quod quia.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo inventore cupiditate harum ex, hic suscipit explicabo 
+                                ipsum exercitationem eligendi illum quis in quod quia.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo inventore cupiditate harum ex, hic suscipit explicabo 
+                                ipsum exercitationem eligendi illum quis in quod quia.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo inventore cupiditate harum ex, hic suscipit explicabo 
+                                ipsum exercitationem eligendi illum quis in quod quia.</p>
+                    </div>
+                    <div class="col-lg-8">
+                        <a href=""><h2>Travaux et publications</h2></a>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo inventore cupiditate harum ex, hic suscipit explicabo 
+                                ipsum exercitationem eligendi illum quis in quod quia.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo inventore cupiditate harum ex, hic suscipit explicabo 
+                                ipsum exercitationem eligendi illum quis in quod quia.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo inventore cupiditate harum ex, hic suscipit explicabo 
+                                ipsum exercitationem eligendi illum quis in quod quia.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo inventore cupiditate harum ex, hic suscipit explicabo 
+                                ipsum exercitationem eligendi illum quis in quod quia.</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <a href=""><img src="" alt=""></a>
+                    </div>
+                    
+                    <div class="col-lg-4">
+                        <a href=""><img src="" alt=""></a>
+                    </div>
+                    <div class="col-lg-8">
+                        <a href=""><h2>Travaux et publications</h2></a>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo inventore cupiditate harum ex, hic suscipit explicabo 
+                                ipsum exercitationem eligendi illum quis in quod quia.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo inventore cupiditate harum ex, hic suscipit explicabo 
+                                ipsum exercitationem eligendi illum quis in quod quia.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo inventore cupiditate harum ex, hic suscipit explicabo 
+                                ipsum exercitationem eligendi illum quis in quod quia.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo inventore cupiditate harum ex, hic suscipit explicabo 
+                                ipsum exercitationem eligendi illum quis in quod quia.</p>
+                    </div>
+                </div>
+            </div>               
         </section>
+        <br>
+        <br>
     </main>
 
     <?php
