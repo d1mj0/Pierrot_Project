@@ -42,6 +42,9 @@
                     <li class="nav-item">    
                         <a class="nav-link_menu col-lg-4 mx-auto" href="travaux_et_publications.php">Travaux et publications</a>
                     </li>
+                    <li class="nav-item">    
+                        <a class="nav-link_menu col-lg-4 mx-auto" href="blog.php">Blog</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link_menu col-lg-4 mx-auto" href="a_propos.php">&#xC0; propos</a> 
                     </li>
