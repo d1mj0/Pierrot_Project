@@ -26,7 +26,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-12">
-                        <p>
+                        <p class="text">
                         
 
 Comme il y est question d’anthropologie anarchiste, il paraissait judicieux d’en offrir un état des lieux, une esquisse, pour le moins une axiomatique, sinon quelques prémisses. Cependant, au fur et mesure que s’établissent les primats anarchistes, on s’aperçoit de l’importance croissance que prend le mythe, et ce jusqu’à l’extrême assertion que représente la nécessité de son élaboration. Or si l’on admet que la Genèse est le mythe masculin de la hiérarchie, alors le mythe anarchiste se doit être féminin et en ce sens, il ne peut-être que celui du « Matriarcat ». 

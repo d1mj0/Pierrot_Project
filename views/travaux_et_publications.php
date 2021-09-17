@@ -58,7 +58,7 @@
                     </div>
                     
                     <div class="col-lg-8">
-                        <a href=""><h3>De guerre ne se lasse de nous entrelacer</h3></a>
+                        <a href="de_guerre.php"><h3>De guerre ne se lasse de nous entrelacer</h3></a>
                         <p>Cette réflexion sur l’« aide au développement » comme Continuation du commerce politique par d’autres moyens 
                             est le fruit de la maturation de mon travail de DEA. Mon hypothèse est que le « principe d’inversion », 
                             caractéristique de la hiérarchie selon L. Dumont, permet parfaitement d’expliquer le renversement que 
