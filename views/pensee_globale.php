@@ -36,7 +36,7 @@
                             
                         </div>
                     </div>
-                        <div class="col-sm-md-lg-xl">
+                        <div class="col-12">
                             <p>Pierre André Jarillot. Né entre lac et montagnes il y a presque 45 ans, je m'ennuyais ferme dans ma contrée savoyarde. Pour m'extirper 
                             autant de mon milieux culturel que de ma condition sociale, je jetais alors mon dévolu sur les sciences sociales et humaines. Docteur en
                             anthropologie diplômé de Paris 8 depuis 2018, j’ai été journaliste avant de devenir machiniste de théâtre pour financer ma thèse. Si 

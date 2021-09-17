@@ -7,6 +7,7 @@
 main a{
     
     text-decoration: none;
+    color: black;
 }
 
 main a:hover{
@@ -14,8 +15,8 @@ main a:hover{
     text-decoration: none;
 }
 
-main h1, h2, h3, h4, h5,h6{
-    color: #ffffff;
+.text{
+    text-justify: newspaper;
 }
 
 /*<---------------------------------------------Header--------------------------------------------->*/
@@ -92,9 +93,25 @@ nav ul{
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(90,90,90,1) 0%, rgba(255,255,255,0) 69%); 
 }
 
+/*<---------------------------------------------Card--------------------------------------------->*//*<---------------------------------------------Card--------------------------------------------->*/
+.card-body{
+    background-color: #5a5a5a;
+}
+
+.card-title{
+    color:#7a2b2b;
+}
+
+.card-text{
+    color:#ffffff;
+}
 
 
-
+/*<---------------------------------------------Button--------------------------------------------->*/
+.btn{
+    color: #ffffff;
+    background-color: #7a2b2b;
+}
 
 /*<---------------------------------------------Footer--------------------------------------------->*/
 img_pensee_globale
@@ -105,7 +122,12 @@ div .border{
 
 .footer-row{
     background-color:#3c3c3c ;
-    padding: 5%;
+    margin-bottom: 0rem;
+    
+}
+
+ul{
+    
 }
 
 .footer-link_menu{

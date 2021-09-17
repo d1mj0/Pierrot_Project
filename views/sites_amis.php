@@ -9,7 +9,7 @@
         <br>
         <br>
         <section>
-            <div class="container">
+            <div class="container-fluid">
                     <div class="row">
                         <div class="title col-12">
                             <h2>Sites Amis</h2>

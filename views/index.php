@@ -7,7 +7,7 @@
 <main>
     <br>
     <br>
-    <section class="container" id="articles">
+    <section class="container-fluid" id="articles">
             <div class="row">
                 <div class="title col-12">
                     <a href="blog.php"><h2>Derniers articles</h2></a>
@@ -30,7 +30,7 @@
     </section>
     <br>
     <br>   
-    <section class="container" id="pensee_globale">
+    <section class="container-fluid" id="pensee_globale">
             <div class="row">
                 <div class="title col-12">
                     <a href="pensee_globale.php"><h2>Pensée globale</h2></a>
@@ -61,25 +61,26 @@
     </section>
     <br>
     <br>
-    <section id="travaux_publications" class="container">
+    <section id="travaux_publications" class="container-fluid">
         <div class="row">
             <div class="title col-12">
                 <a href="travaux_et_publications.php"><h2>Travaux et publications</h2></a>
             </div>
         </div>
         <br>
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-4">
                     <a href=""><img src="" alt=""></a>
                 </div>
                 <div class="col-lg-8">
-                    <a href=""><h3>Travaux et publications</3></a>
-                    <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo inventore cupiditate harum ex, hic suscipit explicabo 
-                            ipsum exercitationem eligendi illum quis in quod quia.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo inventore cupiditate harum ex, hic suscipit explicabo 
-                            ipsum exercitationem eligendi illum quis in quod quia.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo inventore cupiditate harum ex, hic suscipit explicabo 
-                            ipsum exercitationem eligendi illum quis in quod quia.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo inventore cupiditate harum ex, hic suscipit explicabo 
-                            ipsum exercitationem eligendi illum quis in quod quia.</p>
+                    <a href="La_version_de_eve.php"><h3>Travaux et publications</h3></a>
+                    <p class="text">Comme il y est question d’anthropologie anarchiste, il paraissait judicieux d’en offrir un état des lieux, une esquisse, 
+                            pour le moins une axiomatique, sinon quelques prémisses. Cependant, au fur et mesure que s’établissent les primats anarchistes, 
+                            on s’aperçoit de l’importance croissance que prend le mythe, et ce jusqu’à l’extrême assertion que représente 
+                            la nécessité de son élaboration. Or si l’on admet que la Genèse est le mythe masculin de la hiérarchie, 
+                            alors le mythe anarchiste se doit être féminin et en ce sens, il ne peut-être que celui du « Matriarcat »</p>
+                            <a href="la_version_de_eve.php">Lire la suite >>></a>
                 </div>
                 <div class="col-lg-8">
                     <a href="La_version_de_eve.php"><h3>La version de Eve ou l'élaboration d'un mythe anarchiste</h3></a>

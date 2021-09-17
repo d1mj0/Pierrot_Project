@@ -12,10 +12,10 @@
     require_once('./templates/header.php');
     ?>
 
-<br>
+        <br>
         <br>
         <section>
-            <div class="container">
+            <div class="container-fluid">
                     <div class="row">
                         <div class="title col-12">
                             <h2>Mentions légales</h2>
@@ -101,12 +101,8 @@ Tout litige en relation avec l’utilisation du site www.deleversion.org est sou
         <br>
     </main>
 
-    <?php
-    //Appel template footer
-    require_once("./templates/footer.php");
-    ?>
+<?php
+//Appel template footer
+require_once("./templates/footer.php");
+?>
 
-    <?php
-    //Appel template footer
-    require_once("./templates/footer.php");
-    ?>
