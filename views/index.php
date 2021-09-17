@@ -68,18 +68,19 @@
             </div>
         </div>
         <br>
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-4">
                     <a href=""><img src="" alt=""></a>
                 </div>
                 <div class="col-lg-8">
-                    <a href=""><h3>Travaux et publications</3></a>
-                    <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo inventore cupiditate harum ex, hic suscipit explicabo 
-                            ipsum exercitationem eligendi illum quis in quod quia.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo inventore cupiditate harum ex, hic suscipit explicabo 
-                            ipsum exercitationem eligendi illum quis in quod quia.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo inventore cupiditate harum ex, hic suscipit explicabo 
-                            ipsum exercitationem eligendi illum quis in quod quia.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo inventore cupiditate harum ex, hic suscipit explicabo 
-                            ipsum exercitationem eligendi illum quis in quod quia.</p>
+                    <a href="La_version_de_eve.php"><h3>Travaux et publications</h3></a>
+                    <p class="text">Comme il y est question d’anthropologie anarchiste, il paraissait judicieux d’en offrir un état des lieux, une esquisse, 
+                            pour le moins une axiomatique, sinon quelques prémisses. Cependant, au fur et mesure que s’établissent les primats anarchistes, 
+                            on s’aperçoit de l’importance croissance que prend le mythe, et ce jusqu’à l’extrême assertion que représente 
+                            la nécessité de son élaboration. Or si l’on admet que la Genèse est le mythe masculin de la hiérarchie, 
+                            alors le mythe anarchiste se doit être féminin et en ce sens, il ne peut-être que celui du « Matriarcat »</p>
+                            <a href="la_version_de_eve.php">Lire la suite >>></a>
                 </div>
                 <div class="col-lg-8">
                     <a href="La_version_de_eve.php"><h3>La version de Eve ou l'élaboration d'un mythe anarchiste</h3></a>

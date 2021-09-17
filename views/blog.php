@@ -6,11 +6,13 @@
     ?>
 
 <main class="my-5">
-    <div class="container">
-      <!--Section: Content-->
+    <div class="container-fluid">
+      <div class="row">
         <div class="title col-12">
             <h2>Blog</h2>
         </div>
+      </div>
+      <br>
       <section class="text-center">
         <h4 class="mb-5"><strong>Derniers articles</strong></h4>
         <div class="container">
