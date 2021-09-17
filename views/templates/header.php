@@ -23,7 +23,7 @@
 <body>
     <header>
     <div class="parent-img">
-        <img src="../views/assets/img/design_header.svg" class="parent-img-responsive" />
+       <a href="index.php"><img src="../views/assets/img/design_header.svg" class="parent-img-responsive" /></a> 
     </div>
 
         
