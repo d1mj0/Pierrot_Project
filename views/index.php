@@ -74,7 +74,7 @@
                     <a href=""><img src="" alt=""></a>
                 </div>
                 <div class="col-lg-8">
-                    <a href=""><h2>Travaux et publications</h2></a>
+                    <a href=""><h3>Travaux et publications</3></a>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo inventore cupiditate harum ex, hic suscipit explicabo 
                             ipsum exercitationem eligendi illum quis in quod quia.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo inventore cupiditate harum ex, hic suscipit explicabo 
                             ipsum exercitationem eligendi illum quis in quod quia.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo inventore cupiditate harum ex, hic suscipit explicabo 
@@ -82,12 +82,13 @@
                             ipsum exercitationem eligendi illum quis in quod quia.</p>
                 </div>
                 <div class="col-lg-8">
-                    <a href=""><h2>Travaux et publications</h2></a>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo inventore cupiditate harum ex, hic suscipit explicabo 
-                            ipsum exercitationem eligendi illum quis in quod quia.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo inventore cupiditate harum ex, hic suscipit explicabo 
-                            ipsum exercitationem eligendi illum quis in quod quia.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo inventore cupiditate harum ex, hic suscipit explicabo 
-                            ipsum exercitationem eligendi illum quis in quod quia.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo inventore cupiditate harum ex, hic suscipit explicabo 
-                            ipsum exercitationem eligendi illum quis in quod quia.</p>
+                    <a href="La_version_de_eve.php"><h3>La version de Eve ou l'élaboration d'un mythe anarchiste</h3></a>
+                    <p>Comme il y est question d’anthropologie anarchiste, il paraissait judicieux d’en offrir un état des lieux, une esquisse, 
+                            pour le moins une axiomatique, sinon quelques prémisses. Cependant, au fur et mesure que s’établissent les primats anarchistes, 
+                            on s’aperçoit de l’importance croissance que prend le mythe, et ce jusqu’à l’extrême assertion que représente 
+                            la nécessité de son élaboration. Or si l’on admet que la Genèse est le mythe masculin de la hiérarchie, 
+                            alors le mythe anarchiste se doit être féminin et en ce sens, il ne peut-être que celui du « Matriarcat »</p>
+                            <a href="la_version_de_eve.php">Lire la suite >>></a>
                 </div>
                 <div class="col-lg-4">
                     <a href=""><img src="" alt=""></a>
@@ -97,12 +98,13 @@
                     <a href=""><img src="" alt=""></a>
                 </div>
                 <div class="col-lg-8">
-                    <a href=""><h2>Travaux et publications</h2></a>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo inventore cupiditate harum ex, hic suscipit explicabo 
-                            ipsum exercitationem eligendi illum quis in quod quia.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo inventore cupiditate harum ex, hic suscipit explicabo 
-                            ipsum exercitationem eligendi illum quis in quod quia.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo inventore cupiditate harum ex, hic suscipit explicabo 
-                            ipsum exercitationem eligendi illum quis in quod quia.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo inventore cupiditate harum ex, hic suscipit explicabo 
-                            ipsum exercitationem eligendi illum quis in quod quia.</p>
+                    <a href="la_version_de_eve.php"><h3>La version de Eve ou l'élaboration scientifique d'un mythe anarchiste</h3></a>
+                    <p>Si d’un côté, les sciences sociales peinent dans un grand dédale de complexités qu’elles n’ont ramené à aucune loi 
+                            d’organisation claire, à aucun principe véritablement unificateur1 et que de l’autre on ne peut que constater l’évidente 
+                            faiblesse théorique de l’anarchisme, parent pauvre du marxisme, théoriquement un peu boiteux, mais compensant peut-être 
+                            l’intelligence par la passion et la sincérité… 
+                            Alors gageons que la combinaison de ces carences fasse la force d’une science véritablement anarchiste.</p>
+                    <a href="">Lire la suite >>></a>
                 </div>
             </div>
         </div>
