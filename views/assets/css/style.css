@@ -1,6 +1,21 @@
-a {
+.title a {
+    color: #ffffff;
     text-decoration: none;
     
+}
+
+main a{
+    
+    text-decoration: none;
+}
+
+main a:hover{
+    color: #7a2b2b;
+    text-decoration: none;
+}
+
+main h1, h2, h3, h4, h5,h6{
+    color: #ffffff;
 }
 
 /*<---------------------------------------------Header--------------------------------------------->*/
@@ -13,11 +28,6 @@ a {
     height:auto;	
 }
 
-.child-img{
-    position: absolute;
-    left: 15%;
-    right: 0;
-}
 
 .nav-container{
     padding: 6px;
@@ -74,13 +84,23 @@ nav ul{
   }
 
 }
+/*<---------------------------------------------Main Index--------------------------------------------->*/
+
+
+.title{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(90,90,90,1) 0%, rgba(255,255,255,0) 69%); 
+}
+
+
+
+
 
 /*<---------------------------------------------Footer--------------------------------------------->*/
-
-.border{
-    padding: 18px;
-    z-index: 1;
-    background-color:#5a5a5a ;
+img_pensee_globale
+div .border{
+    border: 1.12em solid #5a5a5a;
+    
 }
 
 .footer-row{
@@ -99,4 +119,11 @@ nav ul{
 
 .footer-link_menu a:hover{
     color: #7a2b2b;
+}
+
+
+/*<------------------cdn check------------>*/
+.fab{
+    color: aliceblue;
+    font-size: 1em;
 }
