@@ -7,7 +7,7 @@
 <main>
     <br>
     <br>
-    <section class="container" id="articles">
+    <section class="container-fluid" id="articles">
             <div class="row">
                 <div class="title col-12">
                     <a href="blog.php"><h2>Derniers articles</h2></a>
@@ -30,7 +30,7 @@
     </section>
     <br>
     <br>   
-    <section class="container" id="pensee_globale">
+    <section class="container-fluid" id="pensee_globale">
             <div class="row">
                 <div class="title col-12">
                     <a href="pensee_globale.php"><h2>Pensée globale</h2></a>
@@ -61,7 +61,7 @@
     </section>
     <br>
     <br>
-    <section id="travaux_publications" class="container">
+    <section id="travaux_publications" class="container-fluid">
         <div class="row">
             <div class="title col-12">
                 <a href="travaux_et_publications.php"><h2>Travaux et publications</h2></a>

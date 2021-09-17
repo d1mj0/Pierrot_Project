@@ -38,7 +38,7 @@
                             on s’aperçoit de l’importance croissance que prend le mythe, et ce jusqu’à l’extrême assertion que représente 
                             la nécessité de son élaboration. Or si l’on admet que la Genèse est le mythe masculin de la hiérarchie, 
                             alors le mythe anarchiste se doit être féminin et en ce sens, il ne peut-être que celui du « Matriarcat »</p>
-                            <a href="">Lire la suite >>></a>
+                            <a href="la_version_de_eve.php">Lire la suite >>></a>
                     </div>
                     <div class="col-lg-4">
                         <a href=""><img src="" alt=""></a>
@@ -64,7 +64,7 @@
                             caractéristique de la hiérarchie selon L. Dumont, permet parfaitement d’expliquer le renversement que 
                             l’on rencontre entre la conception, somme toute louable de l’éthique tiers-mondiste et l’application 
                             plus que douteuse, parfois condamnable que l’on peut constater sur le terrain. .</p>
-                            <a href="">Lire la suite >>></a>
+                            <a href="de_guerre.php">Lire la suite >>></a>
                     </div>
                     <div class="col-lg-4">
                         <a href=""><img src="" alt=""></a>
