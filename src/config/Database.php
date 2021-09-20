@@ -6,9 +6,9 @@ class Database{
     
     private $dbname = "eversionDB"; 
 
-    private $username = "admin_user";
+    private $username = "root";
 
-    private $pass = "De1ever5!0n";
+    private $pass = "";
 
     public function getPDO(){
         try{
