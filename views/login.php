@@ -6,7 +6,7 @@
         $userController = new UserController($_GET['mail'], $_GET['pass'], NULL);
         $userController->login();
     }
-
+    $title = "Login";
     require_once('./templates/header.php');
 ?>
 <body>
@@ -29,8 +29,8 @@
                                                     <input class="form-control" id="inputPassword" type="password" placeholder="Mot de passe" />
                                                     <label for="inputPassword">Mot de passe</label>
                                                 </div>
-                                                <div class="d-flex align-items-center  mt-4 mb-0">
-                                                        <a class="btn btn-primary" href="blog_administration.php">Login</a>
+                                                <div class="d-flex align-items-center justify-content-center mt-4 mb-0">
+                                                        <a class="btn " href="blog_administration.php">Login</a>
                                                 </div>
                                             </form>
                                         </div>

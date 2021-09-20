@@ -59,9 +59,8 @@ class ArticleController {
         
             return $this->title = $title;
         }
-    }
+    
 
-   
 
     public function getDesc(){  
         return $this->desc;
@@ -90,5 +89,6 @@ class ArticleController {
         return $this->photo = $photo;
     }
 
+}
 
 ?>
