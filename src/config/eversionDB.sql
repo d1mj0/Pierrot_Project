@@ -15,109 +15,70 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
---
--- Table structure for table `articles`
---
 
-DROP TABLE IF EXISTS `articles`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+
+
 CREATE TABLE `articles` (
-  `id` int NOT NULL,
-  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `description` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `content` varchar(10000) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `id` int(3) NOT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `description` varchar(255)  DEFAULT NULL,
+  `content` varchar(10000)  DEFAULT NULL,
   `photo` mediumblob,
   `date_time_publi` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `articles`
---
 
 LOCK TABLES `articles` WRITE;
-/*!40000 ALTER TABLE `articles` DISABLE KEYS */;
-/*!40000 ALTER TABLE `articles` ENABLE KEYS */;
+
 UNLOCK TABLES;
 
---
--- Table structure for table `login`
---
 
-DROP TABLE IF EXISTS `login`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+
 CREATE TABLE `login` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  `id` int(3) NOT NULL AUTO_INCREMENT,
+  `email` varchar(255) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`) 
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `login`
---
 
 LOCK TABLES `login` WRITE;
-/*!40000 ALTER TABLE `login` DISABLE KEYS */;
+
 INSERT INTO `login` VALUES (1,'admin@admin.com','admin');
-/*!40000 ALTER TABLE `login` ENABLE KEYS */;
+
 UNLOCK TABLES;
 
---
--- Table structure for table `newsletter`
---
 
-DROP TABLE IF EXISTS `newsletter`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+
+
 CREATE TABLE `newsletter` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `first_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `last_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `id` int(3) NOT NULL AUTO_INCREMENT,
+  `email` varchar(255)  DEFAULT NULL,
+  `first_name` varchar(255) DEFAULT NULL,
+  `last_name` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `newsletter`
---
 
 LOCK TABLES `newsletter` WRITE;
-/*!40000 ALTER TABLE `newsletter` DISABLE KEYS */;
-/*!40000 ALTER TABLE `newsletter` ENABLE KEYS */;
+
 UNLOCK TABLES;
 
---
--- Table structure for table `publications`
---
 
-DROP TABLE IF EXISTS `publications`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+
 CREATE TABLE `publications` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `description` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `content` varchar(10000) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `id` int(3) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) DEFAULT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `content` varchar(10000) DEFAULT NULL,
   `photo` mediumblob,
-  `date_time_publi` timestamp NULL DEFAULT NULL,
-  `url` varchar(2083) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `date_time_publi` timestamp ,
+  `url` varchar(2083) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `publications`
---
 
 LOCK TABLES `publications` WRITE;
-/*!40000 ALTER TABLE `publications` DISABLE KEYS */;
-/*!40000 ALTER TABLE `publications` ENABLE KEYS */;
+
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
