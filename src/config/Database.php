@@ -4,11 +4,11 @@ class Database{
 
     private $host = "localhost"; 
     
-    private $dbname = "admin_db"; 
+    private $dbname = "eversionDB"; 
 
-    private $username = "root";
+    private $username = "admin_user";
 
-    private $pass = "";
+    private $pass = "De1ever5!0n";
 
     public function getPDO(){
         try{
