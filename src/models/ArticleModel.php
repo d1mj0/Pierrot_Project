@@ -18,7 +18,7 @@ class ArticleModel {
     public function add($title, $desc, $text, $photo){
         // Create 
         // cette méthode va s'occuper des requêtes d'insertions en base de données. 
-        $request = $this->connexion->prepare('INSERT INTO articles (title, desc, text, photo, date_enregistrement) VALUES (:title, :desc, :text, :photo, NOW())');
+        $request = $this->connexion->prepare('INSERT INTO articles (title, desc, text, photo, date_heure_publi) VALUES (:title, :desc, :text, :photo, NOW())');
     
         $request->execute([
             ':title' => $title,
