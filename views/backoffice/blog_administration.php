@@ -1,28 +1,18 @@
 <?php
-require_once('../src/controllers/UserController.php');
-require_once('../src/controllers/CarController.php');
-require_once('../src/controllers/AgencyController.php');
-require_once('../src/controllers/CommandController.php');
+require_once('../src/controllers/ArticleController.php');
 
 
-if(!empty($_POST['member']) && !empty($_POST['car']) && !empty($_POST['agency']) && !empty($_POST['start_date']) && !empty($_POST['start_hour']) && !empty($_POST['end_date']) && !empty($_POST['end_hour'])){
-    $command = new CommandController($_POST);
 
-    $command->addCommand();
+if(!empty($_POST['title']) && !empty($_POST['desc']) && !empty($_POST['text']) && !empty($_POST['photo'])){
+    $article = new ArticleController($_POST['title'], $_POST['desc'], $_POST['text'], $_POST['photo']);
+    $article->addArticle();
 }
 
-$command = new CommandController(NULL);
-$commands = $command->listCommands();
+$article = new ArticleController(NULL,NULL,NULL,NULL);
+$article = $article->listArticle();
 
 
-$member = new UserController(NULL, NULL, NULL, NULL, NULL, NULL, NULL,);
-$members = $member->listUsers();
 
-$car = new CarController(NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-$cars = $car->listCars();
-
-$agency = new AgencyController(NULL, NULL, NULL, NULL, NULL, NULL);
-$agencies = $agency->listAgencies();
 
 require_once('./templates/header.php');
 
@@ -32,61 +22,37 @@ require_once('./templates/header.php');
     <section>
         <table>
                 <tr class="td_head">
-                    <td>Commande</td>
-                    <td>Membre</td>
-                    <td>Véhicule</td>
-                    <td>Agence</td>
-                    <td>Date et heure de départ</td>
-                    <td>Date et heure de fin</td>
-                    <td>Prix total</td>
-                    <td>Date et heure d'enregistrement</td>
+                    <td>Photo</td>
+                    <td>Titre</td>
+                    <td>Description</td>
+                    <td>Texte</td>
+                    <td>Date et heure de publication</td>
                     <td>Action</td>
                 </tr>
                 <?php foreach($commands as $values): ?>
                 <tr>
-                    <td><?= $values['id_commande']; ?></td>
-                    <td><?= $values['id_membre'] . ' - ' . $values['prenom'] . ' ' . $values['nom']  . ' - ' . $values['email'] ; ?></td>
-                    <td><?= $values['id_vehicule'] . ' - ' . $values['marque'] . ' ' . $values['modele']; ?></td>
-                    <td><?= $values['id_agence'] . ' - ' . $values['titre'];  ?></td>
-                    <td><?= $values['date_heure_depart']; ?></td>
-                    <td><?= $values['date_heure_fin']; ?></td>
-                    <td><?= $values['prix_total']; ?> €</td>
-                    <td><?= $values['date_enregistrement']; ?></td>
+                    <td><?= $values['photo']; ?></td>
+                    <td><?= $values['title'];?></td>
+                    <td><?= $values['desc']; ?></td>
+                    <td><?= $values['text'];  ?></td>
+                    <td><?= $values['date_heure_publi']; ?></td>
                     <td>Action</td>
                 </tr>
                 <?php endforeach; ?>
             </table>
     </section>
-    <form action="command_administration.php" method="POST">
-        <select name="member" id="">
-            <option value="">-- Membres --</option>
-            <?php foreach($members as $values): ?>
-            <option value="<?= $values['id_membre'] ?>"><?= $values['email'] ?></option>
-            <?php endforeach; ?>
-        </select>
-        <select name="car" id="">
-            <option value="">-- Véhicules --</option>
-            <?php foreach($cars as $values): ?>
-            <option value="<?= $values['id_vehicule'] ?>"><?= $values['titre'] ?></option>
-            <?php endforeach; ?>
-        </select>
-        <select name="agency" id="">
-            <option value="">-- Agences --</option>
-            <?php foreach($agencies as $values): ?>
-            <option value="<?= $values['id_agence'] ?>"><?= $values['titre'] ?></option>
-            <?php endforeach; ?>
-        </select>
+    <form action="blog_administration.php" method="POST">
 
-        <label for="">Date départ</label>
-        <input type="date" name="start_date" id="">
+        <label for="">Titre</label>
+        <textarea type="Title" name="title" id="">
 
-        <label for="">Heure départ</label>
-        <input type="time" name="start_hour" id="">
+        <label for="">Description</label>
+        <textarea type="Desc" name="Desc" id="">
 
-        <label for="">Date fin</label>
-        <input type="date" name="end_date" id="">
+        <label for="">Text</label>
+        <textarea type="Text" name="Text" id="">
 
-        <label for="">Heure fin</label>
+        <label for="">Photo</label>
         <input type="time" name="end_hour" id="">
 
         <button>Envoyer</button>
