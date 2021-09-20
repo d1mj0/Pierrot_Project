@@ -15,14 +15,15 @@ class ArticleModel {
     // CRUD(Create, read, update, delete)
 
 
-    public function create($title, $desc, $text, $photo){
+    public function add($title, $description, $text, $photo){
         // Create 
         // cette méthode va s'occuper des requêtes d'insertions en base de données. 
-        $request = $this->connexion->prepare('INSERT INTO articles (title, desc, text, photo, date_heure_publi) VALUES (:title, :desc, :text, :photo, NOW())');
+        $request = $this->connexion->prepare('INSERT INTO article (title, description, text, photo, date_heure_publi) VALUES (:title, :description, :text, :photo, NOW())');
     
         $request->execute([
+            
             ':title' => $title,
-            ':desc' => $desc,
+            ':description' => $description,
             ':text' => $text,
             ':photo' => $photo,
         ]);
@@ -33,7 +34,7 @@ class ArticleModel {
     public function getAll(){
         // Read
         // cette méthode va permettre de récupérer tous les utilisateurs en base de données. 
-        $request = $this->connexion->prepare('SELECT * FROM articles');
+        $request = $this->connexion->prepare('SELECT * FROM article');
 
         $request->execute();
 
@@ -42,17 +43,15 @@ class ArticleModel {
         return $result;
     }
 
-    public function getOne($title){
+    public function getOne($id){
         // Read
         // cette méthode va permettre de récupérer un seul utilisateur en base de données. 
 
-        $request = $this->connexion->prepare('SELECT * FROM articles WHERE title=:title');
+        $request = $this->connexion->prepare('SELECT * FROM article WHERE id_article=:id');
 
-        $request->execute([
-            ':title' => $title
-        ]);
-
-
+        
+        $request->execute([':id' => $id]);
+        
         $result = $request->fetchAll(PDO::FETCH_ASSOC); // PDO::FETCH_ASSOC permet de récupérer seulement le tableau associatif
 
         return $result;
