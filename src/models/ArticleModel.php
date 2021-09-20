@@ -15,7 +15,7 @@ class ArticleModel {
     // CRUD(Create, read, update, delete)
 
 
-    public function add($title, $desc, $text, $photo){
+    public function create($title, $desc, $text, $photo){
         // Create 
         // cette méthode va s'occuper des requêtes d'insertions en base de données. 
         $request = $this->connexion->prepare('INSERT INTO articles (title, desc, text, photo, date_heure_publi) VALUES (:title, :desc, :text, :photo, NOW())');
