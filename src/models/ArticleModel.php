@@ -2,7 +2,7 @@
 // Les models s'occupent des requêtes en base de données. 
 require_once('../src/config/Database.php'); 
 
-class UserModel {
+class ArticleModel {
 
     // On crée une propriété connexion qui contiendra l'objet PDO
     private $connexion;
@@ -15,27 +15,25 @@ class UserModel {
     // CRUD(Create, read, update, delete)
 
 
-    public function add($pseudo, $pass, $name, $firstname, $mail, $civility, $rank){
+    public function create($title, $desc, $text, $photo){
         // Create 
         // cette méthode va s'occuper des requêtes d'insertions en base de données. 
-        $request = $this->connexion->prepare('INSERT INTO membre (pseudo, pass, name, firstname, mail, civility, rank, date_enregistrement) VALUES (:pseudo, :pass, :name, :firstname, :mail, :civility, :rank,  NOW())');
+        $request = $this->connexion->prepare('INSERT INTO articles (title, desc, text, photo, date_heure_publi) VALUES (:title, :desc, :text, :photo, NOW())');
     
         $request->execute([
-            ':pseudo' => $pseudo,
-            ':pass' => $pass,
-            ':name' => $name,
-            ':firstname' => $firstname,
-            ':mail' => $mail,
-            ':civility' => $civility,
-            ':rank' => $rank
+            ':title' => $title,
+            ':desc' => $desc,
+            ':text' => $text,
+            ':photo' => $photo,
         ]);
 
+    
     }
 
     public function getAll(){
         // Read
         // cette méthode va permettre de récupérer tous les utilisateurs en base de données. 
-        $request = $this->connexion->prepare('SELECT * FROM membre');
+        $request = $this->connexion->prepare('SELECT * FROM articles');
 
         $request->execute();
 
@@ -44,14 +42,14 @@ class UserModel {
         return $result;
     }
 
-    public function getOne($mail){
+    public function getOne($title){
         // Read
         // cette méthode va permettre de récupérer un seul utilisateur en base de données. 
 
-        $request = $this->connexion->prepare('SELECT * FROM membre WHERE mail=:mail');
+        $request = $this->connexion->prepare('SELECT * FROM articles WHERE title=:title');
 
         $request->execute([
-            ':mail' => $mail
+            ':title' => $title
         ]);
 
 

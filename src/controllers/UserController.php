@@ -12,13 +12,11 @@ require_once('../src/models/UserModel.php');
 
 class UserController {
 
+    private $mail;
 
     private $pass;
 
-    
-    private $mail;
-
-
+        
     private $rank;
 
     public function __construct($Email, $Password, $rank){
@@ -67,11 +65,11 @@ class UserController {
     // On pourrait sécuriser chaque champ plus en détails. 
 
 
-    public function getPassword(){
+    public function getPass(){
         return $this->pass;
     }
 
-    public function setPassword($Password){
+    public function setPass($Password){
         // hasher un mot de passe, permet de le sécuriser. 
         // strlen() permet de connaitre le nombre de caractères d'une chaine. 
         if(strlen($Password) > 5){
@@ -87,11 +85,11 @@ class UserController {
    
 
 
-    public function getEmail(){  
+    public function getMail(){  
         return $this->mail;
     }
 
-    public function setEmail($Email){
+    public function setMail($Email){
         // filter_var permet de vérifier ou de nettoyer pas mal d'éléments en PHP. 
         if(filter_var($Email, FILTER_VALIDATE_EMAIL)){
             return $this->Email = $Email;
