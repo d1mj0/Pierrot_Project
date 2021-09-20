@@ -1,4 +1,6 @@
 <?php
+$title = "Admin";
+
 require_once('../src/controllers/ArticleController.php');
 
 
@@ -29,7 +31,7 @@ require_once('./templates/header.php');
                     <td>Date et heure de publication</td>
                     <td>Action</td>
                 </tr>
-                <?php foreach($commands as $values): ?>
+                <?php foreach($article as $values): ?>
                 <tr>
                     <td><?= $values['photo']; ?></td>
                     <td><?= $values['title'];?></td>
@@ -43,17 +45,17 @@ require_once('./templates/header.php');
     </section>
     <form action="blog_administration.php" method="POST">
 
-        <label for="">Titre</label>
-        <textarea type="Title" name="title" id="">
+        <label for="title">Titre</label>
+        <textarea type="Title" name="title" id="title">
 
-        <label for="">Description</label>
-        <textarea type="Desc" name="Desc" id="">
+        <label for="desc">Description</label>
+        <textarea id="desc" name="desc" cols="20" rows="6"></textarea>
 
         <label for="">Text</label>
-        <textarea type="Text" name="Text" id="">
+        <textarea id="text" name="text" cols="20" rows="10"></textarea>
 
-        <label for="">Photo</label>
-        <input type="time" name="end_hour" id="">
+        <label for="photo">Photo</label>
+        <input type="file" name="photo" id="photo">
 
         <button>Envoyer</button>
     </form>

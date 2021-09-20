@@ -6,10 +6,9 @@
 ?>
 
 <main>
-
     <div id="layoutContact">
         <div id="layoutContact_content">
-                <section>
+            <section>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-5">
@@ -30,10 +29,9 @@
                                                     <label for="inputFirstName">Prénom <span class="err"><?php echo $firstnameErr; ?></span></label>
                                                 </div>
                                                 <div class="d-flex align-items-center justify-content-center mt-4 mb-0">
-                                                        <input type=submit class="btn" id="submit" value="Envoyer"/>
+                                                    <input type=submit class="btn" id="submit" value="Envoyer"/>
                                                 </div>
                                             </form>
-
                                         </div>
                                     </div>
                                 </div>
