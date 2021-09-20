@@ -12,11 +12,10 @@ require_once('../src/models/ArticleModel.php');
 
 class ArticleController {
 
-
     private $title;
 
     
-    private $desc;
+    private $description;
 
 
     private $text;
@@ -24,22 +23,24 @@ class ArticleController {
 
     private $photo;
 
-    public function __construct($title, $desc, $text, $photo){
-        $this->setTitle($title);
-        $this->setDesc($desc);
-        $this->setText($text);
-        $this->setPhoto($photo);
+    public function __construct($data){
+        if(!empty($data)){
+        
+        $this->setTitle($data['title']);
+        $this->setDesc($data['description']);
+        $this->setText($data['text']);
+        $this->setPhoto($data['photo']);
     }
 
-    
+}
     public function addArticle(){
-        $articleModel = new ArticleModel();
-        $articleModel->create($this->title, $this->desc, $this->text, $this->photo);
+        $article = new ArticleModel();
+        $article->add($this->title, $this->description, $this->text, $this->photo);
     }
 
-    public function listArticle(){
-        $articleModel = new ArticleModel();
-        return $articleModel->getAll();
+    public function listArticles(){
+        $article = new ArticleModel();
+        return $article->getAll();
     }
 
     
@@ -50,7 +51,7 @@ class ArticleController {
 
     // On pourrait sécuriser chaque champ plus en détails. 
 
-
+    
     public function getTitle(){
         return $this->title;
     }
@@ -58,17 +59,17 @@ class ArticleController {
     public function setTitle($title){
         
             return $this->title = $title;
-        }
+    }
     
 
 
     public function getDesc(){  
-        return $this->desc;
+        return $this->description;
     }
 
-    public function setDesc($desc){
+    public function setDesc($description){
         
-            return $this->desc = $desc;
+            return $this->description = $description;
         
     }
 

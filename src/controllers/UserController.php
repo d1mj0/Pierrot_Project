@@ -12,33 +12,32 @@ require_once('../src/models/UserModel.php');
 
 class UserController {
 
-    private $mail;
+    private $email;
 
-    private $pass;
+    private $password;
 
-        
     private $rank;
 
-    public function __construct($Email, $Password, $rank){
-        $this->setMail($Email);
-        $this->setPass($Password);
+    public function __construct($email, $password, $rank){
+        $this->setMail($email);
+        $this->setPass($password);
         $this->setRank($rank);
     }
 
     
     public function login(){
-        $data = $this->checkMail($this->Email);
+        $data = $this->checkMail($this->email);
         if(count($data) === 1){
-            if(password_verify($this->Password, $data[0]['Password'])){ // password_verify() permet de faire correspondre un mot de passe et mot de passe hashé.
+            if(password_verify($this->password, $data[0]['password'])){ // password_verify() permet de faire correspondre un mot de passe et mot de passe hashé.
                 
                 // La variable prédéfinie $_SESSION permet de persister les données de page en page.
                 // Il ne faut surtout pas oublier session_start() en début de fichier. 
                 $_SESSION['user'] = [
-                    'Email' => $data[0]['Email'],
+                    'email' => $data[0]['email'],
                     'rank' => $data[0]['rank'],
                 ];
                 if($data[0]['rank'] == "admin"){
-                    header('Location: user_administration.php');
+                    header('Location: blog_administration.php');
                 }
                 
             
@@ -48,55 +47,48 @@ class UserController {
 
     
 
-    public function listUsers(){
+
+    public function checkMail($email){
         $userModel = new UserModel();
-        return $userModel->getAll();
+        return $userModel->getOne($email);
     }
 
-    public function checkMail($mail){
-        $userModel = new UserModel();
-        return $userModel->getOne($mail);
-    }
+
 
     ////////////////////////////////////
     // Encapsulation : getter / setter
     ////////////////////////////////////
 
-    // On pourrait sécuriser chaque champ plus en détails. 
-
-
-    public function getPass(){
-        return $this->pass;
-    }
-
-    public function setPass($Password){
-        // hasher un mot de passe, permet de le sécuriser. 
-        // strlen() permet de connaitre le nombre de caractères d'une chaine. 
-        if(strlen($Password) > 5){
-            // On vérifie si firstname et name sont non-null pour hashé le mot de passe
-            // Cela permet de différencier la connexion et l'inscription. 
-            if(isset($this->firstname) && isset($this->name)){
-                $Password = password_hash($Password, PASSWORD_BCRYPT); // password_hash permet de hasher un mot de passe. 
-            }
-            return $this->Password = $Password;
-        }
-    }
-
-   
+    // On pourrait sécuriser chaque champ plus en détails.
 
 
     public function getMail(){  
-        return $this->mail;
+        return $this->email;
     }
 
-    public function setMail($Email){
+    public function setMail($email){
         // filter_var permet de vérifier ou de nettoyer pas mal d'éléments en PHP. 
-        if(filter_var($Email, FILTER_VALIDATE_EMAIL)){
-            return $this->Email = $Email;
+        if(filter_var($email, FILTER_VALIDATE_EMAIL)){
+            return $this->email = $email;
         }
     }
 
-    
+    public function getPass(){
+        return $this->password;
+    }
+
+    public function setPass($password){
+        // hasher un mot de passe, permet de le sécuriser. 
+        // strlen() permet de connaitre le nombre de caractères d'une chaine. 
+        if(strlen($password) > 5){
+            // On vérifie si firstname et name sont non-null pour hashé le mot de passe
+            // Cela permet de différencier la connexion et l'inscription. 
+            if(isset($this->email)){
+                $pass = password_hash($password, PASSWORD_BCRYPT); // password_hash permet de hasher un mot de passe. 
+            }
+            return $this->pass = $pass;
+        }
+    }
 
     public function getRank(){
         return $this->rank;

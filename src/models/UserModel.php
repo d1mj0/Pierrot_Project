@@ -15,18 +15,17 @@ class UserModel {
     // CRUD(Create, read, update, delete)
 
 
-    public function add($pseudo, $pass, $name, $firstname, $mail, $civility, $rank){
+    public function add($password, $email, $rank){
         // Create 
         // cette méthode va s'occuper des requêtes d'insertions en base de données. 
-        $request = $this->connexion->prepare('INSERT INTO membre (pseudo, pass, name, firstname, mail, civility, rank, date_enregistrement) VALUES (:pseudo, :pass, :name, :firstname, :mail, :civility, :rank,  NOW())');
+        $request = $this->connexion->prepare('INSERT INTO login (password, email, rank) VALUES (:pass, :mail, :rank)');
     
         $request->execute([
-            ':pseudo' => $pseudo,
-            ':pass' => $pass,
-            ':name' => $name,
-            ':firstname' => $firstname,
-            ':mail' => $mail,
-            ':civility' => $civility,
+            
+            ':pass' => $password,
+                        
+            ':mail' => $email,
+            
             ':rank' => $rank
         ]);
 
@@ -35,7 +34,7 @@ class UserModel {
     public function getAll(){
         // Read
         // cette méthode va permettre de récupérer tous les utilisateurs en base de données. 
-        $request = $this->connexion->prepare('SELECT * FROM membre');
+        $request = $this->connexion->prepare('SELECT * FROM login');
 
         $request->execute();
 
@@ -44,14 +43,14 @@ class UserModel {
         return $result;
     }
 
-    public function getOne($mail){
+    public function getOne($email){
         // Read
         // cette méthode va permettre de récupérer un seul utilisateur en base de données. 
 
-        $request = $this->connexion->prepare('SELECT * FROM membre WHERE mail=:mail');
+        $request = $this->connexion->prepare('SELECT * FROM login WHERE mail=:mail');
 
         $request->execute([
-            ':mail' => $mail
+            ':mail' => $email
         ]);
 
 

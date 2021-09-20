@@ -21,7 +21,7 @@
                                                         <label for="inputEmail">Email</label>
                                                     </div>
                                                     <div class="form-floating mb-3">
-                                                        <input class="form-control" id="inputName" type="name" placeholder="Nom" />
+                                                        <input class="form-control" id="inputName" type="name" placeholder="Nom"/>
                                                         <label for="inputName">Nom</label>
                                                     </div>
                                                     <div class="form-floating mb-3">
