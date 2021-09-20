@@ -6,6 +6,7 @@
 ?>
 
 <main>
+
     <div id="layoutContact">
         <div id="layoutContact_content">
                 <section>
@@ -32,6 +33,7 @@
                                                         <input type=submit class="btn" id="submit" value="Envoyer"/>
                                                 </div>
                                             </form>
+
                                         </div>
                                     </div>
                                 </div>
