@@ -27,6 +27,7 @@ class ArticleModel {
             ':photo' => $photo,
         ]);
 
+    
     }
 
     public function getAll(){
