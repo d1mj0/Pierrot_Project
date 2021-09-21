@@ -15,17 +15,16 @@ class ArticleModel {
     // CRUD(Create, read, update, delete)
 
 
-    public function add($title, $description, $text, $photo){
+    public function add($title, $description, $text, $img){
         // Create 
         // cette méthode va s'occuper des requêtes d'insertions en base de données. 
-        $request = $this->connexion->prepare('INSERT INTO article (title, description, text, photo, date_heure_publi) VALUES (:title, :description, :text, :photo, NOW())');
-    
+        $request = $this->connexion->prepare('INSERT INTO article (title, description, text, img, date_heure_publi) VALUES (:title, :description, :text, :img, NOW())');
+        
         $request->execute([
-            
             ':title' => $title,
             ':description' => $description,
             ':text' => $text,
-            ':photo' => $photo,
+            ':img' => $img,
         ]);
 
     

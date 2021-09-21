@@ -3,20 +3,22 @@ $title = "Admin";
 
 require_once('../src/controllers/ArticleController.php');
 
-if(isset($_FILES['photo']) && $_FILES['photo']['error'] === 0){
+if(isset($_FILES['img']) && $_FILES['img']['error'] === 0){
     $uploaddir = "./assets/img/";
     $uploadfile = $uploaddir . basename($_FILES['img']['name']);
 
-    move_uploaded_file($_FILES['img']['tmp_name'], $uploadfile);
+    move_uploaded_file($_FILES['photo']['tmp_name'], $uploadfile);
 }
 
-if(!empty($_POST['title']) && !empty($_POST['description']) && !empty($_POST['text']) && !empty($_POST['photo'])){
-    $article = new ArticleController($_POST);
+if(!empty($_POST['title']) && !empty($_POST['description']) && !empty($_POST['text']) && isset($uploadfile)){
+    $article = new ArticleController($_POST['title'], $_POST['description'], $_POST['text'], $uploadfile);
     $article->addArticle();
 }
 
-$article = new ArticleController(NULL, NULL, NULL, NULL);
-$articles = $article->listArticles();
+
+
+$articleSelect = new ArticleController(NULL, NULL, NULL, NULL);
+$articles = $articleSelect->listArticles();
 
 
 
@@ -40,7 +42,7 @@ require_once('./templates/header.php');
                 <?php foreach($articles as $values): ?>
                 <tr>
                     <td><?= $values['id_article']; ?></td>
-                    <td><img width="100" height="100" src="<?= $values['photo']; ?>" alt=""></td>
+                    <td><img width="100" height="100" src="<?= $values['img']; ?>" alt=""></td>
                     <td><?= $values['title'];?></td>
                     <td><?= $values['description']; ?></td>
                     <td><?= $values['text'];  ?></td>
@@ -58,7 +60,7 @@ require_once('./templates/header.php');
                                     <div class="card shadow-lg border-0 rounded-lg mt-5">
                                         <div class="card-header"><h3 class="text-center font-weight-light my-4">Article</h3></div>
                                             <div class="card-body">
-                                                <form  action="blog_administration.php" method="POST">
+                                                <form  action="blog_administration.php" method="post">
                                                     <div class="form-floating mb-3">
                                                         <input class="form-control" id="title" type="text" placeholder="Titre"/>          
                                                         <label for="title">Titre</label>
@@ -72,8 +74,8 @@ require_once('./templates/header.php');
                                                         <label for="">Text</label>
                                                     </div>
                                                     <div class="form-floating mb-3">
-                                                        <input type="file" name="photo" id="photo">   
-                                                        <label for="photo">Photo</label>
+                                                        <input type="file" name="img" id="img">   
+                                                        <label for="img">Photo</label>
                                                     </div>
                                                     <div class="d-flex align-items-center justify-content-center mt-4 mb-0">
 

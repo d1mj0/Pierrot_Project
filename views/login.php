@@ -30,7 +30,7 @@
                                             <label for="inputPassword">Mot de passe</label>
                                         </div>
                                         <div class="d-flex align-items-center justify-content-center mt-4 mb-0">
-                                                <a class="btn " href="blog_administration.php">Login</a>
+                                            <button>Se connecter</button>
                                         </div>
                                     </form>
                                 </div>
