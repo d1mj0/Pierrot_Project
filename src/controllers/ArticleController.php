@@ -23,20 +23,29 @@ class ArticleController {
 
     private $photo;
 
-    public function __construct($data){
-        if(!empty($data)){
-        
-        $this->setTitle($data['title']);
-        $this->setDesc($data['description']);
-        $this->setText($data['text']);
-        $this->setPhoto($data['photo']);
+    public function __construct($title, $description, $text, $img){
+        $this->setTitle ($title);
+        $this->setDesc($description);
+        $this->setText($text);
+        $this->setPhoto($img);
     }
 
-}
-    public function addArticle(){
-        $article = new ArticleModel();
-        $article->add($this->title, $this->description, $this->text, $this->photo);
+
+
+public function addArticle(){
+    
+        if(isset($this->title) && isset($this->description) && isset($this->text) && isset($this->img)){
+            $articleModel = new ArticleModel();
+            $articleModel->add($this->title,  $this->description, $this->text, $this->img);
+            header('Location: blog_administration.php');
+
+        
     }
+}
+    // public function addArticle(){
+    //     $article = new ArticleModel();
+    //     $article->add($this->title, $this->description, $this->text, $this->photo);
+    // }
 
     public function listArticles(){
         $article = new ArticleModel();
@@ -83,11 +92,11 @@ class ArticleController {
     }
 
     public function getPhoto(){
-        return $this->photo;
+        return $this->img;
     }
 
-    public function setPhoto($photo){
-        return $this->photo = $photo;
+    public function setPhoto($img){
+        return $this->img = $img;
     }
 
 }

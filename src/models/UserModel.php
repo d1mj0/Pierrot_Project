@@ -34,7 +34,7 @@ class UserModel {
     public function getAll(){
         // Read
         // cette méthode va permettre de récupérer tous les utilisateurs en base de données. 
-        $request = $this->connexion->prepare('SELECT * FROM login');
+        $request = $this->connexion->prepare('SELECT * FROM user');
 
         $request->execute();
 
@@ -47,7 +47,7 @@ class UserModel {
         // Read
         // cette méthode va permettre de récupérer un seul utilisateur en base de données. 
 
-        $request = $this->connexion->prepare('SELECT * FROM login WHERE mail=:mail');
+        $request = $this->connexion->prepare('SELECT * FROM user WHERE mail=:mail');
 
         $request->execute([
             ':mail' => $email

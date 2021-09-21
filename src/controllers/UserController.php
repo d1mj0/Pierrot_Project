@@ -84,9 +84,9 @@ class UserController {
             // On vérifie si firstname et name sont non-null pour hashé le mot de passe
             // Cela permet de différencier la connexion et l'inscription. 
             if(isset($this->email)){
-                $pass = password_hash($password, PASSWORD_BCRYPT); // password_hash permet de hasher un mot de passe. 
+                $password = password_hash($password, PASSWORD_BCRYPT); // password_hash permet de hasher un mot de passe. 
             }
-            return $this->pass = $pass;
+            return $this->password = $password;
         }
     }
 
