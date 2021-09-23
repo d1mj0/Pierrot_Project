@@ -2,11 +2,11 @@
     
     require_once('../src/controllers/UserController.php'); 
 
-    if(!empty($_POST['email']) && !empty($_POST['password'])){
+   
         $userController = new UserController($_POST['email'], $_POST['password'], NULL);
         $userController->login();
-    }
-    $title = "Login";
+    
+    $title = "inscription";
     require_once('./templates/header.php');
 ?>
 
@@ -20,7 +20,7 @@
                             <div class="card shadow-lg border-0 rounded-lg mt-5">
                                 <div class="card-header"><h3 class="text-center font-weight-light my-4">Connection</h3></div>
                                 <div class="card-body">
-                                    <form action="login.php" method="get">
+                                    <form action="inscription.php" method="get">
                                         <div class="form-floating mb-3">
                                             <input class="form-control" id="email" name="email"  type="email" placeholder="name@example.com" />
                                             <label for="email">Email</label>
@@ -30,7 +30,7 @@
                                             <label for="password">Mot de passe</label>
                                         </div>
                                         <div class="d-flex align-items-center justify-content-center mt-4 mb-0">
-                                            <button type="submit">Se connecter</button>
+                                            <button type="submit">S'inscrire</button>
                                         </div>
                                     </form>
                                 </div>

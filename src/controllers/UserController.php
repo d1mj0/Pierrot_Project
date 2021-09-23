@@ -1,7 +1,7 @@
 <?php
-session_start(); // session_start permet de créer la session ou d'en récupérer une déjà existante. 
+session_start(); 
 
-// Les controllers s'occupent du traitement des données. 
+
 
 // require_once('../src/config/Database.php'); // Attention aux chemins relatifs. Ici Database est appelée depuis inscription.php.
 require_once('../src/models/UserModel.php');
@@ -46,7 +46,16 @@ class UserController {
     }
 
     
+    public function inscription(){
+        if(count($this->checkMail($this->mail)) === 0){
+            if(isset($this->password) && isset($this->email) && isset($this->rank)){
+                $userModel = new UserModel();
+                $userModel->add($this->password,  $this->email, $this->rank);
+                header('Location: index.php');
 
+            }
+        }
+    }
 
     public function checkMail($email){
         $userModel = new UserModel();
@@ -78,11 +87,9 @@ class UserController {
     }
 
     public function setPass($password){
-        // hasher un mot de passe, permet de le sécuriser. 
-        // strlen() permet de connaitre le nombre de caractères d'une chaine. 
-        if(strlen($password) > 5){
-            // On vérifie si firstname et name sont non-null pour hashé le mot de passe
-            // Cela permet de différencier la connexion et l'inscription. 
+        
+        if(strlen($password) > 4){
+            
             if(isset($this->email)){
                 $password = password_hash($password, PASSWORD_BCRYPT); // password_hash permet de hasher un mot de passe. 
             }

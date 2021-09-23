@@ -1,10 +1,10 @@
 <?php
-// Les models s'occupent des requêtes en base de données. 
+
 require_once('../src/config/Database.php'); 
 
 class UserModel {
 
-    // On crée une propriété connexion qui contiendra l'objet PDO
+
     private $connexion;
 
     public function __construct(){
@@ -15,17 +15,17 @@ class UserModel {
     // CRUD(Create, read, update, delete)
 
 
-    public function add($password, $email, $rank){
+    public function add($email, $password, $rank){
         // Create 
         // cette méthode va s'occuper des requêtes d'insertions en base de données. 
-        $request = $this->connexion->prepare('INSERT INTO login (password, email, rank) VALUES (:pass, :mail, :rank)');
+        $request = $this->connexion->prepare('INSERT INTO member (email, password, rank) VALUES (:email, :password, :rank)');
     
         $request->execute([
+
+            ':email' => $email,
             
-            ':pass' => $password,
-                        
-            ':mail' => $email,
-            
+            ':password' => $password,
+                    
             ':rank' => $rank
         ]);
 
@@ -34,7 +34,7 @@ class UserModel {
     public function getAll(){
         // Read
         // cette méthode va permettre de récupérer tous les utilisateurs en base de données. 
-        $request = $this->connexion->prepare('SELECT * FROM user');
+        $request = $this->connexion->prepare('SELECT * FROM member');
 
         $request->execute();
 
@@ -47,10 +47,10 @@ class UserModel {
         // Read
         // cette méthode va permettre de récupérer un seul utilisateur en base de données. 
 
-        $request = $this->connexion->prepare('SELECT * FROM user WHERE mail=:mail');
+        $request = $this->connexion->prepare('SELECT * FROM member WHERE email=:email');
 
         $request->execute([
-            ':mail' => $email
+            ':email' => $email
         ]);
 
 

@@ -1,7 +1,5 @@
 <?php
-session_start(); // session_start permet de créer la session ou d'en récupérer une déjà existante. 
-
-// Les controllers s'occupent du traitement des données. 
+session_start(); 
 
 // require_once('../src/config/Database.php'); // Attention aux chemins relatifs. Ici Database est appelée depuis inscription.php.
 require_once('../src/models/ArticleModel.php');
@@ -21,35 +19,30 @@ class ArticleController {
     private $text;
 
 
-    private $photo;
+    private $img;
 
     public function __construct($title, $description, $text, $img){
         $this->setTitle ($title);
         $this->setDesc($description);
         $this->setText($text);
-        $this->setPhoto($img);
+        $this->setImg($img);
     }
 
 
 
-public function addArticle(){
-    
-        if(isset($this->title) && isset($this->description) && isset($this->text) && isset($this->img)){
-            $articleModel = new ArticleModel();
-            $articleModel->add($this->title,  $this->description, $this->text, $this->img);
-            header('Location: blog_administration.php');
+
+    public function addArticle(){
+        $articleModel = new ArticleModel();
+        $articleModel->create($this->title, $this->description, $this->text, $this->img);
+    }
 
         
-    }
-}
-    // public function addArticle(){
-    //     $article = new ArticleModel();
-    //     $article->add($this->title, $this->description, $this->text, $this->photo);
-    // }
+    
 
+    
     public function listArticles(){
-        $article = new ArticleModel();
-        return $article->getAll();
+        $articleModel = new ArticleModel();
+        return $articleModel->getAll();
     }
 
     
@@ -91,11 +84,11 @@ public function addArticle(){
         return $this->text = $text;
     }
 
-    public function getPhoto(){
+    public function getImg(){
         return $this->img;
     }
 
-    public function setPhoto($img){
+    public function setImg($img){
         return $this->img = $img;
     }
 
