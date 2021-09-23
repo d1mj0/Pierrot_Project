@@ -17,7 +17,7 @@ class ArticleModel {
 
     public function create($title, $description, $text, $img){
 
-        $request = $this->connexion->prepare('INSERT INTO article (title, description, text, img, date_heure_publi) VALUES (:title, :description, :text, :img, NOW())');
+        $request = $this->connexion->prepare('INSERT INTO article (title, description, text, img, date_time_publi) VALUES (:title, :description, :text, :img, NOW())');
         
         $request->execute([
             ':title' => $title,

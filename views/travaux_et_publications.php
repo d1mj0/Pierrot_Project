@@ -12,11 +12,11 @@
             <div class="container-fluid">
                     <div class="row">
                         <div class="title col-12">
-                            <h2>Travaux et Publications</h2>
+                            <h2 >Travaux et Publications</h2>
                         </div>
                     </div>
             <br>
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-4">
                         <a href=""><img src="" alt=""></a>

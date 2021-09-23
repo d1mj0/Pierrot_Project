@@ -16,8 +16,10 @@
                         </div>
                     </div>
             </div>
-                        <div class="col-sm-md-lg-xl">
-                            <img src="" alt="">
+                        <div class="col-container-md-lg-xl">
+                        <div class="row">
+
+                           <a href="http://www.atelierdecreationlibertaire.com/"><img src="..views/assets/img/acl.png" alt=""></a> 
                         </div>
                     </div>
                 </div>                             

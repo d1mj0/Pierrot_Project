@@ -10,11 +10,11 @@ if(isset($_FILES['img']) && $_FILES['img']['error'] === 0){
     move_uploaded_file($_FILES['img']['tmp_name'], $uploadfile);
 }
 
-if(!empty($_POST['title']) && !empty($_POST['description']) && !empty($_POST['text']) && !empty($uploadfile)){
+if(!empty($_POST['title']) && !empty($_POST['description']) && !empty($_POST['text'])&& isset($uploadfile)){
     $articlePost = new ArticleController($_POST['title'], $_POST['description'], $_POST['text'], $uploadfile);
     $articlePost->addArticle();
-}
 
+}
 
 $articleSelect = new ArticleController(NULL, NULL, NULL, NULL);
 $articles = $articleSelect->listArticles();
@@ -59,9 +59,9 @@ require_once('./templates/header.php');
                                     <div class="card shadow-lg border-0 rounded-lg mt-5">
                                         <div class="card-header"><h3 class="text-center font-weight-light my-4">Article</h3></div>
                                             <div class="card-body">
-                                                <form  action="blog_administration.php" method="post">
-                                                    <div class="form-floating mb-3">
-                                                        <input enctype="multipart/form-data" class="form-control" id="title" type="text" placeholder="Titre"/>          
+                                                <form enctype="multipart/form-data" action="blog_administration.php"  method="post">
+                                                    <div>
+                                                        <input name="title" class="form-control" id="title" type="text" placeholder="Titre"/>          
                                                         <label for="title">Titre</label>
                                                     </div>
                                                     <div class="form-floating mb-3">
@@ -70,7 +70,7 @@ require_once('./templates/header.php');
                                                     </div>
                                                     <div class="form-floating mb-3"> 
                                                         <textarea id="text" name="text" type="text" cols="40" rows="10"></textarea>  
-                                                        <label for="">Text</label>
+                                                        <label for="text">Text</label>
                                                     </div>
                                                     <div class="form-floating mb-3">
                                                         <input type="file" name="img" id="img">   
