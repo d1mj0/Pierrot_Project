@@ -2,10 +2,10 @@
     
     require_once('../src/controllers/UserController.php'); 
 
-    if(!empty($_POST['email']) && !empty($_POST['password'])){
-        $userController = new UserController($_POST['email'], $_POST['password'], NULL);
+    
+        $userController = new UserController($_GET['email'], $_GET['password'], NULL);
         $userController->login();
-    }
+    
     $title = "Login";
     require_once('./templates/header.php');
 ?>
@@ -44,8 +44,11 @@
         </div>
     </div>
 </main>
-
-
+<?php
+echo '<pre>';
+print_r($_SESSION);
+echo '</pre>';
+?>
 <?php
     //Appel template footer
     require_once("./templates/footer.php");
