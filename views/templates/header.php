@@ -22,12 +22,15 @@
 </head>
 <body>
     <header>
-    <div class="parent-img">
-       <a href="index.php"><img src="../views/assets/img/design_header.svg" class="parent-img-responsive" /></a> 
-    </div>
-
-        
+        <div class="parent-img  d-none d-lg-block">
+            <a href="index.php"><img src="../views/assets/img/design_header.svg" class="parent-img-responsive" /></a> 
+        </div>
         <nav class="nav-container navbar-expand-md navbar-light">
+            <div class="container">
+                <div class="navbar-brand mx-auto d-block d-lg-none">
+                    <a href="index.php"><img src="../views/assets/img/title_header.svg"  class="parent-img-responsive navbar-img" /></a> 
+                </div>
+             </div>
             <button class="navbar-toggler align-center" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon "></span>
             </button>

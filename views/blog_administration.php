@@ -7,14 +7,13 @@ if(isset($_FILES['img']) && $_FILES['img']['error'] === 0){
     $uploaddir = "./assets/img/";
     $uploadfile = $uploaddir . basename($_FILES['img']['name']);
 
-    move_uploaded_file($_FILES['photo']['tmp_name'], $uploadfile);
+    move_uploaded_file($_FILES['img']['tmp_name'], $uploadfile);
 }
 
-if(!empty($_POST['title']) && !empty($_POST['description']) && !empty($_POST['text']) && isset($uploadfile)){
-    $article = new ArticleController($_POST['title'], $_POST['description'], $_POST['text'], $uploadfile);
-    $article->addArticle();
+if(!empty($_POST['title']) && !empty($_POST['description']) && !empty($_POST['text']) && !empty($uploadfile)){
+    $articlePost = new ArticleController($_POST['title'], $_POST['description'], $_POST['text'], $uploadfile);
+    $articlePost->addArticle();
 }
-
 
 
 $articleSelect = new ArticleController(NULL, NULL, NULL, NULL);
@@ -44,9 +43,9 @@ require_once('./templates/header.php');
                     <td><?= $values['id_article']; ?></td>
                     <td><img width="100" height="100" src="<?= $values['img']; ?>" alt=""></td>
                     <td><?= $values['title'];?></td>
-                    <td><?= $values['description']; ?></td>
-                    <td><?= $values['text'];  ?></td>
-                    <td><?= $values['date_heure_publi']; ?></td>
+                    <td><?= $values['description'];?></td>
+                    <td><?= $values['text'];?></td>
+                    <td><?= $values['date_time_publi']; ?></td>
                     <td>Action</td>
                 </tr>
                 <?php endforeach; ?>
@@ -62,7 +61,7 @@ require_once('./templates/header.php');
                                             <div class="card-body">
                                                 <form  action="blog_administration.php" method="post">
                                                     <div class="form-floating mb-3">
-                                                        <input class="form-control" id="title" type="text" placeholder="Titre"/>          
+                                                        <input enctype="multipart/form-data" class="form-control" id="title" type="text" placeholder="Titre"/>          
                                                         <label for="title">Titre</label>
                                                     </div>
                                                     <div class="form-floating mb-3">

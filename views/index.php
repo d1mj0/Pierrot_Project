@@ -2,6 +2,11 @@
     //Variable avec le titre de la page
     $title = "Accueil";
     require_once('./templates/header.php');
+    require_once('../src/controllers/ArticleController.php');
+
+    $articleSelect = new ArticleController(NULL, NULL, NULL, NULL);
+    $articles = $articleSelect->listArticles();
+
 ?>
 
 <main>
@@ -16,15 +21,12 @@
         <br>
         <div class="container">
             <div class="row">
+                <?php foreach($articles as $values): ?>
                 <article class="col-lg-8">
-                    <a href="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo inventore cupiditate harum ex, hic suscipit explicabo ipsum exercitationem eligendi illum quis in quod quia.</a>
+                    <a href=""><?= $values['img'];?><?= $values['title'];?><?= $values['description'];?></a>
                 </article>
-                <article class="col-lg-8">
-                    <a href="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo inventore cupiditate harum ex, hic suscipit explicabo ipsum exercitationem eligendi illum quis in quod quia.</a>
-                </article>
-                <article class="col-lg-8">
-                    <a href="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo inventore cupiditate harum ex, hic suscipit explicabo ipsum exercitationem eligendi illum quis in quod quia.</a>
-                </article>
+                <?php endforeach; ?>
+                
             </div>
         </div>
     </section>

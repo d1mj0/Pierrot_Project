@@ -1,8 +1,13 @@
     <?php
-    //Variable avec le titre de la page;
+        //Variable avec le titre de la page;
     $title = "Blog";
     //Appel template header
     require_once("./templates/header.php");
+    require_once('../src/controllers/ArticleController.php');
+
+    $articleSelect = new ArticleController(NULL, NULL, NULL, NULL);
+    $articles = $articleSelect->listArticles();
+
     ?>
 
 <main class="my-5">
@@ -16,123 +21,26 @@
       <section class="text-center">
         <h4 class="mb-5"><strong>Derniers articles</strong></h4>
         <div class="container">
-                    
-        <div class="row">
-          <div class="col-lg-4 col-md-12 mb-4">
-            <div class="card shadow-lg">
-              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                <img src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" class="img-fluid" />
-                <a href="#!">
-                  <div class="mask" style="background-color: rgba(#5c5c5c);"></div>
-                </a>
+          <?php foreach($articles as $values): ?>
+            <div class="row">
+              <div class="col-lg-4 col-md-12 mb-4">
+                <div class="card shadow-lg">
+                  <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                    <img width="100" height="100" src="<?= $values['img']; ?>" alt="">
+                    <a href="#!">
+                      <div class="mask" style="background-color: rgba(#5c5c5c);"></div>
+                    </a>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title"><?= $values['title']; ?></h5>
+                    <p class="card-text"><?= $values['description']; ?></p>
+                    <a href="#!" class="btn ">Lire</a>
+                  </div>
               </div>
-              <div class="card-body">
-                <h5 class="card-title">Titre Article</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up the bulk of the
-                  card's content.
-                </p>
-                <a href="#!" class="btn btn-primary">Lire</a>
-              </div>
-            </div>
+            <?php endforeach; ?>
           </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card shadow-lg">
-              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                <img src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" class="img-fluid" />
-                <a href="#!">
-                  <div class="mask" style="background-color: rgba(#5c5c5c);"></div>
-                </a>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Titre Article</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up the bulk of the
-                  card's content.
-                </p>
-                <a href="#!" class="btn btn-primary">Lire</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4 ">
-            <div class="card shadow-lg">
-              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                <img src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" class="img-fluid" />
-                <a href="#!">
-                  <div class="mask" style="background-color: rgba(#5c5c5c);"></div>
-                </a>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Titre Article</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up the bulk of the
-                  card's content.
-                </p>
-                <a href="#!" class="btn btn-primary">Lire</a>
-              </div>
-            </div>
-          </div>
-
-        <div class="row">
-        <div class="col-lg-4 col-md-12 mb-4">
-            <div class="card shadow-lg">
-              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                <img src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" class="img-fluid" />
-                <a href="#!">
-                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                </a>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Titre Article</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up the bulk of the
-                  card's content.
-                </p>
-                <a href="#!" class="btn btn-primary">Lire</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card shadow-lg">
-              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                <img src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" class="img-fluid" />
-                <a href="#!">
-                  <div class="mask" style="background-color: rgba(#5c5c5c);"></div>
-                </a>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Titre Article</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up the bulk of the
-                  card's content.
-                </p>
-                <a href="#!" class="btn btn-primary">Lire</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card shadow-lg">
-              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                <img src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" class="img-fluid" />
-                <a href="#!">
-                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                </a>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Titre Article</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up the bulk of the
-                  card's content.
-                </p>
-                <a href="#!" class="btn btn-primary">Lire</a>
-              </div>
-            </div>
-          </div>
-      <!--Section: Content-->
+          
+          
 
       <!-- Pagination -->
       <nav class="my-4" aria-label="...">
@@ -153,7 +61,7 @@
     </div>
   </main>
     
-    <?php
+  <?php
     //Appel template footer
     require_once("./templates/footer.php");
-    ?>
+  ?>

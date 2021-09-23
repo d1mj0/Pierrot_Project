@@ -4,7 +4,7 @@ class Database{
 
     private $host = "localhost"; 
     
-    private $dbname = "eversiondb"; 
+    private $dbname = "eversiondb2"; 
 
     private $username = "root";
 
@@ -19,9 +19,6 @@ class Database{
     }
 
 }
-
-
-
 
 
 

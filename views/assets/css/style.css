@@ -38,15 +38,17 @@ main a:hover{
 .nav-container{
     padding: 6px;
     z-index: 1;
-    background-color:#5a5a5a ;
+    background-color: #5a5a5a;
     
+    
+}
+.navbar-img{
+
+box-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px;
 }
 
 
-nav{
-    background-color:#5a5a5a ;
-    
-}
+
 
 nav ul{
     justify-content: space-evenly;

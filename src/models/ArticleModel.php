@@ -1,10 +1,10 @@
 <?php
-// Les models s'occupent des requêtes en base de données. 
+
 require_once('../src/config/Database.php'); 
 
 class ArticleModel {
 
-    // On crée une propriété connexion qui contiendra l'objet PDO
+    
     private $connexion;
 
     public function __construct(){
@@ -15,9 +15,8 @@ class ArticleModel {
     // CRUD(Create, read, update, delete)
 
 
-    public function add($title, $description, $text, $img){
-        // Create 
-        // cette méthode va s'occuper des requêtes d'insertions en base de données. 
+    public function create($title, $description, $text, $img){
+
         $request = $this->connexion->prepare('INSERT INTO article (title, description, text, img, date_heure_publi) VALUES (:title, :description, :text, :img, NOW())');
         
         $request->execute([
