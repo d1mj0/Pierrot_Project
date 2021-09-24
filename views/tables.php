@@ -6,7 +6,7 @@
     $articles = $articleSelect->listArticles();
     
     $title = "tables";
-    require_once('./templates/header.php');
+    
 ?>
     <head>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
@@ -41,11 +41,7 @@
                                 Administration
                             </a>
                             <div class="sb-sidenav-menu-heading">Interface</div>
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                Layouts
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a>
+                            
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="layout-static.html">Static Navigation</a>
@@ -67,22 +63,18 @@
                                         <nav class="sb-sidenav-menu-nested nav">
                                             <a class="nav-link" href="login.html">Login</a>
                                             <a class="nav-link" href="register.html">Register</a>
-                                            <a class="nav-link" href="password.html">Forgot Password</a>
                                         </nav>
                                     </div>
-                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
-                                        Error
-                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                                    </a>
+                                    
                                     
                                 </nav>
                             </div>
                             <div class="sb-sidenav-menu-heading">Addons</div>
-                            <a class="nav-link" href="charts.html">
+                            <a class="nav-link" href="publications_article.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Publication articles
                             </a>
-                            <a class="nav-link" href="tables.html">
+                            <a class="nav-link" href="tables.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 Tableau articles
                             </a>
@@ -98,7 +90,7 @@
                     <div class="container-fluid px-4">
                         <h1 class="mt-4">Tables</h1>
                         <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item"><a href="index.html">Admin</a></li>
+                            <li class="breadcrumb-item"><a href="tables.php">Admin</a></li>
                             <li class="breadcrumb-item active">Tables</li>
                         </ol>
                         
@@ -121,18 +113,18 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    <?php foreach($articles as $values): ?>
-                                        <tr>
-                                            <td><?= $values['id_article']; ?></td>
-                                            <td><img width="100" height="100" src="<?= $values['img']; ?>" alt=""></td>
-                                            <td><?= $values['title'];?></td>
-                                            <td><?= $values['description'];?></td>
-                                            <td><?= $values['text'];?></td>
-                                            <td><?= $values['date_time_publi']; ?></td>
-                                            <td>Action</td>
-                                        </tr>
+                                        <?php foreach($articles as $values): ?>
+                                            <tr>
+                                                <td><?= $values['id_article']; ?></td>
+                                                <td><img width="100" height="100" src="<?= $values['img']; ?>" alt=""></td>
+                                                <td><?= $values['title'];?></td>
+                                                <td><?= $values['description'];?></td>
+                                                <td><?= $values['text'];?></td>
+                                                <td><?= $values['date_time_publi']; ?></td>
+                                                <td>Action</td>
+                                            </tr>
                                         <?php endforeach; ?>
-                                        </tbody>
+                                    </tbody>
                                 </table>
                             </div>
                         </div>
@@ -141,12 +133,7 @@
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">
                         <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Your Website 2021</div>
-                            <div>
-                                <a href="#">Privacy Policy</a>
-                                &middot;
-                                <a href="#">Terms &amp; Conditions</a>
-                            </div>
+                            <div class="text-muted">Copyright &copy; De l'Eversion 2021</div>
                         </div>
                     </div>
                 </footer>
