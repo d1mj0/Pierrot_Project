@@ -1,5 +1,7 @@
 //Validation formulaire newsletter côté navigateur
-document.getElementById("submit").addEventListener("click", verifyField);
+if(document.getElementById("submit") !== null){
+    document.getElementById("submit").addEventListener("click", verifyField);
+}
 
 let fields = document.querySelectorAll("input[required]");
 fields.forEach((field)=>{
