@@ -17,16 +17,16 @@
                                         <div class="card-body">
                                             <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
                                                 <div class="form-floating mb-3">
-                                                    <input class="form-control" id="inputEmail" type="email" placeholder="name@example.com" name="email" required value="<?php echo $email; ?>"/>
-                                                    <label for="inputEmail">Email <span class="err"><?php echo $emailErr; ?></span></label>
+                                                    <input class="form-control" id="email" type="email" placeholder="name@example.com" name="email" required value="<?php echo $email; ?>"/>
+                                                    <label for="email">Email <span class="err"><?php echo $emailErr; ?></span></label>
                                                 </div>
                                                 <div class="form-floating mb-3">
-                                                    <input class="form-control" id="inputLastName" type="text" placeholder="Nom" name="lastname" pattern="^[a-zA-Z-' ]*$" required value="<?php echo $lastname; ?>"/>
-                                                    <label for="inputLastName">Nom <span class="err"><?php echo $lastnameErr; ?></span></label>
+                                                    <input class="form-control" id="lastname" type="text" placeholder="Nom" name="lastname" pattern="^[a-zA-Z-' ]*$" required value="<?php echo $lastname; ?>"/>
+                                                    <label for="lastname">Nom <span class="err"><?php echo $lastnameErr; ?></span></label>
                                                 </div>
                                                 <div class="form-floating mb-3">
-                                                    <input class="form-control" id="inputFirstName" type="text" placeholder="Prénom" pattern="^[a-zA-Z-' ]*$" name="firstname" required value="<?php echo $firstname; ?>"/>
-                                                    <label for="inputFirstName">Prénom <span class="err"><?php echo $firstnameErr; ?></span></label>
+                                                    <input class="form-control" id="name" type="text" placeholder="Prénom" pattern="^[a-zA-Z-' ]*$" name="name" required value="<?php echo $name; ?>"/>
+                                                    <label for="name">Prénom <span class="err"><?php echo $nameErr; ?></span></label>
                                                 </div>
                                                 <div class="d-flex align-items-center justify-content-center mt-4 mb-0">
                                                     <input type=submit class="btn" id="submit" value="Envoyer"/>
@@ -46,10 +46,12 @@
 </main>
 
 <?php
+
+    require_once("../src/controllers/NewsletterController.php");
     //Validation du formulaire côté serveur
 
-    $email = $lastname = $firstname = "";
-    $emailErr = $lastnameErr = $firstnameErr = "";
+    $email = $lastname = $name = "";
+    $emailErr = $lastnameErr = $nameErr = "";
 
     if($_SERVER["REQUEST_METHOD"] == "POST"){
         if(empty($email)){
@@ -66,17 +68,17 @@
         }
         else{
             $lastname = clean_input($_POST["lastname"]);
-            if(!preg_match("/^[a-zA-Z-' ]*$/", $firstname)){
-                $firstnameErr = "Veuillez vérifier ce champ.";
+            if(!preg_match("/^[a-zA-Z-' ]*$/", $lastname)){
+                $lastnameErr = "Veuillez vérifier ce champ.";
             }
         }
-        if(empty($firstname)){
-            $firstnameErr = "Veuillez renseigner ce champ.";
+        if(empty($name)){
+            $nameErr = "Veuillez renseigner ce champ.";
         }
         else{
-            $firstname = clean_input($_POST["firstname"]);
-            if(!preg_match("/^[a-zA-Z-' ]*$/", $firstname)){
-                $firstnameErr = "Veuillez vérifier ce champ.";
+            $name = clean_input($_POST["name"]);
+            if(!preg_match("/^[a-zA-Z-' ]*$/", $name)){
+                $nameErr = "Veuillez vérifier ce champ.";
             }
         }
     }
@@ -87,6 +89,9 @@
         $data = htmlspecialchars($data);
         return $data;
     }
+
+    $newsletterController = new NewsletterController($_POST['lastname'], $_POST['name'], $_POST['email']);
+    $newsletterController->addEmail();
 ?>
 
 <?php
