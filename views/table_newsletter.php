@@ -1,11 +1,11 @@
 <?php
     
-    require_once('../src/controllers/ArticleController.php'); 
+    require_once("../src/controllers/NewsletterController.php");
 
     $articleSelect = new ArticleController(NULL, NULL, NULL, NULL);
     $articles = $articleSelect->listArticles();
     
-    $title = "tables";
+    $title = "tables_Newsletter";
     
 ?>
     <head>
@@ -41,6 +41,13 @@
                                 Administration
                             </a>
                             <div class="sb-sidenav-menu-heading">Interface</div>
+                            
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="layout-static.html">Static Navigation</a>
+                                    <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a>
+                                </nav>
+                            </div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                                 Pages
@@ -84,6 +91,7 @@
                             <li class="breadcrumb-item"><a href="tables.php">Admin</a></li>
                             <li class="breadcrumb-item active">Tables</li>
                         </ol>
+                        
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
