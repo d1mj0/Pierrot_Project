@@ -42,6 +42,7 @@
             $request->execute([
                 ':email'=>$email;
             ]);
+            
         }
     }
 ?>
