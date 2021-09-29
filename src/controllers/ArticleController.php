@@ -38,11 +38,15 @@ class ArticleController {
 
         
     
-
-    
     public function listArticles(){
         $articleModel = new ArticleModel();
         return $articleModel->getAll();
+    }
+
+
+    public function getOneById($id){
+        $articleModel = new articleModel();
+        return $articleModel->getOne($id);
     }
 
     

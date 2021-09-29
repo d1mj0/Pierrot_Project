@@ -7,46 +7,43 @@
 
     $articleSelect = new ArticleController(NULL, NULL, NULL, NULL);
     $articles = $articleSelect->listArticles();
-
-    ?>
+?>
 
 <main class="my-5">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="title col-12">
-            <h2>Blog</h2>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="title col-12">
+              <h2>Blog</h2>
+          </div>
         </div>
       </div>
-    </div>
       <br>
       <section class="text-center">
         <h4 class="mb-5"><strong>Derniers articles</strong></h4>
         <div class="album py-5">
-          <?php foreach($articles as $values): ?>
             <div class="container">
-        
               <div class="row">
-              
                 <div class="col-lg-4 col-md-12 mb-4">
-                  <div class="card shadow-lg">
-                    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                    
-                      <img width="100" height="100" src="<?= $values['img']; ?>" alt="">
-                      <a href="#!">
+                  <?php foreach($articles as $values): ?>
+                    <div class="card shadow-lg">
+                      <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                        <img width="100" height="100" src="<?= $values['img']; ?>" alt="">
+                        <a href="#!">
                         <div class="mask" style="background-color: rgba(#5c5c5c);"></div>
-                      </a>
+                        </a>
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title"><?= $values['title']; ?></h5>
+                        <p class="card-text"><?= $values['description']; ?></p>
+                        <a href="article.php" class="btn ">Lire</a>
+                      </div>
                     </div>
-                    <div class="card-body">
-                      <h5 class="card-title"><?= $values['title']; ?></h5>
-                      <p class="card-text"><?= $values['description']; ?></p>
-                      <a href="#!" class="btn ">Lire</a>
-                    </div>
-                    
+                  <?php endforeach; ?>
                 </div>
-                
+              </div>
             </div>
-          <?php endforeach; ?>
         </div>
+      </section>
 
       <!-- Pagination -->
       <nav class="my-4" aria-label="...">
@@ -65,7 +62,7 @@
         </ul>
       </nav>
     
-  </main>
+</main>
     
   <?php
     //Appel template footer
