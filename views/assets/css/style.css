@@ -110,11 +110,14 @@ nav ul{
     text-align: justify;
 }
 
-
-#quote {
-    font-size: 40px;
-    background-color: aqua;
+figure{
+    border-left: .60rem solid #7a2b2b;
 }
+
+.blockquote p{
+    font-size: xxx-large;
+}
+
 
 /*<---------------------------------------------Card--------------------------------------------->*/
 .card-body{

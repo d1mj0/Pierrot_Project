@@ -20,7 +20,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-4">
-                        <img src="" alt="Piere André Jarillot">
+                        <img src="../views/assets/img/DSC07314-2.jpg" class="img-fluid" alt="Pierre-André Jarillot">
                     </div>
                     <div class="col-lg-8">
                         <p class="text">Pierre André Jarillot. Né entre lac et montagnes il y a presque 45 ans, je m'ennuyais ferme dans ma contrée savoyarde. Pour m'extirper 
