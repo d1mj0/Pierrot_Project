@@ -77,7 +77,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12  mx-auto">
-                        <q class="text" id="quote">"Si révolution il doit y avoir, alors c’est à une révolution de la <strong>pensée</strong> à laquelle nous devons nous préparer."</q>
+                        <p class="text" id ="quote">"Si révolution il doit y avoir, alors c’est à une révolution de la <strong>pensée</strong> à laquelle nous devons nous préparer."</p>
                     </div>
                 </div>
             </div>
