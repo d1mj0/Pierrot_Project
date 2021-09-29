@@ -30,9 +30,9 @@
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand-Boffice ps-3 container" href="index.php">
+            <a class="navbar-brand-Boffice ps-3 container-fluid" href="index.php">
                 
-                    <img src="../views/assets/img/title_header.svg" alt="de l'éversion" class="img-responsive">
+                    <img src="../views/assets/img/title_header.svg" alt="de l'éversion" class="img-fluid">
                 
             </a>
             <!-- Navbar-->

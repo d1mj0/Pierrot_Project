@@ -20,23 +20,24 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-4">
-                        <img src="" alt="Piere André Jarillot">
+                        <img src="../views/assets/img/DSC07314-2.jpg" class="img-fluid" alt="Pierre-André Jarillot">
                     </div>
-                    <div class="col-lg-8">
-                        <p class="text">Pierre André Jarillot. Né entre lac et montagnes il y a presque 45 ans, je m'ennuyais ferme dans ma contrée savoyarde. Pour m'extirper 
-                        autant de mon milieux culturel que de ma condition sociale, je jetais alors mon dévolu sur les sciences sociales et humaines. Docteur en
-                        anthropologie diplômé de Paris 8 depuis 2018, j’ai été journaliste avant de devenir machiniste de théâtre pour financer ma thèse. Si 
-                        j'intégrais Vincennes à Saint-Denis pour son séminaire d'Anthropologie de la guerre dans la perspective d'un départ comme reporter lors de 
-                        la seconde guerre du Golf, ce projet ne devait finalement pas aboutir. C’est donc à partir de mes deux terrains de recherche que sont respectivement 
-                        l’humanitaire au Mali et le coopérativisme au Venezuela et suite au profond désenchantement qu’ils provoquèrent en moi que s’est élaborée toute ma réflexion. 
-                        En bon utopiste que je suis, je restais miné par cette interrogation : Comment depuis des convictions aussi louables que la solidarité 
-                        entre les peuples ou la justice sociale pouvions-nous arriver à des résultats pour le moins si discutables ? J'en étais d'ailleurs 
-                        réduit à penser que ce n'étaient pas les systèmes qui étaient problématique mais bien les hommes, lorsque je découvris Les essais sur
-                        l'individualisme. Et surtout cette assertion de Louis Dumont pour qui l'inversion entre conception et application est le propre des
-                        systèmes hiérarchiques. Si la hiérarchie était bien pour un anarchiste la bête à abattre et si l'anthropologie était en mesure d'en 
-                        offrir une théorie, alors anarchisme et anthropologie pouvaient faire cause commune. Je partis ainsi avec la certitude qu’il existait 
-                        un métasystème d’ordre hiérarchique responsable de cette aberration et des affres de notre Humanité... que je mis dix années à perforer
-                        et qui devait me coûter à peu près tout ce que j'avais.</p>
+                    <div class="col-lg-8" id="bio">
+                        <p class="text" >Docteur en anthropologie. Il a d’abord été journaliste localier avant de devenir machiniste 
+                            de théâtre pour financer sa thèse. La perspective qu’il propose ici est le fruit de la maturation de plus
+                             de quinze ans d’investigations. C’est à partir de l’échec de ses deux terrains de recherche que sont 
+                             respectivement l’humanitaire au Mali et le coopérativisme au Venezuela et surtout face au profond 
+                             désenchantement qu’ils provoquent en lui que s’élabore toute sa réflexion. Il se demande alors comment 
+                             depuis d’intentions aussi louables que la solidarité entre peuples ou la justice sociale nous pouvions 
+                             arriver à des résultats pour le moins si discutables ? Il part ainsi du postulat qu’il existe un 
+                             méta-système d’ordre hiérarchique responsable de cette aberration car seule la distinction hiérarchique 
+                             permet d’entendre cette inversion entre conception et application. De fait, il estime que pour briser ou 
+                             dépasser le paradigme hiérarchique, ce renversement ne peut s’opérer qu’au niveau idéologique et ne peut 
+                             s’obtenir qu’en élaborant un méta anti-système. C’est donc un paradigme que l’on peut qualifier 
+                             d’anarchiste que Pierre-André nous propose ici. Un paradigme qu’il nomme « Éversion », en référence à 
+                             la dimension entropique du processus décrit mais aussi face à la complexité systémique à laquelle il 
+                             se réfère. Le maître mot est lâché : complexité. La dialogique voilà bien à quoi se réfère tout le 
+                             perspectivisme de notre auteur. Une pensée dont la complexité n’a d’égale que sa radicalité.</p>
                     </div>
                 </div>
             </div>                             
