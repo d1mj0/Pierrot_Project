@@ -20,30 +20,30 @@
       <br>
       <section class="text-center">
         <h4 class="mb-5"><strong>Derniers articles</strong></h4>
-        <div class="album py-5">
+          <div class="album py-5">
             <div class="container">
               <div class="row">
-                <div class="col-lg-4 col-md-12 mb-4">
-                  <?php foreach($articles as $values): ?>
-                    <div class="card shadow-lg">
-                      <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                        <img width="100" height="100" src="<?= $values['img']; ?>" alt="">
-                        <a href="#!">
-                        <div class="mask" style="background-color: rgba(#5c5c5c);"></div>
-                        </a>
-                      </div>
-                      <div class="card-body">
-                        <h5 class="card-title"><?= $values['title']; ?></h5>
-                        <p class="card-text"><?= $values['description']; ?></p>
-                        <a href="article.php" class="btn ">Lire</a>
+                <?php foreach($articles as $values): ?>
+                    <div class="col-lg-4 col-md-12 mb-4">
+                      <div class="card shadow-lg">
+                        <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                          <img width="100" height="100" src="<?= $values['img']; ?>" alt="">
+                          <a href="#!">
+                          <div class="mask" style="background-color: rgba(#5c5c5c);"></div>
+                          </a>
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title"><?= $values['title']; ?></h5>
+                          <p class="card-text"><?= $values['description']; ?></p>
+                          <a href="article.php" class="btn ">Lire</a>
+                        </div>
                       </div>
                     </div>
                   <?php endforeach; ?>
-                </div>
               </div>
             </div>
-        </div>
-      </section>
+          </div>
+      <section>
 
       <!-- Pagination -->
       <nav class="my-4" aria-label="...">

@@ -121,6 +121,11 @@ nav ul{
     text-align: justify;
 }
 
+
+q {
+    font-size: 40px;
+}
+
 /*<---------------------------------------------Card--------------------------------------------->*/
 .card-body{
     background-color: #5a5a5a;
