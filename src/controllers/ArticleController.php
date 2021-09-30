@@ -1,5 +1,5 @@
 <?php
-session_start(); 
+
 
 // require_once('../src/config/Database.php'); // Attention aux chemins relatifs. Ici Database est appelée depuis inscription.php.
 require_once('../src/models/ArticleModel.php');
@@ -45,9 +45,6 @@ class ArticleController {
         $articleModel = new ArticleModel();
         $articleModel->delete($this->id);
     }
-
-        
-
 
     
     public function listArticles(){

@@ -19,11 +19,11 @@
                 </div>
             </div>
         <br>
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <div id="carouselIndex" class="carousel slide" data-bs-ride="carousel">
             <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
             </ol>
             <div class="carousel-inner container-fluid">
                 <?php foreach($articles as $values): ?>
@@ -36,11 +36,11 @@
                     </div>
                 <?php endforeach; ?>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Précédent</span>
             </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Suivant</span>
             </a>

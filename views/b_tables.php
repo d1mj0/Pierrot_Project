@@ -115,7 +115,7 @@
                                             <tr>
                                                 <td><?= $values['id_article']; ?></td>
                                                 <td><img width="100" height="100" src="<?= $values['img']; ?>" alt=""></td>
-                                                <td><?= $values['title'];?></td>
+                                                <td><a href="article.php?id_article=<?= $values['id_article']; ?>"><?= $values['title']; ?></a></td>
                                                 <td><?= $values['description'];?></td>
                                                 <td><?= $values['text'];?></td>
                                                 <td><?= $values['date_time_publi']; ?></td>
