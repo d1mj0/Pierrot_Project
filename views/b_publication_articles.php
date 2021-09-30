@@ -15,8 +15,6 @@
     
     }
 
-    $articleSelect = new ArticleController(NULL, NULL, NULL, NULL);
-    $articles = $articleSelect->listArticles();
     
     $title = "Publication Article";
     
