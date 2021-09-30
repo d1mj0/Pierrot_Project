@@ -3,9 +3,13 @@
     require_once("../src/models/NewsletterModel.php");
 
     class NewsletterController{
+
         private $name;
+
         private $lastname;
+
         private $email;
+
         public function __construct($name, $lastname, $email){
             $this->setName($name);
             $this->setLastName($lastname);
@@ -19,6 +23,7 @@
             $newsletterModel = new NewsletterModel();
             return $newsletterModel->add($name, $lastname, $email);
         }
+        
         public function deleteEmail(){
             $newsletterModel = new NewsletterModel();
             return $newsletterModel->delete($email);
@@ -27,6 +32,9 @@
             $newsletterModel = new NewsletterModel();
             return $newsletterModel->update($name, $lastname, $email);
         }
+
+
+
         //setters
         public function setName($name){
             return $this->$name = $name;

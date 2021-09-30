@@ -10,9 +10,9 @@
         public function add($name, $lastname, $email){
             $request = $this->connexion->prepare('INSERT INTO newsletter (name, lastname, email) VALUES (:name, :lastname, :email)');
             $request->execute([
-                ':name'=>$name;
-                ':lastname'=>$lastname;
-                ':email'=>$email;
+                ':name'=>$name,
+                ':lastname'=>$lastname,
+                ':email'=>$email,
             ]);
         }
         public function getAll(){
@@ -24,7 +24,7 @@
         public function getOne($email){
             $request = $this->connection->prepare('SELECT * FROM newsletter WHERE email = :email');
             $request->execute([
-                ':email'=>$email;
+                ':email'=>$email,
             ]);
             $result = $request->fetchAll(PDO::FETCH_ASSOC);
             return $result;
@@ -32,15 +32,15 @@
         public function update($name, $lastname, $email){
             $request = $this->connection->prepare('UPDATE newsletter SET email = :email WHERE name = :name AND lastname = :lastname');
             $request->execute([
-                ':email'=>$email;
-                ':name'=>$name;
-                ':lastname'=>$lastname;
-            ])
+                ':email'=>$email,
+                ':name'=>$name,
+                ':lastname'=>$lastname,
+            ]);
         }
         public function delete($email){
             $request = $this->connection->prepare('DELETE FROM newsletter WHERE email = :email');
             $request->execute([
-                ':email'=>$email;
+                ':email'=>$email,
             ]);
             
         }
