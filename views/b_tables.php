@@ -35,11 +35,19 @@
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
-                            <div class="sb-sidenav-menu-heading">Core</div>
-                            <a class="nav-link" href="index.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Administration
-                            </a>
+                            <div class="sb-sidenav-menu-heading">Administration</div>
+                                <a class="nav-link" href="b_publication_articles.php">
+                                    <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                    Publication articles
+                                </a>
+                                <a class="nav-link" href="b_tables.php">
+                                    <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                    Tableau articles
+                                </a>
+                                <a class="nav-link" href="b_table_newsletter.php">
+                                    <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                    Tableau Newsletter
+                                </a>
                             <div class="sb-sidenav-menu-heading">Interface</div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
@@ -54,21 +62,12 @@
                                     </a>
                                     <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                         <nav class="sb-sidenav-menu-nested nav">
-                                            <a class="nav-link" href="login.html">Login</a>
-                                            <a class="nav-link" href="register.html">Register</a>
+                                            <a class="nav-link" href="login.php">Login</a>
                                         </nav>
                                     </div>
                                 </nav>
                             </div>
-                            <div class="sb-sidenav-menu-heading">Addons</div>
-                            <a class="nav-link" href="publications_article.php">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                                Publication articles
-                            </a>
-                            <a class="nav-link" href="tables.php">
-                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                Tableau articles
-                            </a>
+                            
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">
@@ -79,25 +78,25 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Tables</h1>
+                        <h1 class="mt-4">Article</h1>
                         <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item"><a href="tables.php">Admin</a></li>
-                            <li class="breadcrumb-item active">Tables</li>
+                            <li class="breadcrumb-item"><a href="tables.php">Administration</a></li>
+                            <li class="breadcrumb-item active">Tableau articles</li>
                         </ol>
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
                                 Articles
                             </div>
-                            <div class="card-body">
-                                <table id="datatablesSimple">
+                            <div class="card-body ">
+                                <table id="datatablesSimple" class="container-fluid">
                                     <thead>
                                         <tr>
                                             <th>Id Article</th>
+                                            <th>Illustration</th>
                                             <th>Titre</th>
                                             <th>Description</th>
                                             <th>Texte</th>
-                                            <th>Illustration</th>
                                             <th>date de publication</th>
                                             <th>Action</th>
                                         </tr>

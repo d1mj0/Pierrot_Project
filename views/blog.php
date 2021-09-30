@@ -27,7 +27,7 @@
                     <div class="col-lg-4 col-md-12 mb-4">
                       <div class="card shadow-lg">
                         <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                          <img width="100" height="100" src="<?= $values['img']; ?>" alt="">
+                          <img class="img-fluid" src="<?= $values['img']; ?>" alt="">
                           <a href="#!">
                           <div class="mask" style="background-color: rgba(#5c5c5c);"></div>
                           </a>
