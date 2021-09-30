@@ -16,7 +16,7 @@
         
         
                 <?php foreach($article as $values): ?>
-                    <h1><?= ['title'];?></h1>
+                    <h2><?= ['title'];?></h2>
                     <p><?= ['text']; ?></p>
                 
                 <?php endforeach; ?>

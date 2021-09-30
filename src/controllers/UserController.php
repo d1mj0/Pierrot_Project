@@ -37,7 +37,7 @@ class UserController {
                     'rank' => $data[0]['rank'],
                 ];
                 if($data[0]['rank'] == "admin"){
-                    header('Location: blog_administration.php');
+                    header('Location: b_blog_administration.php');
                 }
                 
             
