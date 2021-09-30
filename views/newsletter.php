@@ -17,7 +17,7 @@
                                         <div class="card-body">
                                             <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
                                                 <div class="form-floating mb-3">
-                                                    <input class="form-control" id="email" type="email" placeholder="name@example.com" name="email" required value="<?php echo $email; ?>"/>
+                                                    <input class="form-control" id="email" type="email" placeholder="name@example.com" name="email" required value=""/>
                                                     <label for="email">Email <span class="err"><?php echo $emailErr; ?></span></label>
                                                 </div>
                                                 <div class="form-floating mb-3">
