@@ -15,15 +15,15 @@
     
     <title>
 <?php
-            //Affiche le titre de la page
-            print_r($title);
+    //Affiche le titre de la page
+    print_r($title);
 ?>
     </title>
 </head>
 <body>
     <header>
         <div class="parent-img  d-none d-lg-block">
-            <a href="index.php"><img src="../views/assets/img/design_header.svg" class="parent-img-responsive" /></a> 
+            <a href="index.php"><img src="../views/assets/img/design_header.jpg" class="parent-img-responsive" /></a> 
         </div>
         <nav class="nav-container navbar-expand-md navbar-light">
             <div class="container">

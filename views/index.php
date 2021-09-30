@@ -71,7 +71,7 @@
                                l’anthropologie elle-même. 
                         </p>
                     </div>
-                    <div class="img-container col-3 " >
+                    <div class="col-lg-4 mx-auto" >
                         <img src="./assets/img/Eversion_370px.svg" id="img_pensee_globale" class="img-fluid" alt="Representation graphique de l'eversion">
                     </div>
                     <div class="col-lg-4 mx-auto">
@@ -95,7 +95,7 @@
                 <div class="row">
                     <div class="col-lg-12 mx-auto ">
                         <figure class="p-3 rounded">
-                            <blockquote  class="blockquote mb-4"><p><i class="fas fa-quote-left fa-lg  me-2"></i>Si révolution il doit y avoir, alors c’est à une révolution de la <strong>pensée</strong> à laquelle nous devons nous préparer. <i class="fas fa-quote-right fa-lg  me-2"></i></p></blockquote>
+                            <blockquote  class="blockquote mb-4"><p><i class="fas fa-quote-left fa-lg  me-2"></i>La révolution de la <strong>pensée</strong> est la seule à laquelle nous devons nous préparer. <i class="fas fa-quote-right fa-lg  me-2"></i></p></blockquote>
                         </figure>
                     </div>
                 </div>
