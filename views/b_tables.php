@@ -4,7 +4,16 @@
 
     $articleSelect = new ArticleController(NULL, NULL, NULL, NULL);
     $articles = $articleSelect->listArticles();
+
     
+        $articleUpdate = new ArticleController(NULL, NULL, NULL, NULL);
+        $articleU = $articleUpdate->updateArticle();
+    
+
+        $articleDelete = new ArticleController(NULL, NULL, NULL, NULL);
+        $articleD = $articleDelete->deleteArticle();
+    
+
     $title = "tables";
     
 ?>
@@ -110,7 +119,7 @@
                                                 <td><?= $values['description'];?></td>
                                                 <td><?= $values['text'];?></td>
                                                 <td><?= $values['date_time_publi']; ?></td>
-                                                <td>Action</td>
+                                                <td><i class="fas fa-edit"><?= $articleU; ?></i>  <i class="fas fa-trash-alt"><?= $articleD; ?></i></td>
                                             </tr>
                                         <?php endforeach; ?>
                                     </tbody>

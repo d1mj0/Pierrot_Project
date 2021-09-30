@@ -2,8 +2,8 @@
     
     require_once("../src/controllers/NewsletterController.php");
 
-    $articleSelect = new ArticleController(NULL, NULL, NULL, NULL);
-    $articles = $articleSelect->listArticles();
+    $newsletterSelect = new NewsletterController(NULL, NULL, NULL, NULL);
+    $newsletterS = $newsletterSelect->listNewsletter();
     
     $title = "tables_Newsletter";
 

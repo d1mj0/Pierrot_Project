@@ -36,7 +36,19 @@ class ArticleController {
         $articleModel->create($this->title, $this->description, $this->text, $this->img);
     }
 
+    public function updateArticle(){
+        $articleModel = new ArticleModel();
+        $articleModel->update($this->title, $this->description, $this->text, $this->img);
+    }
+
+    public function deleteArticle(){
+        $articleModel = new ArticleModel();
+        $articleModel->delete($this->id);
+    }
+
         
+
+
     
     public function listArticles(){
         $articleModel = new ArticleModel();
