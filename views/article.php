@@ -1,19 +1,18 @@
 <?php
-session_start();
+
     
-        //Variable avec le titre de la page;
     $title = ($_SESSION['article']['title']);
-    //Appel template header
     
     require_once('../src/controllers/ArticleController.php');
 
-    
-        $articleModel = new ArticleController(NULL, NULL, NULL, NULL);
-        $articleRead = $articleModel->getOneById($_SESSION(['article']['id']));
-    
-    
-    
+    if(isset($_GET['title']) && isset($_GET['description']) && isset($_GET['text']) && isset($_GET['img'])){
+    $article = new ArticleController($_GET['title'], $_GET['description'], $_GET['text'], $_GET['img']);
+    $articleR = $article->getOneById($_SESSION(['article']['id']));
+
+    }
+
     require_once("./templates/header.php");
+
     ?>
 
     <main>

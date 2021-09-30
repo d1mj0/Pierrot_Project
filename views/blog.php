@@ -1,4 +1,5 @@
     <?php
+    session_start();
         //Variable avec le titre de la page;
     $title = "Blog";
     //Appel template header
@@ -23,7 +24,7 @@
           <div class="album py-5">
             <div class="container">
               <div class="row">
-                <?php foreach($articles as $values): ?>
+                  <?php foreach($articles as $values): ?>
                     <div class="col-lg-4 col-md-12 mb-4">
                       <div class="card shadow-lg">
                         <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
