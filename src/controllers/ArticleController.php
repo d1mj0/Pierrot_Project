@@ -43,7 +43,7 @@ class ArticleController {
 
     public function deleteArticle(){
         $articleModel = new ArticleModel();
-        $articleModel->delete($this->id);
+        $articleModel->delete($this->title, $this->description, $this->text, $this->img);
     }
 
     

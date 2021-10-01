@@ -17,77 +17,9 @@
 
     
     $title = "Publication Article";
-    
+    require_once('../views/templates/b_header.php');
 ?>
-    <head>
-        <link href="../views/assets/css/styles.css" rel="stylesheet" />
-        <link href="../views/assets/css/styles2.css" rel="stylesheet" />
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
-    </head>
-    <body class="sb-nav-fixed">
-        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-            <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="index.html">De l'éversion</a>
-            <!-- Navbar-->
-            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#!">Paramètres</a></li>
-                        <li><a class="dropdown-item" href="#!">Activité Log</a></li>
-                        <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="#!">Déconnection</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-        <div id="layoutSidenav">
-            <div id="layoutSidenav_nav">
-                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
-                    <div class="sb-sidenav-menu">
-                        <div class="nav">
-                            <div class="sb-sidenav-menu-heading">Administration</div>
-                                <a class="nav-link" href="b_publication_articles.php">
-                                    <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                                    Publication articles
-                                </a>
-                                <a class="nav-link" href="b_tables.php">
-                                    <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                    Tableau articles
-                                </a>
-                                <a class="nav-link" href="b_table_newsletter.php">
-                                    <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                    Tableau Newsletter
-                                </a>
-                            <div class="sb-sidenav-menu-heading">Interface</div>
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
-                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                                Pages
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a>
-                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
-                                        Authentication
-                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                                    </a>
-                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
-                                        <nav class="sb-sidenav-menu-nested nav">
-                                            <a class="nav-link" href="login.php">Login</a>
-                                        </nav>
-                                    </div>
-                                </nav>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="sb-sidenav-footer">
-                        <div class="small">Logged in as:</div>
-                    </div>
-                </nav>
-            </div>
-            <div id="layoutSidenav_content">
+    
                 <main>
                     <div class="container-fluid px-4">
                         <h1 class="mt-4">Publication Articles Blog</h1>
@@ -104,23 +36,27 @@
                                             <div class="card shadow-lg border-0 rounded-lg mt-5">
                                                 <div class="card-header"><h3 class="text-center font-weight-light my-4">Article</h3></div>
                                                     <div class="card-body">
-                                                        <form enctype="multipart/form-data" action="blog_administration.php"  method="post">
-                                                            <div>
-                                                                <input name="title" class="form-control" id="title" type="text" placeholder="Titre"/>          
-                                                                <label for="title">Titre</label>
-                                                            </div>
+                                                        <form enctype="multipart/form-data" action="b_publication_articles.php"  method="post">
+                                                            <label class="form-label" for="title">Titre</label>
                                                             <div class="form-floating mb-3">
-                                                                <textarea id="description" name="description" type="text" cols="40" rows="6" placeholder=""></textarea>   
-                                                                <label for="description">Description</label>
+                                                                <input name="title" class="form-control" id="title" type="text" placeholder="Titre"/>            
                                                             </div>
+                                                            <br>
+                                                            <label class="form-label" for="description">Description</label>
+                                                            <div class="form-floating mb-3">
+                                                                <textarea id="description" class="form-control" name="description" type="text" cols="40" rows="6"></textarea>   
+                                                            </div>
+                                                            <br>
+                                                            <label class="form-label" for="text">Text</label>
                                                             <div class="form-floating mb-3"> 
-                                                                <textarea id="text" name="text" type="text" cols="40" rows="10"></textarea>  
-                                                                <label for="text">Text</label>
+                                                                <textarea id="text" class="form-control" name="text" type="text" cols="40" rows="10"></textarea>  
                                                             </div>
+                                                            <br>
+                                                            <label class="form-label" for="img">Photo</label>
                                                             <div class="form-floating mb-3">
-                                                                <input type="file" name="img" id="img">   
-                                                                <label for="img">Photo</label>
+                                                                <input type="file" name="img" id="img" class="form-control">   
                                                             </div>
+                                                            <br>
                                                             <div class="d-flex align-items-center justify-content-center mt-4 mb-0">
                                                                 <button>Ajouter un Article</button>
                                                             </div>
@@ -134,21 +70,10 @@
                             </section>
                         </div>
                     </div>
-                </main>    
-                <footer class="py-4 bg-light mt-auto">
-                    <div class="container-fluid px-4">
-                        <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Your Website 2021</div>
-                            <div>
-                                <a href="#">Privacy Policy</a>
-                                &middot;
-                                <a href="#">Terms &amp; Conditions</a>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
-            </div>
-        </div>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>  
-    </body>
-</html>
+                </main>  
+
+<?php
+
+require_once('../views/templates/b_footer.php'); 
+
+?>
