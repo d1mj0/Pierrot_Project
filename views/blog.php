@@ -36,7 +36,7 @@
                         <div class="card-body">
                           <h5 class="card-title"><?= $values['title']; ?></h5>
                           <p class="card-text"><?= $values['description']; ?></p>
-                          <a href="article.php" class="btn ">Lire</a>
+                          <a href="article.php?id=<?= $values['id_article']; ?>" class="btn ">Lire</a>
                         </div>
                       </div>
                     </div>

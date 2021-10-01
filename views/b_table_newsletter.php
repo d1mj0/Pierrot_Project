@@ -102,7 +102,7 @@
                                         <?php foreach($articles as $values): ?>
                                             <tr>
                                                 <td><?= $values['id_article']; ?></td>
-                                                <td><img width="100" height="100" src="<?= $values['img']; ?>" alt=""></td>
+                                                <td><img src="<?= $values['img']; ?>" alt=""></td>
                                                 <td><?= $values['title'];?></td>
                                                 <td><?= $values['description'];?></td>
                                                 <td><?= $values['text'];?></td>

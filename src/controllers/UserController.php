@@ -26,24 +26,28 @@ class UserController {
 
     
     public function login(){
+       
         $data = $this->checkMail($this->email);
+        var_dump($data[0],'1');
         if(count($data) === 1){
-            if(password_verify($this->password, $data[0]['password'])){ // password_verify() permet de faire correspondre un mot de passe et mot de passe hashé.
+            var_dump($data[0],'2');
+            // password_verify() permet de faire correspondre un mot de passe et mot de passe hashé.
                 
                 // La variable prédéfinie $_SESSION permet de persister les données de page en page.
                 // Il ne faut surtout pas oublier session_start() en début de fichier. 
                 $_SESSION['user'] = [
                     'email' => $data[0]['email'],
                     'rank' => $data[0]['rank'],
-                ];
+                ];var_dump($data[0]);
                 if($data[0]['rank'] == "admin"){
-                    header('Location: b_blog_administration.php');
+                    
+                    header('Location: b_tables.php');
                 }
                 
             
             }
         }
-    }
+    
 
     
     public function inscription(){
@@ -90,9 +94,9 @@ class UserController {
         
         if(strlen($password) > 4){
             
-            if(isset($this->email)){
+            /*if(isset($this->email)){
                 $password = password_hash($password, PASSWORD_BCRYPT); // password_hash permet de hasher un mot de passe. 
-            }
+            }*/
             return $this->password = $password;
         }
     }
