@@ -93,8 +93,8 @@
             <br>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12 mx-auto ">
-                        <figure class="p-3 rounded">
+                    <div class="col-lg-12 mx-auto">
+                        <figure class="figurel p-3 rounded">
                             <blockquote  class="blockquote mb-4"><p><i class="fas fa-quote-left fa-lg  me-2"></i>La révolution de la <strong>pensée</strong> est la seule à laquelle nous devons nous préparer. <i class="fas fa-quote-right fa-lg  me-2"></i></p></blockquote>
                         </figure>
                     </div>

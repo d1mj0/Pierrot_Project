@@ -50,10 +50,10 @@
                                                 <td><?= $values['id_article']; ?></td>
                                                 <td><img width="100" height="100" src="<?= $values['img']; ?>" alt=""></td>
                                                 <td><a href="article.php?id_article=<?= $values['id_article']; ?>"><?= $values['title']; ?></a></td>
-                                                <td><?= $values['description'];?></td>
-                                                <td><?= $values['text'];?></td>
+                                                <td><?= (strlen($values['description']) > 40) ? substr($values['description'], 0, 40)."..." : ($values['description'])?></td>
+                                                <td><?= (strlen($values['text']) > 40) ? substr($values['text'], 0, 40)."..." : ($values['text']) ;?></td>
                                                 <td><?= $values['date_time_publi']; ?></td>
-                                                <td><i class="fas fa-edit"><?= $articleU; ?></i>  <i class="fas fa-trash-alt"><?= $articleD; ?></i></td>
+                                                <td><a href="#"><i class="fas fa-edit"><?= $articleU; ?></i></a>  <a href="#"><i class="fas fa-trash-alt"><?= $articleD; ?></i></a></td>
                                             </tr>
                                         <?php endforeach; ?>
                                     </tbody>
