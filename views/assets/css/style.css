@@ -111,9 +111,15 @@ nav ul{
     
 }
 
-figure{
+.figurel{
     border-left: .60rem solid #7a2b2b;
 }
+
+figure{
+    border-bottom: .60rem solid #7a2b2b;
+}
+
+
 
 .blockquote p{
     font-size: xxx-large;
