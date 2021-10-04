@@ -67,9 +67,9 @@
             <br>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-12 mx-auto">
                     <figure class="figureb p-3 rounded">
-                        <blockquote  class="blockquote mb-4 text-center"><p>Tel est l’axiome de l’<strong>Éversion</strong> :<br> celui de la complémentarité des <br><strong>inverses</strong>.</p></blockquote>
+                        <blockquote  class="blockquote mx-0 mb-0 text-center"><p>Tel est l’axiome de l’<strong id="eversion">Éversion</strong> :<br> celui de la complémentarité des <br><strong>inverses</strong>.</p></blockquote>
                     </figure>
                     </div>
                 </div>

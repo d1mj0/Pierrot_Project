@@ -111,11 +111,16 @@ nav ul{
     
 }
 
+#eversion {
+    background-color: #7a2b2b;
+    color: #7a2b2b;   
+}
+
 .figurel{
     border-left: .60rem solid #7a2b2b;
 }
 
-figure{
+.figureb{
     border-bottom: .60rem solid #7a2b2b;
 }
 
