@@ -22,21 +22,21 @@
       <section class="text-center">
         <h4 class="mb-5"><strong>Derniers articles</strong></h4>
           <div class="album py-5">
-            <div class="container">
-              <div class="row">
+            <div class="container-fluid">
+              <div class="row ">
                   <?php foreach($articles as $values): ?>
-                    <div class="col-lg-4 col-md-12 mb-4">
-                      <div class="card shadow-lg">
-                        <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                    <div class="col-lg-4 col-md-12">
+                      <div class="card m-4">
+                        <div class="bg-image"><!-check image ripple-!>
                           <img class="img-fluid" src="<?= $values['img']; ?>" alt="">
-                          <a href="#!">
-                          <div class="mask" style="background-color: rgba(#5c5c5c);"></div>
+                          <a href="article.php?id=<?= $values['id_article']; ?>">
+                            <div class="mask" style="background-color: rgba(#5c5c5c);"></div>
                           </a>
                         </div>
                         <div class="card-body">
                           <h5 class="card-title"><?= $values['title']; ?></h5>
-                          <p class="card-text"><?= $values['description']; ?></p>
-                          <a href="article.php?id=<?= $values['id_article']; ?>" class="btn ">Lire</a>
+                          <p class="card-text"><?= (strlen($values['description']) > 60) ? substr($values['description'], 0, 60)."..." : ($values['description']) ;?></p>
+                          <a href="article.php?id=<?= $values['id_article']; ?>" class="btn ripple ">Lire</a>
                         </div>
                       </div>
                     </div>
@@ -44,7 +44,7 @@
               </div>
             </div>
           </div>
-      <section>
+      </section>
 
       <!-- Pagination -->
       <nav class="my-4" aria-label="...">
@@ -62,9 +62,9 @@
           </li>
         </ul>
       </nav>
-    
+
 </main>
-    
+
   <?php
     //Appel template footer
     require_once("./templates/footer.php");
