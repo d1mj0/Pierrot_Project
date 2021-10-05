@@ -21,16 +21,16 @@
         }
         public function addEmail(){
             $newsletterModel = new NewsletterModel();
-            return $newsletterModel->add($name, $lastname, $email);
+            return $newsletterModel->add($this->$name, $this->$lastname, $this->$email);
         }
         
         public function deleteEmail(){
             $newsletterModel = new NewsletterModel();
-            return $newsletterModel->delete($email);
+            return $newsletterModel->delete($this->$email);
         }
         public function updateEmail(){
             $newsletterModel = new NewsletterModel();
-            return $newsletterModel->update($name, $lastname, $email);
+            return $newsletterModel->update($this->$name, $this->$lastname, $this->$email);
         }
 
 
