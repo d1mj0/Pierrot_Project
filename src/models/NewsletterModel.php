@@ -7,7 +7,7 @@
             $database = new Database();
             $this->connexion = $database->getPDO();
         }
-        public function add($name, $lastname, $email){
+        public function create($name, $lastname, $email){
             $request = $this->connexion->prepare('INSERT INTO newsletter (name, lastname, email) VALUES (:name, :lastname, :email)');
             $request->execute([
                 ':name'=>$name,

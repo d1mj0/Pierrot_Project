@@ -15,45 +15,44 @@
             $this->setLastName($lastname);
             $this->setEmail($email);
         }
+        public function addEmail(){
+            $newsletterModel = new NewsletterModel();
+            return $newsletterModel->create($this->name, $this->lastname, $this->email);
+        }
         public function listEmails(){
             $newsletterModel = new NewsletterModel();
             return $newsletterModel->getAll();
-        }
-        public function addEmail(){
-            $newsletterModel = new NewsletterModel();
-            return $newsletterModel->add($this->$name, $this->$lastname, $this->$email);
-        }
-        
+        }        
         public function deleteEmail(){
             $newsletterModel = new NewsletterModel();
-            return $newsletterModel->delete($this->$email);
+            return $newsletterModel->delete($this->email);
         }
         public function updateEmail(){
             $newsletterModel = new NewsletterModel();
-            return $newsletterModel->update($this->$name, $this->$lastname, $this->$email);
+            return $newsletterModel->update($this->name, $this->lastname, $this->email);
         }
 
 
 
         //setters
         public function setName($name){
-            return $this->$name = $name;
+            return $this->name = $name;
         }
         public function setLastName($lastname){
-            return $this->$lastname = $lastname;
+            return $this->lastname = $lastname;
         }
         public function setEmail($email){
-            return $this->$email = $email;
+            return $this->email = $email;
         }
         //getters
         public function getName(){
-            return $this->$name;
+            return $this->name;
         }
         public function getLastName(){
-            return $this->$lastname;
+            return $this->lastname;
         }
         public function getEmail(){
-            return $this->$email;
+            return $this->email;
         }
     }
 ?>
