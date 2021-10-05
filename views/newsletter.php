@@ -5,54 +5,11 @@
     require_once('./templates/header.php');
 
     require_once("../src/controllers/NewsletterController.php");
-    //Validation du formulaire côté serveur
-/*
-    $email = $lastname = $name = "";
-    $emailErr = $lastnameErr = $nameErr = "";
 
-    if($_SERVER["REQUEST_METHOD"] == "POST"){
-        if(empty($email)){
-            $emailErr = "Veuillez renseigner ce champ.";
-        }
-        else{
-            $email = clean_input($_POST["email"]);
-            if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-                $emailErr = "Veuillez vérifier ce champ.";
-            }
-        }
-        if(empty($lastname)){
-            $lastnameErr = "Veuillez renseigner ce champ.";
-        }
-        else{
-            $lastname = clean_input($_POST["lastname"]);
-            if(!preg_match("/^[a-zA-Z-' ]*$/", $lastname)){
-                $lastnameErr = "Veuillez vérifier ce champ.";
-            }
-        }
-        if(empty($name)){
-            $nameErr = "Veuillez renseigner ce champ.";
-        }
-        else{
-            $name = clean_input($_POST["name"]);
-            if(!preg_match("/^[a-zA-Z-' ]*$/", $name)){
-                $nameErr = "Veuillez vérifier ce champ.";
-            }
-        }
+    if(!empty($_POST['name']) && !empty($_POST['lastname']) && !empty($_POST['email'])){
+        $newsletterController = new NewsletterController($_POST['name'], $_POST['lastname'], $_POST['email']);
+        $newsletterController->addEmail();
     }
-
-    function clean_input($data){
-        $data = trim($data);
-        $data = stripcslashes($data);
-        $data = htmlspecialchars($data);
-        return $data;
-    }
-*/
-    $name = $_POST['name'];
-    $lastname = $_POST['lastname'];
-    $email = $_POST['email'];
-
-    $newsletterController = new NewsletterController($name, $lastname, $email);
-    $newsletterController->addEmail();
 
     var_dump($newsletterController);
 ?>
