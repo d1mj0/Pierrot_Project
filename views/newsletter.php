@@ -5,16 +5,7 @@
     require_once('./templates/header.php');
 
     require_once("../src/controllers/NewsletterController.php");
-    //Validation du formulaire côté serveur
 
-    
-if(!empty($_POST['name']) && !empty($_POST['lastname']) && !empty($_POST['email'])){
-    $newsP = new NewsletterController($_POST['name'], $_POST['lastname'], $_POST['email']);
-    $newsP->addEmail();
-}
-    
-
-var_dump($newsP);
 ?>
 
 <main>
