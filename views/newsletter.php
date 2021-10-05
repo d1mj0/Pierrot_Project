@@ -6,55 +6,15 @@
 
     require_once("../src/controllers/NewsletterController.php");
     //Validation du formulaire côté serveur
-/*
-    $email = $lastname = $name = "";
-    $emailErr = $lastnameErr = $nameErr = "";
 
-    if($_SERVER["REQUEST_METHOD"] == "POST"){
-        if(empty($email)){
-            $emailErr = "Veuillez renseigner ce champ.";
-        }
-        else{
-            $email = clean_input($_POST["email"]);
-            if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-                $emailErr = "Veuillez vérifier ce champ.";
-            }
-        }
-        if(empty($lastname)){
-            $lastnameErr = "Veuillez renseigner ce champ.";
-        }
-        else{
-            $lastname = clean_input($_POST["lastname"]);
-            if(!preg_match("/^[a-zA-Z-' ]*$/", $lastname)){
-                $lastnameErr = "Veuillez vérifier ce champ.";
-            }
-        }
-        if(empty($name)){
-            $nameErr = "Veuillez renseigner ce champ.";
-        }
-        else{
-            $name = clean_input($_POST["name"]);
-            if(!preg_match("/^[a-zA-Z-' ]*$/", $name)){
-                $nameErr = "Veuillez vérifier ce champ.";
-            }
-        }
-    }
+    
+if(!empty($_POST['name']) && !empty($_POST['lastname']) && !empty($_POST['email'])){
+    $newsP = new NewsletterController($_POST['name'], $_POST['lastname'], $_POST['email']);
+    $newsP->addEmail();
+}
+    
 
-    function clean_input($data){
-        $data = trim($data);
-        $data = stripcslashes($data);
-        $data = htmlspecialchars($data);
-        return $data;
-    }
-*/
-    $name = $_POST['name'];
-    $lastname = $_POST['lastname'];
-    $email = $_POST['email'];
-
-    $newsletterController = new NewsletterController($name, $lastname, $email);
-    $newsletterController->addEmail();
-
-    var_dump($newsletterController);
+var_dump($newsP);
 ?>
 
 <main>
@@ -70,15 +30,15 @@
                                             <form method="POST" enctype="multipart/form-data" action="newsletter.php">
                                                 <div class="form-floating mb-3">
                                                     <input class="form-control" id="email" type="email" placeholder="name@example.com" name="email" required value=""/>
-                                                    <label for="email">Email <span class="err"><?php echo $emailErr; ?></span></label>
+                                                    <label for="email">Email </label>
                                                 </div>
                                                 <div class="form-floating mb-3">
-                                                    <input class="form-control" id="lastname" type="text" placeholder="Nom" name="lastname" pattern="^[a-zA-Z-' ]*$" required value="<?php echo $lastname; ?>"/>
-                                                    <label for="lastname">Nom <span class="err"><?php echo $lastnameErr; ?></span></label>
+                                                    <input class="form-control" id="lastname" type="text" placeholder="Nom" name="lastname" pattern="^[a-zA-Z-' ]*$" required value=""/>
+                                                    <label for="lastname">Nom </span></label>
                                                 </div>
                                                 <div class="form-floating mb-3">
-                                                    <input class="form-control" id="name" type="text" placeholder="Prénom" pattern="^[a-zA-Z-' ]*$" name="name" required value="<?php echo $name; ?>"/>
-                                                    <label for="name">Prénom <span class="err"><?php echo $nameErr; ?></span></label>
+                                                    <input class="form-control" id="name" type="text" placeholder="Prénom" pattern="^[a-zA-Z-' ]*$" name="name" required value=""/>
+                                                    <label for="name">Prénom </label>
                                                 </div>
                                                 <div class="d-flex align-items-center justify-content-center mt-4 mb-0">
                                                     <input type="submit" class="btn" id="submit" value="Envoyer"/>

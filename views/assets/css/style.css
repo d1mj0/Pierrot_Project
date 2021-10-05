@@ -181,7 +181,7 @@ box-shadow:  -20px 20px 31px #8c8c8c,
 
 /*<---------------------------------------------Card--------------------------------------------->*/
 .card{
-  order-radius: 26px;
+  border-radius: 26px;
   background: #ffffff;
   box-shadow:  -35px 35px 70px #666666,
                0px 0px 70px #ffffff;

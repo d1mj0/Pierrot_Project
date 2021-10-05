@@ -2,19 +2,24 @@
     require_once("../src/config/Database.php");
 
     class NewsletterModel{
+        
         private $connection;
         public function __construct(){
             $database = new Database();
             $this->connexion = $database->getPDO();
         }
-        public function add($name, $lastname, $email){
+
+        public function create($name, $lastname, $email){
+
             $request = $this->connexion->prepare('INSERT INTO newsletter (name, lastname, email) VALUES (:name, :lastname, :email)');
+
             $request->execute([
                 ':name'=>$name,
                 ':lastname'=>$lastname,
                 ':email'=>$email,
             ]);
         }
+
         public function getAll(){
             $request = $this->connexion->prepare('SELECT * FROM newsletter');
             $request->execute();
