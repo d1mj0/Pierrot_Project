@@ -9,6 +9,8 @@
             $this->connexion = $database->getPDO();
         }
 
+        public function create($name, $lastname, $email){
+
             $request = $this->connexion->prepare('INSERT INTO newsletter (name, lastname, email) VALUES (:name, :lastname, :email)');
 
             $request->execute([

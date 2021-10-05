@@ -1,21 +1,11 @@
 <?php
 
-
-
-
     require_once('../src/models/ArticleModel.php');
-
-   /* if(isset($_GET['title']) && isset($_GET['description']) && isset($_GET['text']) && isset($_GET['img'])){
-    $article = new ArticleController($_GET['id']);
-    $articleR = $article->getOneById($_SESSION(['article']['id']));
-
-    }*/
-
 
     $articles = new ArticleModel;
     $articleR = $articles->getOne($_GET['id']);
 
-    /*$title = $articleR['title'];*/
+    $title = $articleR[0]['title'];
 
 var_dump($articleR);
 var_dump(($articleR[0]['title']), '1');
