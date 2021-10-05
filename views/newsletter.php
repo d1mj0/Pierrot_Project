@@ -6,12 +6,6 @@
 
     require_once("../src/controllers/NewsletterController.php");
 
-    if(!empty($_POST['name']) && !empty($_POST['lastname']) && !empty($_POST['email'])){
-        $newsletterController = new NewsletterController($_POST['name'], $_POST['lastname'], $_POST['email']);
-        $newsletterController->addEmail();
-    }
-
-    var_dump($newsletterController);
 ?>
 
 <main>
@@ -27,15 +21,15 @@
                                             <form method="POST" enctype="multipart/form-data" action="newsletter.php">
                                                 <div class="form-floating mb-3">
                                                     <input class="form-control" id="email" type="email" placeholder="name@example.com" name="email" required value=""/>
-                                                    <label for="email">Email <span class="err"><?php echo $emailErr; ?></span></label>
+                                                    <label for="email">Email </label>
                                                 </div>
                                                 <div class="form-floating mb-3">
-                                                    <input class="form-control" id="lastname" type="text" placeholder="Nom" name="lastname" pattern="^[a-zA-Z-' ]*$" required value="<?php echo $lastname; ?>"/>
-                                                    <label for="lastname">Nom <span class="err"><?php echo $lastnameErr; ?></span></label>
+                                                    <input class="form-control" id="lastname" type="text" placeholder="Nom" name="lastname" pattern="^[a-zA-Z-' ]*$" required value=""/>
+                                                    <label for="lastname">Nom </span></label>
                                                 </div>
                                                 <div class="form-floating mb-3">
-                                                    <input class="form-control" id="name" type="text" placeholder="Prénom" pattern="^[a-zA-Z-' ]*$" name="name" required value="<?php echo $name; ?>"/>
-                                                    <label for="name">Prénom <span class="err"><?php echo $nameErr; ?></span></label>
+                                                    <input class="form-control" id="name" type="text" placeholder="Prénom" pattern="^[a-zA-Z-' ]*$" name="name" required value=""/>
+                                                    <label for="name">Prénom </label>
                                                 </div>
                                                 <div class="d-flex align-items-center justify-content-center mt-4 mb-0">
                                                     <input type="submit" class="btn" id="submit" value="Envoyer"/>
