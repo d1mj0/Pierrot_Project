@@ -10,7 +10,7 @@
         <section>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="title col-12">
+                    <div class="title col-12 p-2">
                         <h2>Pensée Globale</h2>
                     </div>
                 </div>
