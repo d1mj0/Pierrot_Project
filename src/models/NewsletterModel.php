@@ -18,7 +18,7 @@
             ]);
         }
         public function getAll(){
-            $request = $this->connexion->prepare('SELECT * FROM newsletter');
+            $request = $this->connexion->prepare('SELECT * FROM newsletter ORDER BY name ');
             $request->execute();
             $result = $request->fetchAll(PDO::FETCH_ASSOC);
             return $result;

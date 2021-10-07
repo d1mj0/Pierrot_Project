@@ -32,7 +32,7 @@ class ArticleModel {
     public function getAll(){
         // Read
         // cette méthode va permettre de récupérer tous les utilisateurs en base de données. 
-        $request = $this->connexion->prepare('SELECT * FROM article ORDER BY date_time_publi');
+        $request = $this->connexion->prepare('SELECT * FROM article ORDER BY date_time_publi DESC');
 
         $request->execute();
 
