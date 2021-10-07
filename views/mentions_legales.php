@@ -18,7 +18,7 @@
         <section>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="title col-12">
+                    <div class="title col-12 p-2">
                         <h2>Mentions légales</h2>
                     </div>
                 </div>
@@ -117,7 +117,7 @@
                         </p>
                     </div>
                 </div>
-            </div>               
+            </div>
         </section>
         <br>
         <br>
@@ -127,4 +127,3 @@
 //Appel template footer
 require_once("./templates/footer.php");
 ?>
-

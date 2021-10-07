@@ -9,48 +9,66 @@
 
 ?>
 
-<main>
-    <br>
-    <br>
-    <section class="container-fluid" id="articles">
-            <div class="row">
-                <div class="titleI col-12">
-                    <a href="blog.php"><h2>Derniers articles</h2></a>
-                </div>
-            </div>
+  <main>
+      <br>
+      <br>
+        <div class="container-fluid " id="articles">
+          <div class="row">
+              <div class="titleI col-12 p-2">
+                  <a href="blog.php"><h2>Derniers articles</h2></a>
+              </div>
+          </div>
+        </div>
         <br>
-        <div id="carouselIndex" class="carousel slide" data-bs-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
-            </ol>
+        <div id="carouselIndex" class="carousel slide " data-ride="slide" data-interval='1000ms'>
+          <ol class="carousel-indicators">
+            <?php foreach($articles as $values): ?>
+              <li type="button" data-bs-target="#carouselIndex" data-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></li>
+            <?php endforeach; ?>
+          </ol>
             <div class="carousel-inner container-fluid">
                 <?php foreach($articles as $values): ?>
                     <div class="carousel-item active">
-                            <img class="d-block img-fluid" src="<?= $values['img'];?>" alt="Second slide">
+                      <div class="container-fluid">
+                            <img class="d-block img-fluid" src="<?= $values['img'];?>" alt="First Slide">
                         <div class="carousel-caption d-none d-md-block">
                             <h5><?= $values['title'];?></h5>
                             <p><?= $values['description'];?></p>
+                            <br>
+                            <a href="article.php?id=<?= $values['id_article']; ?>" class="button btn-lg btn-primary">Lire l'article</a>
                         </div>
                     </div>
+                  </div>
                 <?php endforeach; ?>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Précédent</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Suivant</span>
-            </a>
+            <div class="carousel-item">
+              <?php foreach($articles as $values): ?>
+                  <div class="container-fluid">
+                          <img class="d-block img-fluid" src="<?= $values['img'];?>" alt="Second slide">
+                      <div class="carousel-caption d-none d-md-block">
+                          <h5><?= $values['title'];?></h5>
+                          <p><?= $values['description'];?></p>
+                      </div>
+                  </div>
+              <?php endforeach; ?>
+            </div>
+        <div>
+            <button class="carousel-control-prev" type="button" data-target="#carouselIndex" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselIndex" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
         </div>
+      </div>
     </section>
     <br>
     <br>
     <section class="container-fluid" id="pensee_globale">
             <div class="row">
-                <div class="titleI col-12">
+                <div class="titleI col-12 p-2">
                     <a href="pensee_globale.php"><h2>Pensée globale</h2></a>
                 </div>
             </div>
@@ -107,7 +125,7 @@
     <br>
     <section id="travaux_publications" class="container-fluid">
         <div class="row">
-            <div class="titleI col-12">
+            <div class="titleI col-12 p-2">
                 <a href="travaux_et_publications.php"><h2>Travaux et publications</h2></a>
             </div>
         </div>

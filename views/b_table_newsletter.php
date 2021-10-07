@@ -2,9 +2,12 @@
     ini_set("display_errors", 1);   // Delete after
     error_reporting(E_ALL);         // Delete after
 
+
+
     $title = "Tableau newsletter";
     require_once('../views/templates/b_header.php');
     
+
     require_once("../src/controllers/NewsletterController.php");
 
     $newsletter = new NewsletterController(NULL, NULL, NULL);
@@ -15,10 +18,10 @@
 
 <main>
     <div class="container-fluid px-4">
-        <h1 class="mt-4">Tables</h1>
+        <h1 class="mt-4">Tableau Newsletter</h1>
         <ol class="breadcrumb mb-4">
-            <li class="breadcrumb-item"><a href="tables.php">Admin</a></li>
-            <li class="breadcrumb-item active">Tables</li>
+            <li class="breadcrumb-item"><a href="tables.php">Administration</a></li>
+            <li class="breadcrumb-item active">Tableau Newsletter</li>
         </ol>
 
         <div class="card mb-4">

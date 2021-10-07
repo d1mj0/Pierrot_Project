@@ -5,10 +5,12 @@
 
     require_once("../src/controllers/NewsletterController.php");
 
+
     if(!empty($_POST['name']) && !empty($_POST['lastname']) && !empty($_POST['email'])){
         $newsletter = new NewsletterController($_POST['name'], $_POST['lastname'], $_POST['email']);
         $newsletter->addEmail();
     }
+
 ?>
 
 <main>

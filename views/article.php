@@ -7,18 +7,26 @@
 
     $title = $articleR[0]['title'];
 
-var_dump($articleR);
-var_dump(($articleR[0]['title']), '1');
-
     require_once("./templates/header.php");
 
     ?>
 
     <main>
         <section>
+          <br>
+          <br>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-12 text-center">
+                        <h1 class="titleA"><?=$articleR[0]['title']; ?></h1>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6  mx-auto">
                         <img src="<?=$articleR[0]['img']; ?>" class="img-fluid " alt="">
                     </div>
                 </div>
@@ -27,8 +35,8 @@ var_dump(($articleR[0]['title']), '1');
             <br>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-12 text-center titleA">
-                        <h3><?=$articleR[0]['title']; ?></h3>
+                    <div class="col-lg-6 mx-auto">
+                        <h3><?=$articleR[0]['description']; ?></h3>
                     </div>
                 </div>
             </div>
@@ -36,7 +44,7 @@ var_dump(($articleR[0]['title']), '1');
             <br>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-8 mx-auto text" >
+                    <div class="col-lg-6 mx-auto text" >
                         <?=$articleR[0]['text']; ?>
                     </div>
                 </div>
