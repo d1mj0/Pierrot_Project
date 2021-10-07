@@ -2,13 +2,11 @@
     require_once("../src/config/Database.php");
 
     class NewsletterModel{
-        
         private $connection;
         public function __construct(){
             $database = new Database();
             $this->connexion = $database->getPDO();
         }
-
         public function create($name, $lastname, $email){
 
             $request = $this->connexion->prepare('INSERT INTO newsletter (name, lastname, email) VALUES (:name, :lastname, :email)');
@@ -19,7 +17,6 @@
                 ':email'=>$email,
             ]);
         }
-
         public function getAll(){
             $request = $this->connexion->prepare('SELECT * FROM newsletter');
             $request->execute();
@@ -35,19 +32,19 @@
             return $result;
         }
         public function update($name, $lastname, $email){
-            $request = $this->connection->prepare('UPDATE newsletter SET email = :email WHERE name = :name AND lastname = :lastname');
+            $request = $this->connexion->prepare('UPDATE newsletter SET email = :email WHERE name = :name AND lastname = :lastname');
             $request->execute([
                 ':email'=>$email,
                 ':name'=>$name,
                 ':lastname'=>$lastname,
             ]);
         }
-        public function delete($email){
-            $request = $this->connection->prepare('DELETE FROM newsletter WHERE email = :email');
-            $request->execute([
-                ':email'=>$email,
-            ]);
-            
+        public function delete($id){
+            $request = $this->connexion->prepare('DELETE FROM newsletter WHERE id_request = :id');
+            $request->execute([':id'=>$id]);
+
+            $result = $request->fetchAll(PDO::FETCH_ASSOC);
+            return $result;
         }
     }
 ?>

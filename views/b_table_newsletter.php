@@ -1,14 +1,17 @@
 <?php
+    ini_set("display_errors", 1);   // Delete after
+    error_reporting(E_ALL);         // Delete after
 
+     
     require_once("../src/controllers/NewsletterController.php");
 
-    $newsletterSelect = new NewsletterController(NULL, NULL, NULL, NULL);
-    $newsletterS = $newsletterSelect->listNewsletter();
+    $newsletter = new NewsletterController(NULL, NULL, NULL);
+    $newsSelect = $newsletter->listEmails();
+    $newsUpdate = $newsletter->updateEmail();
+    $newsDelete = $newsletter->deleteEmail();
 
     $title = "tables_Newsletter";
-
     require_once('../views/templates/b_header.php');
-
 ?>
 
 <main>
@@ -22,31 +25,27 @@
         <div class="card mb-4">
             <div class="card-header">
                 <i class="fas fa-table me-1"></i>
-                Articles
+                Tableau Newsletter
             </div>
             <div class="card-body">
-                <table id="datatablesSimple">
+                <table id="datatablesSimple" class="container-fluid">
                     <thead>
                         <tr>
-                            <th>Id Article</th>
-                            <th>Titre</th>
-                            <th>Description</th>
-                            <th>Texte</th>
-                            <th>Illustration</th>
-                            <th>date de publication</th>
+                            <th>ID</th>
+                            <th>Prénom</th>
+                            <th>Nom</th>
+                            <th>Email</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach($articles as $values): ?>
+                        <?php foreach($newsSelect as $values): ?>
                             <tr>
-                                <td><?= $values['id_article']; ?></td>
-                                <td><img src="<?= $values['img']; ?>" alt=""></td>
-                                <td><?= $values['title'];?></td>
-                                <td><?= $values['description'];?></td>
-                                <td><?= $values['text'];?></td>
-                                <td><?= $values['date_time_publi']; ?></td>
-                                <td>Action</td>
+                                <td><?= $values['id_request']; ?></td>
+                                <td><?= $values['name']; ?></td>
+                                <td><?= $values['lastname'];?></td>
+                                <td><?= $values['email'];?></td>
+                                <td><a href="#"><i class="fas fa-edit"><?= $newsUpdate; ?></i></a>  <a href="#"><i class="fas fa-trash-alt"><?= $newsDelete; ?></i></a></td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>
@@ -57,7 +56,5 @@
 </main>
 
 <?php
-
-require_once('../views/templates/b_footer.php');
-
+    require_once('../views/templates/b_footer.php');
 ?>
