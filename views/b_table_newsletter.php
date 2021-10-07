@@ -3,15 +3,17 @@
     error_reporting(E_ALL);         // Delete after
 
 
+
+    $title = "Tableau newsletter";
+    require_once('../views/templates/b_header.php');
+    
+
     require_once("../src/controllers/NewsletterController.php");
 
     $newsletter = new NewsletterController(NULL, NULL, NULL);
     $newsSelect = $newsletter->listEmails();
     $newsUpdate = $newsletter->updateEmail();
     $newsDelete = $newsletter->deleteEmail();
-
-    $title = "tables_Newsletter";
-    require_once('../views/templates/b_header.php');
 ?>
 
 <main>

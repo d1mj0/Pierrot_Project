@@ -13,6 +13,14 @@
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/dt-1.11.3/datatables.min.css"/>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
 
+
+
+        <title>
+            <?php
+                echo "$title";
+            ?>
+        </title>
+
     </head>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
@@ -47,7 +55,7 @@
                                 </a>
                                 <a class="nav-link" href="b_table_newsletter.php">
                                     <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                    Tableau Newsletter
+                                    Tableau newsletter
                                 </a>
                             <div class="sb-sidenav-menu-heading">Interface</div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
