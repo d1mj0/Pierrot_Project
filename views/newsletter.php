@@ -1,11 +1,14 @@
 <?php
-    //Variable avec le titre de la page
     $title = "Newsletter";
-    //Appel template header
+
     require_once('./templates/header.php');
 
     require_once("../src/controllers/NewsletterController.php");
 
+    if(!empty($_POST['name']) && !empty($_POST['lastname']) && !empty($_POST['email'])){
+        $newsletter = new NewsletterController($_POST['name'], $_POST['lastname'], $_POST['email']);
+        $newsletter->addEmail();
+    }
 ?>
 
 <main>
@@ -49,6 +52,5 @@
 </main>
 
 <?php
-    //Appel template footer
     require_once("./templates/footer.php");
 ?>

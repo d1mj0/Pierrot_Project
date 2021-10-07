@@ -15,10 +15,9 @@
     <link rel="stylesheet" href="../views/assets/css/style.css">
 
     <title>
-<?php
-    //Affiche le titre de la page
-    print_r($title);
-?>
+        <?php
+            echo "$title";
+        ?>
     </title>
 </head>
 
