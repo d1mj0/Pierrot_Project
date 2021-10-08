@@ -82,7 +82,9 @@ main h3{
 
 .titleI a:hover{
     color: #7a2b2b;
-    text-decoration: none;
+    
+    
+
 }
 
 .titleA h3{
@@ -91,13 +93,13 @@ main h3{
 
 main a{
 
-    text-decoration: none;
+    
     color: black;
 }
 
 main a:hover{
     color: #7a2b2b;
-    text-decoration: none;
+    
 }
 
 
@@ -113,18 +115,24 @@ main a:hover{
     position: relative;
 
 }
-.parent-img-responsive{
-    width:100%;
-    height:auto;
-}
 
 
-.nav-container{
-    padding: 6px;
-    z-index: 1;
+nav .container-fluid{
     background-color: #5a5a5a;
 }
 
+
+.navbar-toggler {
+  margin-top: .25rem;
+  margin-left: .25rem;
+  margin-bottom: .25rem;
+}
+
+.navbar-toggler-icon {
+  
+  border: 1px solid #662222 ;
+  border-radius: 0.25rems;
+}
 
 nav ul{
     justify-content: space-evenly;
@@ -141,7 +149,7 @@ nav ul{
 
 .nav-item a:hover{
     color: #7a2b2b;
-    text-decoration: none;
+    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FFF 0px 0px 20px;
 
 }
 
