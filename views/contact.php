@@ -39,7 +39,7 @@
                                                         <input id="6_letters_code" name="6_letters_code" type="text">
                                                     </div> 
                                                     <div class="d-flex align-items-center justify-content-center mt-4 mb-0">
-                                                        <a class="btn" type="submit" value="Submit" name="submit" href="">Envoyer</a>
+                                                        <a class="btn" type="submit" value="Submit" name="submit" href="mailto:maxeuhma@gmail.com">Envoyer</a>
                                                     </div>
                                                 </form>
                                             </div>
