@@ -63,7 +63,7 @@ h6, .h6 {
   font-size: 1rem;
 }
 
-main h3{
+h3{
     font-weight: bolder;
 }
 
@@ -82,7 +82,9 @@ main h3{
 
 .titleI a:hover{
     color: #7a2b2b;
-    text-decoration: none;
+    
+    
+
 }
 
 .titleA h3{
@@ -91,13 +93,13 @@ main h3{
 
 main a{
 
-    text-decoration: none;
+    
     color: black;
 }
 
 main a:hover{
     color: #7a2b2b;
-    text-decoration: none;
+    
 }
 
 
@@ -106,25 +108,55 @@ main a:hover{
     font-style: italic;
 }
 
+.btn-primary{
+  margin-top: 1rem;
+  background-color: rgba(255, 255, 255, 0);
+  font-weight: bold;
+  border-color: #7a2b2b;
+}
 
+.btn-primary:hover {
+  color: #fff;
+  background-color: #7a2b2b;
+  border-color: #7a2b2b;
+}
+
+p{
+  font-size: large;
+}
+
+#pensee_globale .text{
+  margin: 2rem 2rem;
+}
 
 /*<---------------------------------------------Header--------------------------------------------->*/
 .parent-img{
     position: relative;
 
 }
-.parent-img-responsive{
-    width:100%;
-    height:auto;
-}
 
 
-.nav-container{
-    padding: 6px;
-    z-index: 1;
+nav .container-fluid{
     background-color: #5a5a5a;
 }
 
+
+.navbar-nav{
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.navbar-toggler {
+  margin-top: .25rem;
+  margin-left: .25rem;
+  margin-bottom: .25rem;
+}
+
+.navbar-toggler-icon {
+  
+  border: 1px solid #662222 ;
+  
+}
 
 nav ul{
     justify-content: space-evenly;
@@ -134,14 +166,14 @@ nav ul{
 .nav-item a{
     color: #662222;
     text-decoration: none;
-    font-size:18px;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
 
 .nav-item a:hover{
     color: #7a2b2b;
-    text-decoration: none;
+    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FFF 0px 0px 20px;
 
 }
 
@@ -165,6 +197,96 @@ nav ul{
   }
 
 }
+
+
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+.hamburger {
+padding: 15px 15px;
+display: inline-block;
+cursor: pointer;
+transition-property: opacity, filter;
+transition-duration: 0.15s;
+transition-timing-function: linear;
+font: inherit;
+color: inherit;
+text-transform: none;
+background-color: transparent;
+border: 0;
+margin: 0;
+overflow: visible; }
+
+.hamburger:hover {
+opacity: 0.7; }
+
+.hamburger.is-active:hover {
+opacity: 0.7; }
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+background-color: #000; }
+
+.hamburger-box {
+width: 40px;
+height: 24px;
+display: inline-block;
+position: relative; }
+
+.hamburger-inner {
+display: block;
+top: 50%;
+margin-top: -2px; }
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+width: 40px;
+height: 4px;
+background-color: #000;
+border-radius: 4px;
+position: absolute;
+transition-property: transform;
+transition-duration: 0.15s;
+transition-timing-function: ease; }
+
+.hamburger-inner::before, .hamburger-inner::after {
+content: "";
+display: block; }
+
+.hamburger-inner::before {
+top: -10px; }
+
+.hamburger-inner::after {
+bottom: -10px; }
+
+.hamburger--slider-r .hamburger-inner {
+top: 2px; }
+
+.hamburger--slider-r .hamburger-inner::before {
+top: 10px;
+transition-property: transform, opacity;
+transition-timing-function: ease;
+transition-duration: 0.15s; }
+
+.hamburger--slider-r .hamburger-inner::after {
+top: 20px; }
+    
+.hamburger--slider-r.is-active .hamburger-inner {
+      transform: translate3d(0, 10px, 0) rotate(-45deg); }
+
+.hamburger--slider-r.is-active .hamburger-inner::before {
+        transform: rotate(45deg) translate3d(5.71429px, -6px, 0);
+        opacity: 0; }
+
+.hamburger--slider-r.is-active .hamburger-inner::after {
+        transform: translate3d(0, -20px, 0) rotate(90deg); }
+
+
+
 /*<---------------------------------------------Carrousel--------------------------------------------->*/
 
 .carrousel-item{
@@ -228,6 +350,8 @@ box-shadow:  -20px 20px 31px #8c8c8c,
     max-height: 40%;
     width: auto;
 }
+
+
 
 /*<---------------------------------------------Card--------------------------------------------->*/
 .card{

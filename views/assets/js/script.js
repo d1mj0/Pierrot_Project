@@ -42,3 +42,13 @@ function resetField(f){
         span[0].parentNode.removeChild(span[0]);
     }
 }
+
+
+
+  var hamburger = document.querySelector(".hamburger");
+
+  hamburger.addEventListener("click", function() {
+   
+    hamburger.classList.toggle("is-active");
+    
+  });

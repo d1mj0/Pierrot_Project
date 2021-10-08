@@ -36,7 +36,7 @@
                         <div class="card-body">
                           <h5 class="card-title"><?= $values['title']; ?></h5>
                           <p class="card-text"><?= (strlen($values['description']) > 60) ? substr($values['description'], 0, 60)."..." : ($values['description']) ;?></p>
-                          <a href="article.php?id=<?= $values['id_article']; ?>" class="btn ripple ">Lire</a>
+                          <a href="article.php?id=<?= $values['id_article']; ?>" class="btn btn-primary ripple px-4" role="button">Lire</a>
                         </div>
                       </div>
                     </div>
