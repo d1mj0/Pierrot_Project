@@ -81,7 +81,7 @@
             <br>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-4 mx-auto">
+                    <div class="col-lg-4">
                         <p class="text">La réflexion qui va suivre n’a comme unique et autre but que d’offrir un paradigme à
                             la <strong>pensée anarchiste</strong>. Elle part de la certitude qu’elle est la seule pensée en mesure de proposer
                              à <strong>l’Humanité</strong> un avenir moins inique que celui imposé par le libéralisme triomphant de ce XXième
@@ -100,7 +100,7 @@
                           <img src="../views/assets/img/Eversion_370px.svg" class="" alt="Représentation graphique de l'éversion">
                         </div>
                     </div>
-                    <div class="col-lg-4 mx-auto">
+                    <div class="col-lg-4">
                         <p class="text">Je ne pourrais dire si c’est sa frénétique fréquentation de sociétés hors temps, sinon
                              hors d’âge qui permet ainsi à la discipline d’accéder à une <strong>réalité</strong> d’un autre ordre. En revanche,
                              je tiens pour intuition que cette <strong>porosité</strong> nous préserve d’une réelle théocratisation de l’esprit,

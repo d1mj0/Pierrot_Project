@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="../views/assets/css/reset.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-
     <link rel="stylesheet" href="../views/assets/css/style.css">
+    <script src="../views/assets/js/script.js"></script>
    
     <title>
         <?php
@@ -30,7 +30,7 @@
         <nav class="navbar navbar-expand-lg pt-0">
             <div class="container-fluid">
                     <a class="navbar-brand m-0 p-0" href="#"><img src="../views/assets/img/design_header.jpg"  class="img-fluid mx-auto pt-0 d-block d-md-none d-lg-none navbar-img" /></a>
-                <button class="navbar-toggler hamburger hamburger--slider-r  d-block d-md-none d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerContent" aria-controls="navbarTogglerContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler hamburger hamburger--slider-r is-active d-block d-md-none d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerContent" aria-controls="navbarTogglerContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="hamburger-box">
                     <span class="hamburger-inner"></span>
                     </span>
