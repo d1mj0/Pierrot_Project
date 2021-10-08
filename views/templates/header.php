@@ -13,7 +13,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="../views/assets/css/style.css">
-
+   
     <title>
         <?php
             echo "$title";
@@ -30,10 +30,12 @@
         <nav class="navbar navbar-expand-lg pt-0">
             <div class="container-fluid">
                     <a class="navbar-brand m-0 p-0" href="#"><img src="../views/assets/img/design_header.jpg"  class="img-fluid mx-auto pt-0 d-block d-md-none d-lg-none navbar-img" /></a>
-                <button class="navbar-toggler d-block d-md-none d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerContent" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                <button class="navbar-toggler hamburger hamburger--slider-r  d-block d-md-none d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerContent" aria-controls="navbarTogglerContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                    </span>
                 </button>
-                
+
                 <div class="collapse navbar-collapse" id="navbarTogglerContent">
                     <ul class="navbar-nav container-fluid  mb-2 mb-lg-0">
                         <li class="nav-item">
@@ -52,10 +54,6 @@
                             <a class="nav-link-menu col-lg-4" href="a_propos.php">&#xC0; propos</a>
                         </li>
                     </ul>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
                 </div>
             </div>
         </nav>
