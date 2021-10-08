@@ -9,7 +9,8 @@
 
 ?>
 
-  <main>
+<main>
+    <section>
       <br>
       <br>
         <div class="container-fluid " id="articles">
@@ -20,48 +21,53 @@
           </div>
         </div>
         <br>
+        <br>
         <div id="carouselIndex" class="carousel slide " data-ride="slide" data-interval='1000ms'>
-          <ol class="carousel-indicators">
-            <?php foreach($articles as $values): ?>
-              <li type="button" data-bs-target="#carouselIndex" data-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></li>
-            <?php endforeach; ?>
-          </ol>
+            <ol class="carousel-indicators">
+
+            <?= 
+            $i = 0; 
+            foreach($articles as $values){$actives = '';
+            if($i == 0){
+            $actives ='active'; 
+            }  
+            ?>
+
+                <li type="button" data-target="#carouselIndex" data-slide-to="<?= $i; ?>" class="<?= $actives;?>" aria-current="true"></li>
+            <?= $i++ ; }?>
+            </ol>
+
             <div class="carousel-inner container-fluid">
-                <?php foreach($articles as $values): ?>
-                    <div class="carousel-item active">
-                      <div class="container-fluid">
-                            <img class="d-block img-fluid" src="<?= $values['img'];?>" alt="First Slide">
+
+                <?= 
+                $i = 0; 
+                foreach($articles as $values){$actives = '';
+                if($i == 0){
+                $actives ='active';
+                } 
+                ?>
+
+                    <div class="carousel-item <?= $actives;?>">
+                        <img class="d-block img-fluid" src="<?= $values['img'];?>" alt="<?= $values['title'];?>">
                         <div class="carousel-caption d-none d-md-block">
                             <h5><?= $values['title'];?></h5>
                             <p><?= $values['description'];?></p>
                             <br>
                             <a href="article.php?id=<?= $values['id_article']; ?>" class="button btn-lg btn-primary">Lire l'article</a>
                         </div>
-                    </div>
                   </div>
-                <?php endforeach; ?>
+                <?= $i++; }?>
             </div>
-            <div class="carousel-item">
-              <?php foreach($articles as $values): ?>
-                  <div class="container-fluid">
-                          <img class="d-block img-fluid" src="<?= $values['img'];?>" alt="Second slide">
-                      <div class="carousel-caption d-none d-md-block">
-                          <h5><?= $values['title'];?></h5>
-                          <p><?= $values['description'];?></p>
-                      </div>
-                  </div>
-              <?php endforeach; ?>
+            <div>
+                <button class="carousel-control-prev" type="button" data-target="#carouselIndex" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-target="#carouselIndex" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-        <div>
-            <button class="carousel-control-prev" type="button" data-target="#carouselIndex" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselIndex" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-        </div>
       </div>
     </section>
     <br>
@@ -179,7 +185,6 @@
     <br>
     <br>
 </main>
-
 
 <?php
     //Appel template footer

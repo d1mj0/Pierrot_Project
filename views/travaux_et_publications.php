@@ -10,7 +10,7 @@
         <br>
         <div class="container-fluid">
             <div class="row">
-                <div class="title col-12">
+                <div class="title col-12 p-2">
                     <h2 >Travaux et Publications</h2>
                 </div>
             </div>

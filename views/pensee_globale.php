@@ -3,7 +3,6 @@
     require_once('./templates/header.php');
 ?>
     <main>
-        <section>
         <main>
         <br>
         <br>

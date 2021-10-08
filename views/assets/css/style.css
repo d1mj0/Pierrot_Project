@@ -71,10 +71,13 @@ main h3{
     color: #ffffff;
 }
 
-.titleI a {
-    color: #ffffff;
+ a {
+    
     text-decoration: none;
+}
 
+.titleI a{
+  color: #ffffff;
 }
 
 .titleI a:hover{
