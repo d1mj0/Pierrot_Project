@@ -2,7 +2,7 @@
     require_once("../src/config/Database.php");
 
     class NewsletterModel{
-        private $connection;
+        private $connexion;
         public function __construct(){
             $database = new Database();
             $this->connexion = $database->getPDO();

@@ -1,4 +1,6 @@
 <?php
+    $title = "Publication Article";
+    require_once('../views/templates/b_header.php');
 
     require_once('../src/controllers/ArticleController.php');
 
@@ -14,10 +16,6 @@
         $articlePost->addArticle();
 
     }
-
-
-    $title = "Publication Article";
-    require_once('../views/templates/b_header.php');
 ?>
 
                 <main>
