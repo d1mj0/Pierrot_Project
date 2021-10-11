@@ -97,7 +97,7 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="text-center">
-                          <img src="../views/assets/img/Eversion_370px.svg" class="" alt="Représentation graphique de l'éversion">
+                          <img src="../views/assets/img/Eversion_370px.png" class="img-fluid" alt="Représentation graphique de l'éversion">
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -136,6 +136,7 @@
             </div>
         </div>
         <br>
+        <br>    
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-4">
@@ -153,6 +154,7 @@
                 </div>
             </div>
             <br>
+            <br>
             <div class="row">
                 <div class="col-lg-8">
                     <a href="La_version_de_eve.php"><h3>La version de Eve ou l'élaboration d'un mythe anarchiste</h3></a>
@@ -165,6 +167,7 @@
                     <a href="la_version_de_eve.php">Lire la suite >>></a>
                 </div>
             </div>
+            <br>
             <br>
             <div class="row">
                 <div class="col-lg-4">
