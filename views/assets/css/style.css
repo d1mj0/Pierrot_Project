@@ -78,10 +78,12 @@ h3{
 
 .titleI a{
   color: #ffffff;
+  transition: text-shadow 500ms;
 }
 
 .titleI a:hover{
     color: #7a2b2b;
+    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FFF 0px 0px 20px, #FFF 0px 0px 25px, #FFF 0px 0px 30px;
     
     
 
@@ -171,12 +173,15 @@ nav ul{
     text-decoration: none;
     font-size: 1.5rem;
     font-weight: bold;
+    text-shadow:0;
+    transition: text-shadow 500ms ease-in-out ;
+
 }
 
 
 .nav-item a:hover{
-    color: #7a2b2b;
-    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FFF 0px 0px 20px;
+  
+  text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FFF 0px 0px 20px, #FFF 0px 0px 25px, #FFF 0px 0px 30px;
 
 }
 
