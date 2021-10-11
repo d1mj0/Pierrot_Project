@@ -41,6 +41,17 @@ class ArticleModel {
         return $result;
     }
 
+    public function getAll3(){
+        
+        $request = $this->connexion->prepare('SELECT * FROM article ORDER BY date_time_publi DESC LIMIT 3');
+
+        $request->execute();
+
+        $result = $request->fetchAll(PDO::FETCH_ASSOC);
+
+        return $result;
+    }
+
     public function getOne($id){
         // Read
         // cette méthode va permettre de récupérer un seul utilisateur en base de données. 

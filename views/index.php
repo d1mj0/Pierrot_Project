@@ -5,7 +5,7 @@
     require_once('../src/controllers/ArticleController.php');
 
     $articleSelect = new ArticleController(NULL, NULL, NULL, NULL);
-    $articles = $articleSelect->listArticles();
+    $articles = $articleSelect->listArticles3();
 
 ?>
 
