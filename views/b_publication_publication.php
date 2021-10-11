@@ -20,10 +20,10 @@
 
 <main>
     <div class="container-fluid px-4">
-        <h1 class="mt-4">Publication Publication Blog</h1>
+        <h1 class="mt-4">Publication Publication</h1>
         <ol class="breadcrumb mb-4">
             <li class="breadcrumb-item"><a href="index.html">Administration</a></li>
-            <li class="breadcrumb-item active">Publication Publication Blog</li>
+            <li class="breadcrumb-item active">Publication Publication</li>
         </ol>
         <div id="layoutArticle">
         <div id="layoutContact_content">
