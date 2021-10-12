@@ -7,8 +7,11 @@
 
     setlocale(LC_TIME, ['fr', 'fra', 'fr_FR']);
     $d= $articleR[0]['date_time_publi']; 
-    $tmstp = strftime($d);
+    $tmstp = strtotime($d);
     $dfr = strftime('%A %d %B %Y', $tmstp);
+
+    
+
 
     $title = $articleR[0]['title'];
 
