@@ -6,12 +6,11 @@
     $articles = $articleSelect->listArticles();
 
     
-        $articleUpdate = new ArticleController(NULL, NULL, NULL, NULL);
-        $articleU = $articleUpdate->updateArticle();
+    $articleUpdate = new ArticleController(NULL, NULL, NULL, NULL);
+    $articleU = $articleUpdate->updateArticle();
     
 
-        $articleDelete = new ArticleController(NULL, NULL, NULL, NULL);
-        $articleD = $articleDelete->deleteArticle();
+        
     
 
     $title = "tables";
@@ -53,7 +52,7 @@
                                                 <td><?= (strlen($values['description']) > 40) ? substr($values['description'], 0, 40)."..." : ($values['description'])?></td>
                                                 <td><?= (strlen($values['text']) > 40) ? substr($values['text'], 0, 40)."..." : ($values['text']) ;?></td>
                                                 <td><?= $values['date_time_publi']; ?></td>
-                                                <td><a href="#"><i class="fas fa-edit"><?= $articleU; ?></i></a>  <a href="#"><i class="fas fa-trash-alt"><?= $articleD; ?></i></a></td>
+                                                <td><form action="b_update_article.php" method="POST"><a href="b_update_article.php?<?= $values['id_article']; ?>"><i class="fas fa-edit"></i></a></form>  <form action="b_delete_article.php" method="POST"><a href="b_delete_article.php?<?= $values['id_article']; ?>"><i class="fas fa-trash-alt"></i></a></form></td>
                                             </tr>
                                         <?php endforeach; ?>
                                     </tbody>
