@@ -5,9 +5,19 @@
     $articles = new ArticleModel;
     $articleR = $articles->getOne($_GET['id']);
 
+    setlocale(LC_TIME, ['fr', 'fra', 'fr_FR']);
+    $d= $articleR[0]['date_time_publi']; 
+    $tmstp = strtotime($d);
+    $dfr = strftime('%A %d %B %Y', $tmstp);
+
+    
+
+
     $title = $articleR[0]['title'];
 
     require_once("./templates/header.php");
+
+
 
     ?>
 
@@ -27,7 +37,8 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-6  mx-auto">
-                        <img src="<?=$articleR[0]['img']; ?>" class="img-fluid " alt="">
+                        <img src="<?=$articleR[0]['img']; ?>" class="img-fluid " alt=""><br>
+                        <p>Publié le <?=$dfr ; ?> </p>
                     </div>
                 </div>
             </div>

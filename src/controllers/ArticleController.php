@@ -52,6 +52,11 @@ class ArticleController {
         return $articleModel->getAll();
     }
 
+    public function listArticles3(){
+        $articleModel = new ArticleModel();
+        return $articleModel->getAll3();
+    }
+
 
     public function getOneById($id){
         $articleModel = new articleModel();
