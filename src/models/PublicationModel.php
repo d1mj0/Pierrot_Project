@@ -45,5 +45,12 @@
             $result = $request->fetchAll(PDO::FETCH_ASSOC);
             return $result;
         }
+        //fetch all publications by date in descending order
+        public function displayChronoDesc(){
+            $request = $this->connexion->prepare('SELECT * FROM `publication` ORDER BY `date_time_publi` DESC LIMIT 4');
+            $request->execute();
+            $result = $request->fetchAll(PDO::FETCH_ASSOC);
+            return $result;
+        }
     }
 ?>

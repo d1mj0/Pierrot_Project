@@ -3,9 +3,13 @@
     $title = "Accueil";
     require_once('./templates/header.php');
     require_once('../src/controllers/ArticleController.php');
+    require_once("../src/controllers/PublicationController.php");
 
     $articleSelect = new ArticleController(NULL, NULL, NULL, NULL);
     $articles = $articleSelect->listArticles3();
+
+    $publicController = new PublicationController(NULL, NULL, NULL, NULL);
+    $recentPublications = $publicController->listPubliChronoDesc();
 
 ?>
 
@@ -138,51 +142,33 @@
         <br>
         <br>    
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-4">
-                    <a href=""><img src="" alt=""></a>
-                </div>
-                <div class="col-lg-8">
-                    <a href="La_version_de_eve.php"><h3>Travaux et publications</h3></a>
-                        <p class="text">Comme il y est question d’anthropologie anarchiste, il paraissait judicieux d’en offrir un état des lieux, une esquisse,
-                        pour le moins une axiomatique, sinon quelques prémisses. Cependant, au fur et mesure que s’établissent les primats anarchistes,
-                        on s’aperçoit de l’importance croissance que prend le mythe, et ce jusqu’à l’extrême assertion que représente
-                        la nécessité de son élaboration. Or si l’on admet que la Genèse est le mythe masculin de la hiérarchie,
-                        alors le mythe anarchiste se doit être féminin et en ce sens, il ne peut-être que celui du « Matriarcat »
-                        </p>
-                    <a href="la_version_de_eve.php">Lire la suite >>></a>
-                </div>
-            </div>
-            <br>
-            <br>
-            <div class="row">
-                <div class="col-lg-8">
-                    <a href="La_version_de_eve.php"><h3>La version de Eve ou l'élaboration d'un mythe anarchiste</h3></a>
-                        <p class="text">Comme il y est question d’anthropologie anarchiste, il paraissait judicieux d’en offrir un état des lieux, une esquisse,
-                        pour le moins une axiomatique, sinon quelques prémisses. Cependant, au fur et mesure que s’établissent les primats anarchistes,
-                        on s’aperçoit de l’importance croissance que prend le mythe, et ce jusqu’à l’extrême assertion que représente
-                        la nécessité de son élaboration. Or si l’on admet que la Genèse est le mythe masculin de la hiérarchie,
-                        alors le mythe anarchiste se doit être féminin et en ce sens, il ne peut-être que celui du « Matriarcat »
-                        </p>
-                    <a href="la_version_de_eve.php">Lire la suite >>></a>
-                </div>
-            </div>
-            <br>
-            <br>
-            <div class="row">
-                <div class="col-lg-4">
-                    <a href=""><img src="" alt=""></a>
-                </div>
-                <div class="col-lg-8">
-                    <a href="la_version_de_eve.php"><h3>La version de Eve ou l'élaboration scientifique d'un mythe anarchiste</h3></a>
-                    <p class="text">Si d’un côté, les sciences sociales peinent dans un grand dédale de complexités qu’elles n’ont ramené à aucune loi
-                            d’organisation claire, à aucun principe véritablement unificateur1 et que de l’autre on ne peut que constater l’évidente
-                            faiblesse théorique de l’anarchisme, parent pauvre du marxisme, théoriquement un peu boiteux, mais compensant peut-être
-                            l’intelligence par la passion et la sincérité…
-                            Alors gageons que la combinaison de ces carences fasse la force d’une science véritablement anarchiste.</p>
-                    <a href="la_version_de_eve.php">Lire la suite >>></a>
-                </div>
-            </div>
+            <?php foreach($recentPublications as $value): ?>
+                <?php if($value['id_publi'] % 2 != 0): ?>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <a href="publication.php?id=<?php echo $value['id_publi']; ?>"><img src="<?php echo $value['img'] ?>" alt="<?php echo $value['title'] ?>"></a>
+                        </div>
+                        <div class="col-lg-8">
+                            <a href="publication.php?id=<?php echo $value['id_publi']; ?>"><h3><?php echo $value['title']; ?></h3></a>
+                            <p class="text"><?php echo $value['text']; ?></p>
+                            <a href="publication.php?id=<?php echo $value['id_publi']; ?>">Lire la suite >>></a>
+                        </div>
+                    </div>
+                    <br>
+                <?php else: ?>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <a href="publication.php?id=<?php echo $value['id_publi']; ?>"><h3><?php echo $value['title']; ?></h3></a>
+                            <p class="text"><?php echo $value['text']; ?></p>
+                            <a href="publication.php?id=<?php echo $value['id_publi']; ?>">Lire la suite >>></a>
+                        </div>
+                        <div class="col-lg-4">
+                            <a href="publication.php?id=<?php echo $value['id_publi']; ?>"><img src="<?php echo $value['img'] ?>" alt="<?php echo $value['title'] ?>"></a>
+                        </div>
+                    </div>
+                    <br>
+                <?php endif; ?>
+            <?php endforeach; ?>
         </div>
     </section>
     <br>
