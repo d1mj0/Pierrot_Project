@@ -33,6 +33,11 @@
             return $publicModel->getOne($id);
         }
 
+        public function listPubliChronoDesc(){
+            $publicModel = new PublicationModel();
+            return $publicModel->displayChronoDesc();
+        }
+
         public function setTitle($title){    
             return $this->title = $title;
         }
