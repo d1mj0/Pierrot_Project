@@ -390,6 +390,10 @@ a:hover {
   font-weight: bold;
   text-transform: uppercase;
 }
+
+.sb-sidenav-menu-heading{
+  color: #7a2b2b;
+}
 .sb-sidenav .sb-sidenav-menu .nav .nav-link {
   display: flex;
   align-items: center;
