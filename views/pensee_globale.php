@@ -41,7 +41,7 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="text-center">
-                          <img src="../views/assets/img/Eversion_370px.svg" class="" alt="Représentation graphique de l'éversion">
+                          <img src="../views/assets/img/Eversion_370px.png" class="img-fluid" alt="Représentation graphique de l'éversion">
                         </div>
                     </div>
                     <div class="col-lg-4">
