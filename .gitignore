@@ -1,2 +1,3 @@
 /src/config/Database.php
 /src/config/eversiondb2.sql
+/src/config/eversiondb2-dump.sql

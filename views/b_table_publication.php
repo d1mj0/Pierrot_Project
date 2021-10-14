@@ -33,6 +33,7 @@
                             <th>Illustration</th>
                             <th>Titre</th>
                             <th>Description</th>
+                            <th>Texte</th>
                             <th>Date de publication</th>
                             <th>Action</th>
                         </tr>
@@ -43,7 +44,8 @@
                                 <td><?= $values['id_publi']; ?></td>
                                 <td><?= $values['img']; ?></td>
                                 <td><?= $values['title'];?></td>
-                                <td><?= $values['description'];?></td>
+                                <td><?= substr($values['description'], 0, 100);?></td>
+                                <td><?= substr($values['text'], 0, 250);?></td>
                                 <td><?= $values['date_time_publi'];?></td>
                                 <td><a href="#"><i class="fas fa-edit"><?= $publicUpdate; ?></i></a>  <a href="#"><i class="fas fa-trash-alt"><?= $publicDelete; ?></i></a></td>
                             </tr>
