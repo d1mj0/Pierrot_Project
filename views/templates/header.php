@@ -43,19 +43,19 @@
                 <div class="collapse navbar-collapse" id="navbarTogglerContent">
                     <ul class="navbar-nav container-fluid  mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link-menu col-lg-4 " href="index.php">Accueil</a>
+                            <a class="nav-link-menu col-lg-4 " href="index.php">ACCUEIL</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link-menu col-lg-4" href="pensee_globale.php">Pensée globale</a>
+                            <a class="nav-link-menu col-lg-4" href="pensee_globale.php">PENSÉE GLOBALE</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link-menu col-lg-4" href="travaux_et_publications.php">Travaux et publications</a>
+                            <a class="nav-link-menu col-lg-4" href="travaux_et_publications.php">TRAVAUX ET PUBLICATIONS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link-menu col-lg-4" href="blog.php">Blog</a>
+                            <a class="nav-link-menu col-lg-4" href="blog.php">BLOG</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link-menu col-lg-4" href="a_propos.php">&#xC0; propos</a>
+                            <a class="nav-link-menu col-lg-4" href="a_propos.php">&#xC0; PROPOS</a>
                         </li>
                     </ul>
                 </div>
