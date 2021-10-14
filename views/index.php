@@ -28,7 +28,7 @@
         <br>
         <div class="container-fluid ">
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-6 mx-auto">
                 <div id="carouselIndex" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
                     <?php 
