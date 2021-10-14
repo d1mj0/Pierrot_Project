@@ -13,7 +13,22 @@
     }
 
     if(!empty($_POST['title']) && !empty($_POST['description']) && !empty($_POST['text'])&& isset($uploadfile)){
-        $publicController = new PublicationController($_POST['title'], $_POST['description'], $_POST['text'], $uploadfile);
+        
+        $text = $_POST['text'];
+        $text_array = explode("\n", $text);
+        $html_array = [];
+        foreach($text_array as $line){
+            if(strlen($line) == 0){
+                continue;
+            }
+            else{
+                $html_p = "<p>" . $line . "</p>";
+                array_push($html_array, $html_p);
+            }
+        }
+        $html = implode("\n", $html_array);
+
+        $publicController = new PublicationController($_POST['title'], $_POST['description'], $html, $uploadfile);
         $publicController->addPublication();
     }
 ?>

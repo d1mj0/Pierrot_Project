@@ -146,24 +146,24 @@
                 <?php if($value['id_publi'] % 2 != 0): ?>
                     <div class="row">
                         <div class="col-lg-4">
-                            <a href="publication.php?id=<?php echo $value['id_publi']; ?>"><img src="<?php echo $value['img'] ?>" alt="<?php echo $value['title'] ?>"></a>
+                            <a href="publication.php?id=<?= $value['id_publi']; ?>"><img src="<?= $value['img']; ?>" alt="<?= $value['title']; ?>"></a>
                         </div>
                         <div class="col-lg-8">
-                            <a href="publication.php?id=<?php echo $value['id_publi']; ?>"><h3><?php echo $value['title']; ?></h3></a>
-                            <p class="text"><?php echo $value['text']; ?></p>
-                            <a href="publication.php?id=<?php echo $value['id_publi']; ?>">Lire la suite >>></a>
+                            <a href="publication.php?id=<?= $value['id_publi']; ?>"><h3><?= $value['title']; ?></h3></a>
+                            <p class="text"><?= substr($value['text'], 0, 1000) . "..."; ?></p>
+                            <a href="publication.php?id=<?= $value['id_publi']; ?>">Lire la suite >>></a>
                         </div>
                     </div>
                     <br>
                 <?php else: ?>
                     <div class="row">
                         <div class="col-lg-8">
-                            <a href="publication.php?id=<?php echo $value['id_publi']; ?>"><h3><?php echo $value['title']; ?></h3></a>
-                            <p class="text"><?php echo $value['text']; ?></p>
-                            <a href="publication.php?id=<?php echo $value['id_publi']; ?>">Lire la suite >>></a>
+                            <a href="publication.php?id=<?= $value['id_publi']; ?>"><h3><?= $value['title']; ?></h3></a>
+                            <p class="text"><?= substr($value['text'], 0, 1000) . "..."; ?></p>
+                            <a href="publication.php?id=<?= $value['id_publi']; ?>">Lire la suite >>></a>
                         </div>
                         <div class="col-lg-4">
-                            <a href="publication.php?id=<?php echo $value['id_publi']; ?>"><img src="<?php echo $value['img'] ?>" alt="<?php echo $value['title'] ?>"></a>
+                            <a href="publication.php?id=<?= $value['id_publi']; ?>"><img src="<?= $value['img']; ?>" alt="<?= $value['title']; ?>"></a>
                         </div>
                     </div>
                     <br>
