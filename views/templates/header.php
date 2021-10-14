@@ -31,7 +31,7 @@
             </div>
         </div>
     </div>
-        <nav class="navbar navbar-expand-lg pt-0">
+        <nav class="navbar navbar-expand-lg py-0">
             <div class="container-fluid">
                     <a class="navbar-brand m-0 p-0" href="#"><img src="../views/assets/img/design_header.jpg"  class="img-fluid mx-auto pt-0 d-block d-md-none d-lg-none navbar-img" /></a>
                 <button class="navbar-toggler hamburger hamburger--slider-r is-active d-block d-md-none d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerContent" aria-controls="navbarTogglerContent" aria-expanded="false" aria-label="Toggle navigation">

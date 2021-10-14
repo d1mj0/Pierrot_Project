@@ -18,7 +18,7 @@
             <br>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-3 mx-auto">
+                    <div class="col-lg-3 mx-auto">
                         <img src="../views/assets/img/de l'eversion title header.svg" alt="">
                     </div>
                 </div>
@@ -66,10 +66,10 @@
             </div>
             <br>
             <br>
-            <div class="container quotes">
+            <div class="container">
                 <div class="row">
-                    <div class="col-lg-12 ">
-                        <figure class="figureb p-3 rounded">
+                    <div class="col-lg-10 mx-auto quotesBottom">
+                        <figure class="p-3 ">
                             <blockquote  class="blockquote mx-0 mb-0 text-center"><p>Tel est l’axiome de l’<strong id="eversion">Éversion</strong> :<br> celui de la complémentarité des <strong>inverses</strong>.</p></blockquote>
                         </figure>
                     </div>
@@ -82,7 +82,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6 mx-auto">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero placeat dicta quod laborum dolore atque, 
+                    <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero placeat dicta quod laborum dolore atque, 
                         officia iste recusandae optio natus, quam quaerat, aperiam ullam.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero placeat dicta quod laborum dolore atque, 
                         officia iste recusandae optio natus, quam quaerat, aperiam ullam.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero placeat dicta quod laborum dolore atque, 
                         officia iste recusandae optio natus, quam quaerat, aperiam ullam.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero placeat dicta quod laborum dolore atque, 
@@ -96,10 +96,10 @@
         </div>
         <br>
         <br>
-        <div class="container quotes" id="download">
+        <div class="container " id="download">
             <div class="row">
-                <div class="col-lg-6 mx-auto">
-                    <figure class="figureb p-3 rounded">
+                <div class="col-lg-7 mx-auto quotesBottom">
+                    <figure class="figureb mx-0 p-3">
                         <a href="./assets/yourfile.pdf" download="newfilename"><blockquote  class="blockquote mx-0 mb-0 text-center"><p>Télécharger la <strong>thèse</strong> en pdf</p></blockquote></a>
                     </figure>
                 </div>

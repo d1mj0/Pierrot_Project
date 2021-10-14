@@ -14,12 +14,10 @@
 ?>
 
 <main>
-    <section>
-        <br>
-        <br>
+    <section class="blog">
         <div class="container-fluid ">
             <div class="row">
-                <div class="col-lg-10 mx-auto ">
+                <div class="col-lg-12 mx-auto ">
                 <div id="carouselIndex" class="carousel slide carouselI" data-bs-ride="carousel">
                     <div class="carousel-indicators">
                     <?php 
@@ -47,7 +45,7 @@
                         <div class="carousel-item <?= $actives; ?>">
                             <img class="d-block img-fluid" src="<?= $values['img']; ?>" alt="<?= $values['title']; ?>">
                             <div class="carousel-caption d-none d-md-block">
-                                <h5><?= $values['title'];?></h5>
+                                <h5 class="mb-3"><?= $values['title'];?></h5>
                                 <p><?= $values['description']; ?></p>
                                 <br>
                                 <a href="article.php?id=<?= $values['id_article']; ?>" class="button btn-lg btn-primary">Lire l'article</a>
@@ -72,8 +70,8 @@
     <section  id="pensee_globaleI">
         <div class="container-fluid">
             <div class="row">
-                <div class="titleI col-12 p-2">
-                    <a href="pensee_globale.php"><h2>Pensée globale</h2></a>
+                <div class="titleI col-lg-12 p-3">
+                    <a href="pensee_globale.php"><h2>PENSÉE GLOBALE</h2></a>
                 </div>
             </div>
             <br>
@@ -115,11 +113,11 @@
                 </div>
             </div>
             <br>
-            <div class="container quotes">
+            <div class="container justify-content-center">
                 <div class="row">
-                    <div class="col-lg-12">
-                        <figure class="figurel m-3 p-3 rounded">
-                            <blockquote  class="blockquote mb-4 text"><p><i class="fas fa-quote-left fa-lg  me-2"></i>La révolution de la <strong>pensée</strong> est la seule à laquelle nous devons nous préparer.<i class="fas fa-quote-right fa-lg  me-2"></i></p></blockquote>
+                    <div class="col-lg-10 mx-auto quotesLeft">
+                        <figure class="py-1">
+                            <blockquote  class="blockquote m-5 "><p class="text"><i class="fas fa-quote-left fa-lg  me-2"></i>La révolution de la <strong>pensée</strong> est la seule à laquelle nous devons nous préparer.<i class="fas fa-quote-right fa-lg  me-2"></i></p></blockquote>
                         </figure>
                     </div>
                 </div>
@@ -131,8 +129,8 @@
     <section id="travaux_publications">
         <div class="container-fluid">
             <div class="row">
-                <div class="titleI col-12 p-2">
-                    <a href="travaux_et_publications.php"><h2>Travaux et publications</h2></a>
+                <div class="titleI col-lg-12 p-3">
+                    <a href="travaux_et_publications.php"><h2>TRAVAUX ET PUBLICATIONS</h2></a>
                 </div>
             </div>
         </div>

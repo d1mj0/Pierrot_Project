@@ -20,7 +20,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-5">
                                     <div class="card shadow-lg border-0 rounded-lg mt-5">
-                                        <div class="card-header "><h3 class=" text-center font-weight-light card-title my-4">Contact</h3></div>
+                                        <div class="card-header "><h3 class=" text-center card-title my-4">Contact</h3></div>
                                             <div class="card-body">
                                                 <form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>"> 
                                                     <div class="form-floating mb-3">
@@ -46,7 +46,7 @@
                                                         <label for="message">Entrez le code suivant :</label>
                                                     </div> 
                                                     <div class="d-flex align-items-center justify-content-center mt-4 mb-0">
-                                                        <a class="btn" type="submit" value="Submit" name="submit" href="mailto:maxeuhma@gmail.com">Envoyer</a>
+                                                        <a class="btn submit" type="submit" value="Submit" name="submit" href="mailto:maxeuhma@gmail.com">Envoyer</a>
                                                     </div>
                                                 </form>
                                             </div>
