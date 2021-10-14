@@ -14,16 +14,18 @@
                     </div>
                 </div>
             </div>
+            <br>
+            <br>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-5 mx-auto">
+                    <div class="col-3 mx-auto">
                         <img src="../views/assets/img/de l'eversion title header.svg" alt="">
                     </div>
                 </div>
             </div>
             <br>
             <br>
-            <div class="container-fluid">
+            <div class="container-fluid" id="pensee_globale">
                 <div class="row">
                     <div class="col-lg-4">
                         <p class="text">
@@ -41,7 +43,7 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="text-center">
-                          <img src="../views/assets/img/Eversion_370px.svg" class="" alt="Représentation graphique de l'éversion">
+                          <img src="../views/assets/img/Eversion_370px.png" class="img-fluid" alt="Représentation graphique de l'éversion">
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -77,7 +79,34 @@
         <br>
         <br>
         <section>
-
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 mx-auto">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero placeat dicta quod laborum dolore atque, 
+                        officia iste recusandae optio natus, quam quaerat, aperiam ullam.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero placeat dicta quod laborum dolore atque, 
+                        officia iste recusandae optio natus, quam quaerat, aperiam ullam.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero placeat dicta quod laborum dolore atque, 
+                        officia iste recusandae optio natus, quam quaerat, aperiam ullam.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero placeat dicta quod laborum dolore atque, 
+                        officia iste recusandae optio natus, quam quaerat, aperiam ullam.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero placeat dicta quod laborum dolore atque, 
+                        officia iste recusandae optio natus, quam quaerat, aperiam ullam.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero placeat dicta quod laborum dolore atque, 
+                        officia iste recusandae optio natus, quam quaerat, aperiam ullam.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero placeat dicta quod laborum dolore atque, 
+                        officia iste recusandae optio natus, quam quaerat, aperiam ullam.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero placeat dicta quod laborum dolore atque, 
+                        officia iste recusandae optio natus, quam quaerat, aperiam ullam.</p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="container quotes" id="download">
+            <div class="row">
+                <div class="col-lg-6 mx-auto">
+                    <figure class="figureb p-3 rounded">
+                        <a href="./assets/yourfile.pdf" download="newfilename"><blockquote  class="blockquote mx-0 mb-0 text-center"><p>Télécharger la <strong>thèse</strong> en pdf</p></blockquote></a>
+                    </figure>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
         </section>
     </main>
 <?php
