@@ -1,16 +1,35 @@
 <?php
 
-require_once('../src/controllers/ArticleController.php'); 
+require_once('../views/templates/b_header.php'); 
+require_once('../src/models/ArticleModel.php'); 
 
 
+$title =  "Suppression d'article";
 
 
-if(isset($_REQUEST['id_article']) && is_numeric($_REQUEST['id_article']))
-{
-    $articleDelete = new ArticleController(NULL, NULL, NULL, NULL);
-    $articleD = $articleDelete->deleteArticle();
+if(isset($_POST['deleteArticle'])){
+$id =$_POST['idArticle'];
+
+$articleDelete = new ArticleModel;
+$articleD = $articleDelete->delete($id);
+
+if($articleD){
+echo '<div class="alert alert-success>
+<button type="button" class="close" data-dismiss="alert-success">
+<strong>"L article a été supprimé"</strong>
+</div>';
+}
+else{
+echo '<div class="alert alert-danger>
+<button type="button" class="close" data-dismiss="alert-danger">
+<strong>"L article a été supprimé"</strong>
+</div>';
+}
 }
 
+?>
 
 
+<?php
+    require_once('../views/templates/b_footer.php');
 ?>

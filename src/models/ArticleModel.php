@@ -81,8 +81,12 @@ class ArticleModel {
     }
 
     public function delete($id){
-        $request = $this->connexion->prepare('DELETE FROM article WHERE id_article=:id');
+        $request = $this->connexion->prepare('DELETE FROM article WHERE id_article =:id');
         $request->execute([':id' => $id]);
+
+        $request->execute([':id' => $id]);
+           
+    
 
         $result = $request -> fetchAll(PDO::FETCH_ASSOC);
         return $result;
