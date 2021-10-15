@@ -6,11 +6,11 @@
         private $description;
         private $text;
         private $img;
-        public function __construct($title, $description, $text, $image){
+        public function __construct($title, $description, $text, $img){
             $this->setTitle($title);
             $this->setDesc($description);
             $this->setText($text);
-            $this->setImg($image);
+            $this->setImg($img);
         }
         public function addPublication(){
             $publicModel = new PublicationModel();

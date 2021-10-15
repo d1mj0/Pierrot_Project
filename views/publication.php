@@ -2,9 +2,15 @@
     require_once("./templates/header.php");
     require_once("../src/models/PublicationModel.php");
 
+    $title = $publication[0]['title'];
+
     $publicModel = new PublicationModel();
     $publication = $publicModel->getOne($_GET['id']);
-    $title = $publication[0]['title'];
+
+    setlocale(LC_TIME, ['fr', 'fra', 'fr_FR']);
+    $d= $publication[0]['date_time_publi']; 
+    $tmstp = strtotime($d);
+    $dfr = strftime('%A %d %B %Y', $tmstp);
 ?>
 
 <main>
@@ -24,6 +30,7 @@
             <div class="row">
                 <div class="col-lg-6  mx-auto">
                     <img src="<?=$publication[0]['img']; ?>" class="img-fluid " alt="">
+                    <p>Publié le <?=$dfr ; ?> </p>
                 </div>
             </div>
         </div>

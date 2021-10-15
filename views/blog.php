@@ -45,7 +45,6 @@
             </div>
           </div>
       </section>
-
       <!-- Pagination -->
       <nav class="my-4" aria-label="...">
         <ul class="pagination pagination-circle justify-content-center">
@@ -62,7 +61,6 @@
           </li>
         </ul>
       </nav>
-
 </main>
 
   <?php

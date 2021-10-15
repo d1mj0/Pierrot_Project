@@ -2,9 +2,11 @@
     ini_set("display_errors", 1);
     error_reporting(E_ALL);
 
-    $title = "Publication Publication";
     require_once('../views/templates/b_header.php');
     require_once('../src/controllers/PublicationController.php');
+    require_once('../src/controllers/TextController.php');
+
+    $title = "Publication Publication";
 
     if(isset($_FILES['img']) && $_FILES['img']['error'] === 0){
         $uploaddir = "./assets/img/";
@@ -13,7 +15,10 @@
     }
 
     if(!empty($_POST['title']) && !empty($_POST['description']) && !empty($_POST['text'])&& isset($uploadfile)){
-        $publicController = new PublicationController($_POST['title'], $_POST['description'], $_POST['text'], $uploadfile);
+        $text = $_POST['text'];
+        $txtCtrl = new TextController();
+        $html = $txtCtrl->txt2html($text);
+        $publicController = new PublicationController($_POST['title'], $_POST['description'], $html, $uploadfile);
         $publicController->addPublication();
     }
 ?>
@@ -22,7 +27,7 @@
     <div class="container-fluid px-4">
         <h1 class="mt-4">Publication Publication</h1>
         <ol class="breadcrumb mb-4">
-            <li class="breadcrumb-item"><a href="index.html">Administration</a></li>
+            <li class="breadcrumb-item"><a href="index.php">Administration</a></li>
             <li class="breadcrumb-item active">Publication Publication</li>
         </ol>
         <div id="layoutArticle">

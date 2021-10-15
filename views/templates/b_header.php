@@ -48,7 +48,7 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Publication publication
                             </a>
-                            <a class="nav-link" href="b_tables.php">
+                            <a class="nav-link" href="b_table_article.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 Tableau articles
                             </a>
