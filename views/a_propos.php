@@ -1,7 +1,5 @@
     <?php
-    //Variable avec le titre de la page;
     $title = "&#xC0;  propos";
-    //Appel template header
     require_once('./templates/header.php');
     ?>
 
