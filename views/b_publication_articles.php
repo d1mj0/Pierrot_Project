@@ -4,7 +4,7 @@
 
     require_once('../views/templates/b_header.php');
     require_once('../src/controllers/ArticleController.php');
-    require_once('../src/controller/TextController.php');
+    require_once('../src/controllers/TextController.php');
 
     $title = "Publication Article";
 
