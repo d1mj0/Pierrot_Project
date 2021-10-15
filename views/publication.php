@@ -2,9 +2,10 @@
     require_once("./templates/header.php");
     require_once("../src/models/PublicationModel.php");
 
+    $title = $publication[0]['title'];
+
     $publicModel = new PublicationModel();
     $publication = $publicModel->getOne($_GET['id']);
-    $title = $publication[0]['title'];
 
     setlocale(LC_TIME, ['fr', 'fra', 'fr_FR']);
     $d= $publication[0]['date_time_publi']; 

@@ -2,9 +2,10 @@
     ini_set("display_errors", 1);
     error_reporting(E_ALL);
 
-    $title = "Tableau publications";
     require_once("./templates/b_header.php");
     require_once("../src/controllers/PublicationController.php");
+
+    $title = "Tableau publications";
 
     $publicController = new PublicationController(NULL, NULL, NULL, NULL);
     $publicSelect = $publicController->listPublication();

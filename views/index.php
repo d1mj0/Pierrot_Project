@@ -1,16 +1,15 @@
 <?php
-    //Variable avec le titre de la page
-    $title = "Accueil";
     require_once('./templates/header.php');
     require_once('../src/controllers/ArticleController.php');
     require_once("../src/controllers/PublicationController.php");
+
+    $title = "Accueil";
 
     $articleSelect = new ArticleController(NULL, NULL, NULL, NULL);
     $articles = $articleSelect->listArticles3();
 
     $publicController = new PublicationController(NULL, NULL, NULL, NULL);
     $recentPublications = $publicController->listPubliChronoDesc();
-
 ?>
 
 <main>
@@ -150,7 +149,7 @@
                         </div>
                         <div class="col-lg-8">
                             <a href="publication.php?id=<?= $value['id_publi']; ?>"><h3><?= $value['title']; ?></h3></a>
-                            <p class="text"><?= substr($value['text'], 0, 1000) . "..."; ?></p>
+                            <?= substr($value['text'], 0, 1000) . "...</p>"; ?>
                             <a href="publication.php?id=<?= $value['id_publi']; ?>">Lire la suite >>></a>
                         </div>
                     </div>
@@ -159,7 +158,7 @@
                     <div class="row">
                         <div class="col-lg-8">
                             <a href="publication.php?id=<?= $value['id_publi']; ?>"><h3><?= $value['title']; ?></h3></a>
-                            <p class="text"><?= substr($value['text'], 0, 1000) . "..."; ?></p>
+                            <?= substr($value['text'], 0, 1000) . "...</p>"; ?>
                             <a href="publication.php?id=<?= $value['id_publi']; ?>">Lire la suite >>></a>
                         </div>
                         <div class="col-lg-4">
@@ -176,6 +175,5 @@
 </main>
 
 <?php
-    //Appel template footer
     require_once("./templates/footer.php");
 ?>
