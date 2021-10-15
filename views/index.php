@@ -17,8 +17,10 @@
     <section class="blog">
         <div class="container-fluid ">
             <div class="row">
+
                 <div class="col-lg-12 m-auto ">
                 <div id="carouselIndex" class="carousel slide carouselI" data-bs-ride="carousel">
+
                     <div class="carousel-indicators">
                     <?php 
                         $i = 0; 
@@ -141,24 +143,28 @@
                 <?php if($values['id_publi'] % 2 != 0): ?>
                     <div class="row">
                         <div class="col-lg-4">
+
                             <a href="publication.php?id=<?= $values['id_publi']; ?>"><img src="<?= $values['img'] ?>" alt="<?=  $values['title'] ?>"></a>
                         </div>
                         <div class="col-lg-8">
                             <a href="publication.php?id=<?=  $values['id_publi']; ?>"><h3><?= $values['title']; ?></h3></a>
                             <p class="text"><?= $values['text']; ?></p>
                             <a href="publication.php?id=<?=  $values['id_publi']; ?>">Lire la suite >>></a>
+
                         </div>
                     </div>
                     <br>
                 <?php else: ?>
                     <div class="row">
                         <div class="col-lg-8">
+
                             <a href="publication.php?id=<?= $values['id_publi']; ?>"><h3><?= $values['title']; ?></h3></a>
                             <p class="text"><?= $values['text']; ?></p>
                             <a href="publication.php?id=<?= $values['id_publi']; ?>">Lire la suite >>></a>
                         </div>
                         <div class="col-lg-4">
                             <a href="publication.php?id=<?= $values['id_publi']; ?>"><img src="<?= $values['img'] ?>" alt="<?=$values['title'] ?>"></a>
+
                         </div>
                     </div>
                     <br>

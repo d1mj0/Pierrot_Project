@@ -9,7 +9,13 @@
     $articleUpdate = new ArticleController(NULL, NULL, NULL, NULL);
     $articleU = $articleUpdate->updateArticle();
     
+    $articleDelete = new ArticleController(NULL, NULL, NULL, NULL);
+    $articleD = $articleDelete->deleteArticle();
 
+    if (isset($_POST["deleteItem"]) && is_numeric($_POST["deleteItem"])){
+        $articleD = $_POST["deleteItem"];
+        
+    }
         
     
 
@@ -31,32 +37,34 @@
                                 Articles
                             </div>
                             <div class="card-body ">
-                                <table id="datatablesSimple" class="container-fluid">
-                                    <thead>
-                                        <tr>
-                                            <th>Id Article</th>
-                                            <th>Illustration</th>
-                                            <th>Titre</th>
-                                            <th>Description</th>
-                                            <th>Texte</th>
-                                            <th>date de publication</th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <?php foreach($articles as $values): ?>
+                                <form action="" method="POST">
+                                    <table id="datatablesSimple" class="container-fluid">
+                                        <thead>
                                             <tr>
-                                                <td><?= $values['id_article']; ?></td>
-                                                <td><img width="100" height="100" src="<?= $values['img']; ?>" alt=""></td>
-                                                <td><a href="article.php?id_article=<?= $values['id_article']; ?>"><?= $values['title']; ?></a></td>
-                                                <td><?= (strlen($values['description']) > 40) ? substr($values['description'], 0, 40)."..." : ($values['description'])?></td>
-                                                <td><?= (strlen($values['text']) > 40) ? substr($values['text'], 0, 40)."..." : ($values['text']) ;?></td>
-                                                <td><?= $values['date_time_publi']; ?></td>
-                                                <td><form action="b_update_article.php" method="POST"><a href="b_update_article.php?<?= $values['id_article']; ?>"><i class="fas fa-edit"></i></a></form>  <form action="b_delete_article.php" method="POST"><a href="b_delete_article.php?<?= $values['id_article']; ?>"><i class="fas fa-trash-alt"></i></a></form></td>
+                                                <th>Id Article</th>
+                                                <th>Illustration</th>
+                                                <th>Titre</th>
+                                                <th>Description</th>
+                                                <th>Texte</th>
+                                                <th>date de publication</th>
+                                                <th>Action</th>
                                             </tr>
-                                        <?php endforeach; ?>
-                                    </tbody>
-                                </table>
+                                        </thead>
+                                        <tbody>
+                                            <?php foreach($articles as $values): ?>
+                                                <tr>
+                                                    <td><?= $values['id_article']; ?></td>
+                                                    <td><img width="100" height="100" src="<?= $values['img']; ?>" alt=""></td>
+                                                    <td><a href="article.php?id_article=<?= $values['id_article']; ?>"><?= $values['title']; ?></a></td>
+                                                    <td><?= (strlen($values['description']) > 40) ? substr($values['description'], 0, 40)."..." : ($values['description'])?></td>
+                                                    <td><?= (strlen($values['text']) > 40) ? substr($values['text'], 0, 40)."..." : ($values['text']) ;?></td>
+                                                    <td><?= $values['date_time_publi']; ?></td>
+                                                    <td><button type="submit" name="deleteItem" value="'.$values[0].'"><i class="fas fa-edit"></i></button> <a href="b_delete_article.php?<?= $values['id_article']; ?>"><i class="fas fa-trash-alt"></i></a></td>
+                                                </tr>
+                                            <?php endforeach; ?>
+                                        </tbody>
+                                    </table>
+                                </form>
                             </div>
                         </div>
                     </div>
