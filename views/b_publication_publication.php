@@ -2,9 +2,11 @@
     ini_set("display_errors", 1);
     error_reporting(E_ALL);
 
-    $title = "Publication Publication";
     require_once('../views/templates/b_header.php');
     require_once('../src/controllers/PublicationController.php');
+    require_once('../src/controllers/TextController.php');
+
+    $title = "Publication Publication";
 
     if(isset($_FILES['img']) && $_FILES['img']['error'] === 0){
         $uploaddir = "./assets/img/";
@@ -13,21 +15,9 @@
     }
 
     if(!empty($_POST['title']) && !empty($_POST['description']) && !empty($_POST['text'])&& isset($uploadfile)){
-        
         $text = $_POST['text'];
-        $text_array = explode("\n", $text);
-        $html_array = [];
-        foreach($text_array as $line){
-            if(strlen($line) == 0){
-                continue;
-            }
-            else{
-                $html_p = "<p>" . $line . "</p>";
-                array_push($html_array, $html_p);
-            }
-        }
-        $html = implode("\n", $html_array);
-
+        $txtCtrl = new TextController();
+        $html = $txtCtrl->txt2html($text);
         $publicController = new PublicationController($_POST['title'], $_POST['description'], $html, $uploadfile);
         $publicController->addPublication();
     }

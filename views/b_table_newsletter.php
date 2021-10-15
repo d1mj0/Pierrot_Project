@@ -1,14 +1,11 @@
 <?php
-    ini_set("display_errors", 1);   // Delete after
-    error_reporting(E_ALL);         // Delete after
+    ini_set("display_errors", 1);
+    error_reporting(E_ALL);
 
-
+    require_once('../views/templates/b_header.php');
+    require_once("../src/controllers/NewsletterController.php");
 
     $title = "Tableau newsletter";
-    require_once('../views/templates/b_header.php');
-    
-
-    require_once("../src/controllers/NewsletterController.php");
 
     $newsletter = new NewsletterController(NULL, NULL, NULL);
     $newsSelect = $newsletter->listEmails();
