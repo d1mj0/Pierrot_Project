@@ -21,7 +21,7 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-5">
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
-                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Inscription newsletter</h3></div>
+                                    <div class="card-header"><h3 class="text-center card-title my-4">Inscription newsletter</h3></div>
                                         <div class="card-body">
                                             <form method="POST" enctype="multipart/form-data" action="newsletter.php">
                                                 <div class="form-floating mb-3">
@@ -36,8 +36,12 @@
                                                     <input class="form-control" id="name" type="text" placeholder="Prénom" pattern="^[a-zA-Z-' ]*$" name="name" required value=""/>
                                                     <label for="name">Prénom </label>
                                                 </div>
+                                                <div class="form-check mb-3">
+                                                    <input class="form-check-input"  id="checkInput" type="checkbox"  required value=""/>
+                                                    <label class="form-check-label"  for="checkInput">J'accepte de recevoir vos e-mails et confirme avoir pris connaissance de votre politique de confidentialité et mentions légales.</label>
+                                                </div>
                                                 <div class="d-flex align-items-center justify-content-center mt-4 mb-0">
-                                                    <input type="submit" class="btn" id="submit" value="Envoyer"/>
+                                                    <input type="submit" class="btn submit" id="submit" value="Envoyer"/>
                                                 </div>
                                             </form>
                                         </div>
