@@ -17,7 +17,7 @@
     <section class="blog">
         <div class="container-fluid ">
             <div class="row">
-                <div class="col-lg-12 mx-auto ">
+                <div class="col-lg-12 m-auto ">
                 <div id="carouselIndex" class="carousel slide carouselI" data-bs-ride="carousel">
                     <div class="carousel-indicators">
                     <?php 
