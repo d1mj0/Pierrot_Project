@@ -67,7 +67,7 @@ class ArticleModel {
     }
 
     public function update($title, $description, $text){
-        $request = $this->connexion->prepare('UPDATE article SET title=:title, description=:description, text=:text WHERE id_article=article');
+        $request = $this->connexion->prepare('UPDATE article SET title=:title, description=:description, text=:text WHERE id_article=:id');
         $request->execute([
             ':title' => $title,
             ':description' => $description,

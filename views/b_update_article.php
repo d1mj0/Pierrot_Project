@@ -4,14 +4,21 @@ require_once('../views/templates/b_header.php');
 require_once('../src/models/ArticleModel.php'); 
 
 
+
 $title =  "Mise à jour d'article";
+
+
+
+
+$articles = new ArticleModel;
+$articleR = $articles->getOne($_GET['id']);
 
 
 if(isset($_POST['updateArticle'])){
 $id = $_POST['idArticle'];
 
 $articleUpdate = new ArticleModel;
-$articleU = $articleUpdate->update($id);
+$articleU = $articleUpdate->update($title, $description, $text);
 
 if($articleU){
 echo '<div class="alert alert-success>
@@ -30,10 +37,10 @@ echo '<div class="alert alert-danger>
 ?>
 <main>
     <div class="container-fluid px-4">
-        <h1 class="mt-4">Publication Articles Blog</h1>
+        <h1 class="mt-4">Mise à jour Articles Blog</h1>
         <ol class="breadcrumb mb-4">
             <li class="breadcrumb-item"><a href="index.html">Administration</a></li>
-            <li class="breadcrumb-item active">Publication Articles Blog</li>
+            <li class="breadcrumb-item active">Mise à jour Articles Blog</li>
         </ol>
         <div id="layoutArticle">
         <div id="layoutContact_content">
@@ -47,23 +54,19 @@ echo '<div class="alert alert-danger>
                                         <form enctype="multipart/form-data" action="b_publication_articles.php"  method="post">
                                             <label class="form-label" for="title">Titre</label>
                                             <div class="form-floating mb-3">
-                                                <input  id="editTitle" class="form-control" name="title"  type="text" value="<?= ; ?>"/>
+                                                <input  id="editTitle" class="form-control" name="title"  type="text" value="<?= $articleR[0]['title']; ?>"/>
                                             </div>
                                             <br>
-                                            <label class="form-label" for="description">Description</label>
+                                            <label class="form-label" for="editDescription">Description</label>
                                             <div class="form-floating mb-3">
-                                                <textarea id="editDescription" class="form-control" name="description" type="text" cols="40" rows="6"></textarea>
+                                                <textarea id="editDescription" class="form-control" name="editDescription" type="text" value="<?= $articleR[0]['text']; ?>" cols="40" rows="6"></textarea>
                                             </div>
                                             <br>
-                                            <label class="form-label" for="text">Text</label>
+                                            <label class="form-label" for="text">Texte</label>
                                             <div class="form-floating mb-3">
-                                                <textarea id="text" class="form-control" name="text" type="text" cols="40" rows="10"></textarea>
+                                                <textarea id="ediText" class="form-control" name="text" type="text" value="<?= $articleR[0]['description']; ?>" cols="40" rows="10"></textarea>
                                             </div>
                                             <br>
-                                            <label class="form-label" for="img">Photo</label>
-                                            <div class="form-floating mb-3">
-                                                <input type="file" name="img" id="img" class="form-control">
-                                            </div>
                                             <br>
                                             <div class="d-flex align-items-center justify-content-center mt-4 mb-0 alert alert-success">
                                                 <button  data-dismiss="alert"  >Mise à jour de l'article</button>
