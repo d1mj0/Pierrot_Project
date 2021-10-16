@@ -4,7 +4,7 @@
 
     require_once('../views/templates/b_header.php');
     require_once('../src/controllers/ArticleController.php');
-    require_once('../src/controller/TextController.php');
+    require_once('../src/controllers/TextController.php');
 
     $title = "Publication Article";
 
@@ -50,7 +50,7 @@
                                                 <textarea id="description" class="form-control" name="description" type="text" cols="40" rows="6"></textarea>
                                             </div>
                                             <br>
-                                            <label class="form-label" for="text">Text</label>
+                                            <label class="form-label" for="text">Texte</label>
                                             <div class="form-floating mb-3">
                                                 <textarea id="text" class="form-control" name="text" type="text" cols="40" rows="10"></textarea>
                                             </div>

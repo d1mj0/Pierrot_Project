@@ -67,7 +67,7 @@ class ArticleModel {
     }
 
     public function update($title, $description, $text){
-        $request = $this->connexion->prepare('UPDATE article SET title=:title, description=:description, text=:text WHERE id_article=article');
+        $request = $this->connexion->prepare('UPDATE article SET title=:title, description=:description, text=:text WHERE id_article=:id');
         $request->execute([
             ':title' => $title,
             ':description' => $description,
@@ -81,8 +81,12 @@ class ArticleModel {
     }
 
     public function delete($id){
-        $request = $this->connexion->prepare('DELETE FROM article WHERE id_article=:id');
+        $request = $this->connexion->prepare('DELETE FROM article WHERE id_article =:id');
         $request->execute([':id' => $id]);
+
+        $request->execute([':id' => $id]);
+           
+    
 
         $result = $request -> fetchAll(PDO::FETCH_ASSOC);
         return $result;
