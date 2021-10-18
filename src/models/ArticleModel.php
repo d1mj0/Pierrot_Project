@@ -66,12 +66,14 @@ class ArticleModel {
         return $result;
     }
 
-    public function update($title, $description, $text){
-        $request = $this->connexion->prepare('UPDATE article SET title=:title, description=:description, text=:text WHERE id_article=:id');
+    public function update($title, $description, $text, $img){
+        $request = $this->connexion->prepare('UPDATE article SET title=:title, description=:description, text=:text, img=:img WHERE id_article=:id');
         $request->execute([
             ':title' => $title,
             ':description' => $description,
             ':text' => $text,
+            ':img' => $img,
+            
     ]);
 
         $result = $request -> fetchAll(PDO::FETCH_ASSOC);

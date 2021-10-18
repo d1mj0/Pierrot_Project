@@ -8,7 +8,7 @@ $title =  "Suppression d'article";
 
 
 if(isset($_POST['deleteArticle'])){
-$id =$_POST['idArticle'];
+$id = $_POST['idArticle'];
 
 $articleDelete = new ArticleModel;
 $articleD = $articleDelete->delete($id);
@@ -22,7 +22,7 @@ echo '<div class="alert alert-success>
 else{
 echo '<div class="alert alert-danger>
 <button type="button" class="close" data-dismiss="alert-danger">
-<strong>"L article a été supprimé"</strong>
+<strong>"L article n a pas été supprimé"</strong>
 </div>';
 }
 }

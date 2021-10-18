@@ -8,8 +8,7 @@
     $articleSelect = new ArticleController(NULL, NULL, NULL, NULL);
     $articles = $articleSelect->listArticles();
     
-    $articleUpdate = new ArticleController(NULL, NULL, NULL, NULL);
-    $articleU = $articleUpdate->updateArticle();
+    
     
     
 
