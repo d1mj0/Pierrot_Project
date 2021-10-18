@@ -20,18 +20,22 @@ if(isset($_FILES['img']) && $_FILES['img']['error'] === 0){
     move_uploaded_file($_FILES['img']['tmp_name'], $uploadfile);
 }
 
-if(!empty($_POST['title']) && !empty($_POST['description']) && !empty($_POST['text']) && isset($uploadfile) && isset($_POST['updateArticle'])){
-
-$articleUpdate = new ArticleController($_POST['title'], $_POST['description'], $_POST['text'], $uploadfile);
+if(isset($_GET['id']) && isset($_POST['articleUpdate'])){
+if(!empty($_POST['title']) && !empty($_POST['description']) && !empty($_POST['text']) && isset($uploadfile)){
+$text = $_POST['text'];
+$txtCtrl = new TextController();
+$html = $txtCtrl->txt2html($text);
+$articleUpdate = new ArticleController($_POST['title'], $_POST['description'], $html, $uploadfile);
 $articleUpdate->updateArticle();
 
-if($articleUpdate){
+if(!$articleUpdate){
 echo '<div class="alert alert-success>
 <button type="button" class="close" data-dismiss="alert-success">
 <strong>"L article a été mis à jour"</strong>
 </div>';
-
+header("location:b_table_article.php");
 }
+
 else{
 echo '<div class="alert alert-danger>
 <button type="button" class="close" data-dismiss="alert-danger">
@@ -39,7 +43,10 @@ echo '<div class="alert alert-danger>
 </div>';
 header("location:b_update_article.php");
 }
+
 }
+}
+
 
 ?>
 <main>
@@ -56,34 +63,35 @@ header("location:b_update_article.php");
                     <div class="row justify-content-center">
                         <div class="col-lg-5">
                             <div class="card shadow-lg border-0 rounded-lg mt-5">
-                                <div class="card-header"><h3 class="text-center font-weight-light my-4">Article</h3></div>
+                                <div class="card-header"><h3 class="text-center font-weight-light my-4">Mise à jour de l'article  <br><?= $articleR[0]['title']; ?></h3></div>
                                     <div class="card-body">
-                                        <form enctype="multipart/form-data" action="b_update_article.php"  method="POST">
-                                            <input type="hidden" name="id" value="<?= $articleR[0]['id'] ?>">
+                                        <form enctype="multipart/form-data" action="b_update_article.php?<?= $articleR[0]['id'] ?>"  method="POST">
+                                            
                                             <label class="form-label" for="title">Titre</label>
                                             <div class="form-floating mb-3">
-                                                <input  id="editTitle" class="form-control" name="title"  type="text" value="<?= $articleR[0]['title']; ?>"/>
+                                                <input  id="editTitle" class="form-control" name="title"  type="text" value="<?= $articleR[0]['title']; ?>" required/>
                                             </div>
                                             <br>            
                                             <label class="form-label" for="description">Description</label>
                                             <div class="form-floating mb-3">
-                                                <textarea  id="editDescription" class="form-control" name="description"  type="text" ><?= $articleR[0]['description']; ?></textarea>
+                                                <textarea  id="editDescription" class="form-control" name="description"  type="text" required ><?= $articleR[0]['description']; ?></textarea>
                                             </div>
                                             <br>
                                             <label class="form-label" for="text">Texte</label>
                                             <div class="form-floating mb-3">
-                                                <textarea id="editText" class="form-control" name="text" type="text" cols="40" rows="10"><?= $articleR[0]['text']; ?></textarea>
+                                                <textarea id="editText" class="form-control" name="text" type="text" cols="40" rows="10" required><?= $articleR[0]['text']; ?></textarea>
                                             </div>
                                             <br>
                                             <br>
-                                            <label class="form-label" for="img">Photo</label>
+                                            <label class="form-label" for="img">Illustration</label>
                                             <div class="form-floating mb-3">
-                                                <input type="file" name="img" id="img" class="form-control">
+                                                <input type="file" name="img" id="img" class="form-control" required>
                                             </div>
                                             <br>
                                             <br>
                                             <div class="d-flex align-items-center justify-content-center mt-4 mb-0 alert alert-success">
                                                 <button  type='submit' name='articleUpdate' data-dismiss="alert"  >Mise à jour de l'article</button>
+                                                <a href="b_table_article.php" class="btn btn-danger"> CANCEL </a>
                                             </div>
                                         </form>
                                     </div>
