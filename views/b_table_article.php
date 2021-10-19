@@ -1,9 +1,11 @@
 <?php
+    $title = "Tableau articles"; 
+
     require_once('../views/templates/b_header.php'); 
     require_once('../src/controllers/ArticleController.php');
     require_once('../src/models/ArticleModel.php');
 
-    $title = "Tableau articles"; 
+    
 
     $articleSelect = new ArticleController(NULL, NULL, NULL, NULL);
     $articles = $articleSelect->listArticles();

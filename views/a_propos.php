@@ -1,5 +1,6 @@
     <?php
     $title = "&#xC0;  propos";
+    
     require_once('./templates/header.php');
     ?>
 

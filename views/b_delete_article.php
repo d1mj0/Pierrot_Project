@@ -1,10 +1,12 @@
 <?php
 
+$title =  "Suppression d'article";
+
 require_once('../views/templates/b_header.php'); 
 require_once('../src/models/ArticleModel.php'); 
 
 
-$title =  "Suppression d'article";
+
 
 
 if(isset($_POST['deleteArticle'])){

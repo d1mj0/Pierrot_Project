@@ -1,9 +1,12 @@
 <?php
+
+    $title = "Accueil";
+
     require_once('./templates/header.php');
     require_once('../src/controllers/ArticleController.php');
     require_once("../src/controllers/PublicationController.php");
 
-    $title = "Accueil";
+    
 
     $articleSelect = new ArticleController(NULL, NULL, NULL, NULL);
     $articles = $articleSelect->listArticles3();
