@@ -2,10 +2,12 @@
     ini_set("display_errors", 1);
     error_reporting(E_ALL);
 
+    $title = "Tableau newsletter";
+    
     require_once('../views/templates/b_header.php');
     require_once("../src/controllers/NewsletterController.php");
 
-    $title = "Tableau newsletter";
+    
 
     $newsletter = new NewsletterController(NULL, NULL, NULL);
     $newsSelect = $newsletter->listEmails();

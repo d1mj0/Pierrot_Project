@@ -1,8 +1,10 @@
 <?php
+    $title = $publication[0]['title'];
+
     require_once("./templates/header.php");
     require_once("../src/models/PublicationModel.php");
 
-    $title = $publication[0]['title'];
+    
 
     $publicModel = new PublicationModel();
     $publication = $publicModel->getOne($_GET['id']);

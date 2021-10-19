@@ -1,8 +1,10 @@
 <?php
+    $title = $articleR[0]['title'];
+
     require_once("./templates/header.php");
     require_once('../src/models/ArticleModel.php');
     
-    $title = $articleR[0]['title'];
+    
 
     $articles = new ArticleModel;
     $articleR = $articles->getOne($_GET['id']);
