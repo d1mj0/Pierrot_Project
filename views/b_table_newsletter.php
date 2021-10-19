@@ -46,7 +46,7 @@
                                 <td><?= $values['name']; ?></td>
                                 <td><?= $values['lastname'];?></td>
                                 <td><?= $values['email'];?></td>
-                                <td><a href="#"><i class="fas fa-edit"><?= $newsUpdate; ?></i></a>  <a href="#"><i class="fas fa-trash-alt"><?= $newsDelete; ?></i></a></td>
+                                <td><form action="b_update_newsletter.php"><a href="b_update_newsletter.php?id=<?= $values['id_request']; ?>" name="newsUpdate"><i class="fas fa-edit"></i></a></form> <form action="b_delete_newsletter.php" method="POST"><input type="hidden" name="idNewsletter" value="<?= $values['id_request']; ?>"><input type="submit"  name="deleteNews"  value="delete"></form></td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>

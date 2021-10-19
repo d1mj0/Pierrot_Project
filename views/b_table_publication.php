@@ -50,7 +50,7 @@
                                 <td><?= substr($values['description'], 0, 100);?></td>
                                 <td><?= substr($values['text'], 0, 250);?></td>
                                 <td><?= $values['date_time_publi'];?></td>
-                                <td><a href="#"><i class="fas fa-edit"><?= $publicUpdate; ?></i></a>  <a href="#"><i class="fas fa-trash-alt"><?= $publicDelete; ?></i></a></td>
+                                <td><form action="b_update_publication.php"><a href="b_update_publication.php?id=<?= $values['id_publi']; ?>" name="publicUpdate"><i class="fas fa-edit"></i></a></form> <form action="b_delete_publication.php" method="POST"><input type="hidden" name="idPublication" value="<?= $values['id_publi']; ?>"><input type="submit"  name="deletePublic"  value="delete"></form></td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>

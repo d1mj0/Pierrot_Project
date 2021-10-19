@@ -27,7 +27,7 @@
                   <?php foreach($articles as $values): ?>
                     <div class="col-lg-4 col-md-12">
                       <div class="card m-4">
-                        <div class="bg-image"><!-check image ripple-!>
+                        <div class="bg-image">
                           <img class="img-fluid" src="<?= $values['img']; ?>" alt="">
                           <a href="article.php?id=<?= $values['id_article']; ?>">
                             <div class="mask" style="background-color: rgba(#5c5c5c);"></div>
