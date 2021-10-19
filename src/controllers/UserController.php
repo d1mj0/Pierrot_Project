@@ -28,9 +28,9 @@ class UserController {
     public function login(){
        
         $data = $this->checkMail($this->email);
-        var_dump($data[0],'1');
+        
         if(count($data) === 1){
-            var_dump($data[0],'2');
+            
             // password_verify() permet de faire correspondre un mot de passe et mot de passe hashé.
                 
                 // La variable prédéfinie $_SESSION permet de persister les données de page en page.

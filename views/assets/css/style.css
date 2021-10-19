@@ -426,10 +426,10 @@ box-shadow:  -20px 20px 31px #8c8c8c,
 
 /*<---------------------------------------------Card--------------------------------------------->*/
 .card{
-  border-radius: 26px;
+  
   background: #ffffff;
   box-shadow:  -35px 35px 70px #666666,
-               0px 0px 70px #ffffff;
+               35px 35px 70px #666666;
 }
 
 .card-body{
@@ -447,9 +447,11 @@ box-shadow:  -20px 20px 31px #8c8c8c,
 }
 
 .card-header{
-  border-radius: 26px;
-  border: 1rem solid #5a5a5a;
+  border: 0.2rem solid #5a5a5a;
 }
+
+
+
 /*<---------------------------------------------A propos--------------------------------------------->*/
 #bio p{
     font-size: 1.63em;

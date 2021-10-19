@@ -463,7 +463,7 @@ a:hover {
   .form-control::file-selector-button, .dataTable-input::file-selector-button {
     transition: none;
   }
-}
+
 .form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button, .dataTable-input:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
   background-color: #dde0e3;
 }
@@ -924,3 +924,4 @@ a.btnAdmin.btn.btn-light.ripple{
     margin-left: 0;
     
   }
+}
