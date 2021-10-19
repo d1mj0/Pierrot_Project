@@ -21,16 +21,13 @@
 <body class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <!-- Navbar Brand-->
-        <a class="navbar-brand ps-3" href="index.php"><img class="img-fluid" src="../views/assets/img/title_header.svg" alt=""></a>
+        <a class="navbar-brand ps-3" href="b_administration.php"><img class="img-fluid" src="../views/assets/img/title_header.svg" alt=""></a>
         <!-- Navbar-->
         <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#!">Paramètres</a></li>
-                    <li><a class="dropdown-item" href="#!">Activité Log</a></li>
-                    <li><hr class="dropdown-divider" /></li>
-                    <li><a class="dropdown-item" href="#!">Déconnection</a></li>
+                    <li><a class="dropdown-item" href="b_deconnexion.php">Déconnection</a></li>
                 </ul>
             </li>
         </ul>

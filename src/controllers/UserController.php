@@ -41,7 +41,7 @@ class UserController {
                 ];var_dump($data[0]);
                 if($data[0]['rank'] == "admin"){
                     
-                    header('Location: b_tables.php');
+                    header('Location: b_administration.php');
                 }
                 
             

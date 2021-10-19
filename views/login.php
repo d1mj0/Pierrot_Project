@@ -2,10 +2,17 @@
     $title = "Login";
     require_once('../src/controllers/UserController.php'); 
 
-    if(!empty($_GET['email']) && !empty($_GET['password'])){
-        $userController = new UserController($_GET['email'], $_GET['password'], NULL);
+    session_start();
+    $message="";
+    
+    
+
+    if(!empty($_POST['email']) && !empty($_POST['password'])){
+        $userController = new UserController($_POST['email'], $_POST['password'], NULL);
         $userController->login();
-    }
+    } else {
+        $message = "Nom d'utilisateur ou mot de passe invalide!";
+       }
     
     require_once('./templates/header.php');
 ?>
@@ -20,7 +27,7 @@
                             <div class="card shadow-lg border-0 rounded-lg mt-5">
                                 <div class="card-header"><h3 class="text-center font-weight-light my-4">Connection</h3></div>
                                 <div class="card-body">
-                                    <form action="login.php" method="get">
+                                    <form action="login.php" method="POST">
                                         <div class="form-floating mb-3">
                                             <input class="form-control" id="email" name="email"  type="email" placeholder="name@example.com" />
                                             <label for="email">Email</label>
