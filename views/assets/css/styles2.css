@@ -501,6 +501,8 @@ textarea.form-control{
   min-height: calc(1.5em + 0.75rem + 2px);
 }
 
+
+
 .btn {
   display: inline-block;
   font-weight: 400;
@@ -536,6 +538,12 @@ textarea.form-control{
 .btn:disabled, .btn.disabled, fieldset:disabled .btn {
   pointer-events: none;
   opacity: 0.65;
+}
+
+#btnAdmin div div div a .btn-light {
+  padding:0!important;
+  margin:0!important;
+  border:none !important;
 }
 
 .btn-primary {

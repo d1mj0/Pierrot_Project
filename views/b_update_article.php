@@ -21,7 +21,7 @@ if(isset($_FILES['img']) && $_FILES['img']['error'] === 0){
     move_uploaded_file($_FILES['img']['tmp_name'], $uploadfile);
 }
 
-if(isset($_GET['id']) && isset($_POST['articleUpdate'])){
+if(isset($_POST['id']) && isset($_POST['articleUpdate'])){
 if(!empty($_POST['title']) && !empty($_POST['description']) && !empty($_POST['text']) && isset($uploadfile)){
 $text = $_POST['text'];
 $txtCtrl = new TextController();
@@ -67,7 +67,7 @@ echo '<div class="alert alert-danger>
                                 <div class="card-header"><h3 class="text-center font-weight-light my-4">Mise à jour de l'article  <br><?= $articleR[0]['title']; ?></h3></div>
                                     <div class="card-body">
                                         <form enctype="multipart/form-data" action="b_update_article.php?<?= $articleR[0]['id']; ?>"  method="POST">
-                                            
+                                        <input type="hidden" name="id" value="<?= $articleR[0]['id']; ?>" />
                                             <label class="form-label" for="title">Titre</label>
                                             <div class="form-floating mb-3">
                                                 <input  id="editTitle" class="form-control" name="title"  type="text" value="<?= $articleR[0]['title']; ?>" required/>

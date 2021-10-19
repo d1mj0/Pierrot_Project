@@ -11,6 +11,7 @@
     <link href="../views/assets/css/styles2.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/dt-1.11.3/datatables.min.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+    <link rel="shortut icon" href="../views/assets/img/eversion.ico">
     <title>
         <?php
             echo "$title";
