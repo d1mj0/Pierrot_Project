@@ -11,8 +11,7 @@
 
     $newsletter = new NewsletterController(NULL, NULL, NULL);
     $newsSelect = $newsletter->listEmails();
-    $newsUpdate = $newsletter->updateEmail();
-    $newsDelete = $newsletter->deleteEmail();
+    
 ?>
 
 <main>
