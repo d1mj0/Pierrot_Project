@@ -27,7 +27,7 @@ require_once('../views/templates/b_header.php');
                     <a href="b_publication_article.php" class="btnAdmin btn  btn-light ripple py-0" role="button">
                         <div class="bg-image">
                             <img class="img-fluid" src="../views/assets/img/article.png" alt="">
-                            <div class="mask" style="background-color: rgba(#5c5c5c);"></div>
+                            
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">Publier un article de blog</h5> 
@@ -39,8 +39,7 @@ require_once('../views/templates/b_header.php');
                     <div class="card m-4 ">
                     <a href="b_publication_publication.php" class="btnAdmin btn  btn-light ripple py-0" role="button">
                         <div class="bg-image">
-                            <img class="img-fluid" src="../views/assets/img/publi.png" alt="">
-                            <div class="mask" style="background-color: rgba(#5c5c5c);"></div>
+                            <img class="img-fluid" src="../views/assets/img/publi.png" alt="">                          
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">Ajouter une publication</h5> 
@@ -51,42 +50,40 @@ require_once('../views/templates/b_header.php');
             <div class="container-fluid">
                 <div class="row ">
                     <div class="col-lg-4 col-md-12">
-                        <a href="b_table_article.php" class="btnAdmin btn  btn-light ripple py-0" role="button">
-                            <div class="card m-4">
-                                <div class="bg-image">
-                                    <img class="img-fluid" src="../views/assets/img/edit_article.png" alt="">
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title">Consulter/modifier un article de blog</h5>
-                                </div>
+                        <div class="card m-4">
+                            <a href="b_table_article.php" class="btnAdmin btn  btn-light ripple py-0" role="button">
+                            <div class="bg-image ">
+                                <img class="img-fluid" src="../views/assets/img/edit_article.png" alt="">
                             </div>
-                        </a>
+                            <div class="card-body">
+                                <h5 class="card-title">Consulter/modifier un article de blog</h5>
+                            </div>
+                            </a>
+                        </div>
                     </div>
                     <div class="col-lg-4 col-md-12">
-                        <a href="b_table_newsletter.php" class="btnAdmin btn  btn-light ripple py-0" role="button">
-                            <div class="card m-4">
+                        <div class="card m-4">
+                            <a href="b_table_newsletter.php" class="btnAdmin btn  btn-light ripple py-0" role="button">
                                 <div class="bg-image">
                                     <img class="img-fluid" src="../views/assets/img/edit_newsletter.png" alt="">
-                                    <div class="mask" style="background-color: rgba(#5c5c5c);"></div>
                                 </div>
                                 <div class="card-body">
                                     <h5 class="card-title">Consulter/modifier inscription newsletter</h5>
                                 </div>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
                     </div>
                     <div class="col-lg-4 col-md-12">
-                        <a href="b_table_publication.php" class="btnAdmin btn  btn-light ripple py-0" role="button">
-                            <div class="card m-4">
+                        <div class="card m-4">
+                            <a href="b_table_publication.php" class="btnAdmin btn  btn-light ripple py-0" role="button">
                                 <div class="bg-image">
                                     <img class="img-fluid" src="../views/assets/img/edit_publi.png" alt="">
-                                    <div class="mask" style="background-color: rgba(#5c5c5c);"></div>
                                 </div>
                                 <div class="card-body">
                                     <h5 class="card-title">Consulter/modifier une Publication</h5>
                                 </div>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

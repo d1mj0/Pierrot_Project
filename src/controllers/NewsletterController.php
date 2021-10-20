@@ -19,11 +19,11 @@
                 $newsletterModel = new NewsletterModel();
                 return $newsletterModel->getAll();
             }        
-            public function deleteEmail(){
+            public function deleteNewsletter(){
                 $newsletterModel = new NewsletterModel();
                 return $newsletterModel->delete($this->name, $this->lastname, $this->email);
             }
-            public function updateEmail(){
+            public function updateNewsletter(){
                 $newsletterModel = new NewsletterModel();
                 return $newsletterModel->update($this->name, $this->lastname, $this->email);
             }
