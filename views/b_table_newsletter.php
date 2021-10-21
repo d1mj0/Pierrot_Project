@@ -20,7 +20,6 @@
             <li class="breadcrumb-item"><a href="tables.php">Administration</a></li>
             <li class="breadcrumb-item active">Tableau Newsletter</li>
         </ol>
-
         <div class="card mb-4">
             <div class="card-header">
                 <i class="fas fa-table me-1"></i>

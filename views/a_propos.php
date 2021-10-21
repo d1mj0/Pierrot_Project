@@ -35,7 +35,8 @@
                              d’anarchiste que Pierre-André nous propose ici. Un paradigme qu’il nomme « Éversion », en référence à
                              la dimension entropique du processus décrit mais aussi face à la complexité systémique à laquelle il
                              se réfère. Le maître mot est lâché : complexité. La dialogique voilà bien à quoi se réfère tout le
-                             perspectivisme de notre auteur. Une pensée dont la complexité n’a d’égale que sa radicalité.</p>
+                             perspectivisme de notre auteur. Une pensée dont la complexité n’a d’égale que sa radicalité.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -43,7 +44,7 @@
         <br>
         <br>
     </main>
-    <?php
+<?php
     //Appel template footer
     require_once("./templates/footer.php");
-    ?>
+?>

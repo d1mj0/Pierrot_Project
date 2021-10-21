@@ -90,7 +90,8 @@
                     officia iste recusandae optio natus, quam quaerat, aperiam ullam.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero placeat dicta quod laborum dolore atque, 
                     officia iste recusandae optio natus, quam quaerat, aperiam ullam.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero placeat dicta quod laborum dolore atque, 
                     officia iste recusandae optio natus, quam quaerat, aperiam ullam.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero placeat dicta quod laborum dolore atque, 
-                    officia iste recusandae optio natus, quam quaerat, aperiam ullam.</p>
+                    officia iste recusandae optio natus, quam quaerat, aperiam ullam.
+                </p>
             </div>
         </div>
     </div>

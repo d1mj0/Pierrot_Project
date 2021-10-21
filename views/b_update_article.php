@@ -89,7 +89,6 @@ if(isset($_POST['articleUpdate']) && !empty($_POST['title']) && !empty($_POST['d
         </div>
     </div>
 </main>
-
 <?php
 require_once('../views/templates/b_footer.php');
 ?>

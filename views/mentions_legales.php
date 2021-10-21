@@ -1,13 +1,6 @@
-    <?php
-    //Variable avec le titre de la page
-    $title = "Mentions legales";
-    //Appel template header
-    require_once('./templates/header.php');
-    ?>
-
 <?php
     //Variable avec le titre de la page
-    $title = "Travaux et publications";
+    $title = "Mentions legales";
     //Appel template header
     require_once('./templates/header.php');
 ?>

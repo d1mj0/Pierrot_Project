@@ -3,9 +3,9 @@
     $title = "Travaux et publications";
     //Appel template header
     require_once('./templates/header.php');
-    ?>
+?>
 <br>
-        <br>
+    <br>
         <section>
             <div class="container">
                     <div class="row">
@@ -103,7 +103,7 @@
         <br>
         <br>
     </main>
-    <?php
-    //Appel template footer
-    require_once("./templates/footer.php");
-    ?>
+<?php
+//Appel template footer
+require_once("./templates/footer.php");
+?>

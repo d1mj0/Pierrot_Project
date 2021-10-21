@@ -144,7 +144,6 @@
                 <?php if($values['id_publi'] % 2 != 0): ?>
                     <div class="row">
                         <div class="col-lg-4">
-
                             <a href="publication.php?id=<?= $values['id_publi']; ?>"><img src="<?= $values['img'] ?>" alt="<?=  $values['title'] ?>"></a>
                         </div>
                         <div class="col-lg-8">
@@ -163,7 +162,6 @@
                         </div>
                         <div class="col-lg-4">
                             <a href="publication.php?id=<?= $values['id_publi']; ?>"><img src="<?= $values['img'] ?>" alt="<?=$values['title'] ?>"></a>
-
                         </div>
                     </div>
                     <br>

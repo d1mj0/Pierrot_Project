@@ -75,7 +75,6 @@
         </div>
     </div>
 </main>
-
 <?php
     require_once('../views/templates/b_footer.php');
 ?>
