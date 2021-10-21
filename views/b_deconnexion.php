@@ -9,5 +9,4 @@ require_once('./templates/b_header.php');
 ?>
 <?php
 require_once('./templates/b_footer.php');
-
 ?>

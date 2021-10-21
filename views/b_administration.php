@@ -82,7 +82,6 @@ require_once('../views/templates/b_header.php');
         </div>
     </section> 
 </main>
-
 <?php
     require_once('../views/templates/b_footer.php');
 ?>

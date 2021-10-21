@@ -16,22 +16,20 @@
     <link rel="shortut icon" href="../views/assets/img/eversion.ico">
    
     <title>
-        <?php
-            echo "$title";
-        ?>
+<?php
+    echo "$title";
+?>
     </title>
 </head>
-
-
 <body>
     <header>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-xl-12 d-none d-md-block d-lg-block">
-                <a href="index.php"><img src="../views/assets/img/design_header.jpg" class="img-fluid" /></a>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-12 d-none d-md-block d-lg-block">
+                    <a href="index.php"><img src="../views/assets/img/design_header.jpg" class="img-fluid" /></a>
+                </div>
             </div>
         </div>
-    </div>
         <nav class="navbar navbar-expand-lg py-0">
             <div class="container-fluid">
                     <a class="navbar-brand m-0 p-0" href="#"><img src="../views/assets/img/design_header.jpg"  class="img-fluid mx-auto pt-0 d-block d-md-none d-lg-none navbar-img" /></a>
@@ -62,3 +60,4 @@
                 </div>
             </div>
         </nav>
+    </header>
