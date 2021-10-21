@@ -13,7 +13,6 @@
 
 
 ?>
-    
 <main>
     <div class="container-fluid px-4">
         <h1 class="mt-4">Article</h1>
@@ -48,7 +47,7 @@
                                 <td><?= (strlen($values['description']) > 40) ? substr($values['description'], 0, 40)."..." : ($values['description'])?></td>
                                 <td><?= (strlen($values['text']) > 40) ? substr($values['text'], 0, 40)."..." : ($values['text']) ;?></td>
                                 <td><?= $values['date_time_publi']; ?></td>
-                                <td><form action="b_update_article.php"><a href="b_update_article.php?id=<?= $values['id_article']; ?>" name="articleUpdate"><i class="fas fa-edit"></i></a></form> <form action="b_delete_article.php" method="POST"><input type="hidden" name="idArticle" value="<?= $values['id_article']; ?>"><input type="submit"  name="deleteArticle"  value="delete"></form></td>
+                                <td><form action="b_update_article.php"><a href="b_update_article.php?id=<?= $values['id_article']; ?>" name="articleUpdate"><i class="fas fa-edit"></i></a></form> <form action="b_delete_article.php" method="POST"><input type="hidden" name="idArticle" value="<?= $values['id_article']; ?>"><a href="b_delete_article.php?id=<?= $values['id_article']; ?>" name="articleDelete"><input type="submit"  name="deleteArticle"  value="delete"></form></td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>
@@ -56,8 +55,7 @@
             </div>
         </div>
     </div>
-</main>
-                
+</main>            
 <?php
     require_once('../views/templates/b_footer.php');
 ?>

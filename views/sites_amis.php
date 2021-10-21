@@ -1,10 +1,9 @@
-    <?php
+<?php
     //Variable avec le titre de la page
     $title = "Sites amis";
     //Appel template header
     require_once("./templates/header.php");
-    ?>
-
+?>
 <main>
     <br>
     <br>
@@ -29,8 +28,7 @@
     <br>
     <br>
 </main>
-
-    <?php
+<?php
     //Appel template footer
     require_once("./templates/footer.php");
-    ?>
+?>

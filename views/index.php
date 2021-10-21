@@ -14,7 +14,6 @@
     $publicController = new PublicationController(NULL, NULL, NULL, NULL);
     $recentPublications = $publicController->listPubliChronoDesc();
 ?>
-
 <main>
     <br>
     <br>
@@ -175,7 +174,6 @@
     <br>
     <br>
 </main>
-
 <?php
     require_once("./templates/footer.php");
 ?>

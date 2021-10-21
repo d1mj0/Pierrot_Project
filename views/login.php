@@ -2,10 +2,7 @@
     $title = "Login";
     require_once('../src/controllers/UserController.php'); 
 
-    
     $message="";
-    
-    
 
     if(!empty($_POST['email']) && !empty($_POST['password'])){
         $userController = new UserController($_POST['email'], $_POST['password'], NULL);
@@ -16,7 +13,6 @@
     
     require_once('./templates/header.php');
 ?>
-
 <main>
     <div id="layoutContact">
         <div id="layoutContact_content">
@@ -52,9 +48,6 @@
     <br>
     <br>
 </main>
-
-
-
 <?php
     //Appel template footer
     require_once("./templates/footer.php");

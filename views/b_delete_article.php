@@ -1,5 +1,4 @@
 <?php
-
 $title =  "Suppression d'article";
 
 require_once('../views/templates/b_header.php'); 
@@ -30,8 +29,6 @@ echo '<div class="alert alert-danger>
 }
 
 ?>
-
-
 <?php
     require_once('../views/templates/b_footer.php');
 ?>

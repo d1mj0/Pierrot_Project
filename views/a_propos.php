@@ -3,7 +3,6 @@
     
     require_once('./templates/header.php');
     ?>
-
     <main>
         <br>
         <br>
@@ -44,7 +43,6 @@
         <br>
         <br>
     </main>
-
     <?php
     //Appel template footer
     require_once("./templates/footer.php");

@@ -1,7 +1,5 @@
 <?php
-
 $title =  "Mise à jour de l'article";
-
 require_once('../views/templates/b_header.php'); 
 require_once('../src/models/ArticleModel.php'); 
 require_once('../src/controllers/ArticleController.php');
@@ -24,31 +22,12 @@ if(isset($_FILES['img']) && $_FILES['img']['error'] === 0){
 if(isset($_POST['articleUpdate']) && !empty($_POST['title']) && !empty($_POST['description']) && !empty($_POST['text']) && isset($uploadfile)){
     $id = $_POST['id'];
     
-    
-    
     $text = $_POST['text'];
     $txtCtrl = new TextController();
     $html = $txtCtrl->txt2html($text);
     $articleUpdate = new ArticleController($_POST['title'], $_POST['description'], $html, $uploadfile);
-    
     $articleUpdate->updateArticle($id);
-    
-
-if(!empty($articleUpdate)){
-echo '<div class="alert alert-success>
-<button type="button" class="close" data-dismiss="alert-success">
-<strong>"L article a été mis à jour"</strong>
-</div>';
-
-}
-
-else{
-echo '<div class="alert alert-danger>
-<button type="button" class="close" data-dismiss="alert-danger">
-<strong>"L article n a pas été mis a jour"</strong>
-</div>';
-
-}
+    header('location: b_table_article.php' );
 
 }
 
@@ -112,5 +91,5 @@ echo '<div class="alert alert-danger>
 </main>
 
 <?php
-    require_once('../views/templates/b_footer.php');
+require_once('../views/templates/b_footer.php');
 ?>

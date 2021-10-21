@@ -4,14 +4,7 @@
     //Appel template header
     require_once('./templates/header.php');
     require_once('./captcha_code_file.php')
-
-
-
-
-
-
     ?>
-
     <main>
         <div id="layoutContact">
             <div id="layoutContact_content">
@@ -61,8 +54,7 @@
         <br>
         <br>
     </main>
-
-    <?php
+<?php
     //Appel template footer
     require_once("./templates/footer.php");
-    ?>
+?>
