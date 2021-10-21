@@ -9,11 +9,11 @@ require_once('../src/controllers/TextController.php');
 
 
 
-
-
-
 $articles = new ArticleModel;
 $articleR = $articles->getOne($_GET['id']);
+
+
+$id = 0;
 
 if(isset($_FILES['img']) && $_FILES['img']['error'] === 0){
     $uploaddir = "./assets/img/";
@@ -21,15 +21,20 @@ if(isset($_FILES['img']) && $_FILES['img']['error'] === 0){
     move_uploaded_file($_FILES['img']['tmp_name'], $uploadfile);
 }
 
-if(isset($_POST['id']) && isset($_POST['articleUpdate'])){
-if(!empty($_POST['title']) && !empty($_POST['description']) && !empty($_POST['text']) && isset($uploadfile)){
-$text = $_POST['text'];
-$txtCtrl = new TextController();
-$html = $txtCtrl->txt2html($text);
-$articleUpdate = new ArticleController($_POST['title'], $_POST['description'], $html, $uploadfile);
-$articleUpdate->updateArticle();
+if(isset($_POST['articleUpdate']) && !empty($_POST['title']) && !empty($_POST['description']) && !empty($_POST['text']) && isset($uploadfile)){
+    $id = $_POST['id'];
+    
+    
+    
+    $text = $_POST['text'];
+    $txtCtrl = new TextController();
+    $html = $txtCtrl->txt2html($text);
+    $articleUpdate = new ArticleController($_POST['title'], $_POST['description'], $html, $uploadfile);
+    
+    $articleUpdate->updateArticle($id);
+    
 
-if(!$articleUpdate){
+if(!empty($articleUpdate)){
 echo '<div class="alert alert-success>
 <button type="button" class="close" data-dismiss="alert-success">
 <strong>"L article a été mis à jour"</strong>
@@ -46,7 +51,7 @@ echo '<div class="alert alert-danger>
 }
 
 }
-}
+
 
 
 ?>
@@ -66,8 +71,8 @@ echo '<div class="alert alert-danger>
                             <div class="card shadow-lg border-0 rounded-lg mt-5">
                                 <div class="card-header"><h3 class="text-center font-weight-light my-4">Mise à jour de l'article  <br><?= $articleR[0]['title']; ?></h3></div>
                                     <div class="card-body">
-                                        <form enctype="multipart/form-data" action="b_update_article.php?<?= $articleR[0]['id']; ?>"  method="POST">
-                                        <input type="hidden" name="id" value="<?= $articleR[0]['id']; ?>" />
+                                        <form enctype="multipart/form-data" action="b_update_article.php?<?= $_GET['id']; ?>"  method="POST">
+                                        <input type="hidden" name="id" value="<?= $_GET['id']; ?>" />
                                             <label class="form-label" for="title">Titre</label>
                                             <div class="form-floating mb-3">
                                                 <input  id="editTitle" class="form-control" name="title"  type="text" value="<?= $articleR[0]['title']; ?>" required/>
@@ -91,7 +96,7 @@ echo '<div class="alert alert-danger>
                                             <br>
                                             <br>
                                             <div class="d-flex align-items-center justify-content-center mt-4 mb-0">
-                                                <a href="b_table_article.php"  type='submit' name='articleUpdate' class="btn btn-success"  >Mise à jour de l'article</button>
+                                                <button  name='articleUpdate' id="articleUpdate" class="btn btn-success">Mise à jour de l'article</button>
                                                 <a href="b_table_article.php" class="btn btn-danger"> CANCEL </a>
                                             </div>
                                         </form>

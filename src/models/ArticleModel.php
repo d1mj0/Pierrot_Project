@@ -66,30 +66,26 @@ class ArticleModel {
         return $result;
     }
 
-    public function update($title, $description, $text, $img){
+    public function update($title, $description, $text, $img, $id){
         $request = $this->connexion->prepare('UPDATE article SET title=:title, description=:description, text=:text, img=:img WHERE id_article=:id');
         $request->execute([
             ':title' => $title,
             ':description' => $description,
             ':text' => $text,
             ':img' => $img,
+            ':id' => $id,
             
     ]);
-
         $result = $request -> fetchAll(PDO::FETCH_ASSOC);
         return $result;
-        // Update
-        // cette méthode va permettre de modifier les données en base de données. 
+
     }
 
     public function delete($id){
         $request = $this->connexion->prepare('DELETE FROM article WHERE id_article =:id');
         $request->execute([':id' => $id]);
-
-        $request->execute([':id' => $id]);
            
     
-
         $result = $request -> fetchAll(PDO::FETCH_ASSOC);
         return $result;
         // Delete
