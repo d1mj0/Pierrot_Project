@@ -49,5 +49,4 @@ $captcha_noise_color = "0x142864";
   }
 }
 
-
 ?>

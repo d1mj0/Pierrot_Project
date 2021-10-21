@@ -15,7 +15,7 @@
     <title>
 <?php
             //Affiche le titre de la page
-            print_r($title);
+          print_r($title);
 ?>
     </title>
 </head>

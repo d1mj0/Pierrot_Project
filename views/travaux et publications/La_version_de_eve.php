@@ -4,7 +4,6 @@
     //Appel template header
     require_once('./templates/header.php');
     ?>
-
 <br>
         <br>
         <section>
@@ -110,7 +109,6 @@
         <br>
         <br>
     </main>
-
     <?php
     //Appel template footer
     require_once("./templates/footer.php");

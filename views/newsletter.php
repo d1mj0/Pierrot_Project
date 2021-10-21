@@ -14,7 +14,6 @@
         $newsletter->addEmail();
     }
 ?>
-
 <main>
     <div id="layoutContact">
         <div id="layoutContact_content">
@@ -58,7 +57,6 @@
     <br>
     <br>
 </main>
-
 <?php
     require_once("./templates/footer.php");
 ?>

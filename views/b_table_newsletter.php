@@ -13,7 +13,6 @@
     $newsSelect = $newsletter->listEmails();
     
 ?>
-
 <main>
     <div class="container-fluid px-4">
         <h1 class="mt-4">Tableau Newsletter</h1>
@@ -54,7 +53,6 @@
         </div>
     </div>
 </main>
-
 <?php
     require_once('../views/templates/b_footer.php');
 ?>

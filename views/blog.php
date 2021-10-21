@@ -1,5 +1,5 @@
-    <?php
-    session_start();
+<?php
+    
         //Variable avec le titre de la page;
     $title = "Blog";
     //Appel template header
@@ -9,7 +9,6 @@
     $articleSelect = new ArticleController(NULL, NULL, NULL, NULL);
     $articles = $articleSelect->listArticles();
 ?>
-
 <main class="my-5">
       <div class="container-fluid">
         <div class="row">
@@ -62,8 +61,7 @@
         </ul>
       </nav>
 </main>
-
-  <?php
+<?php
     //Appel template footer
     require_once("./templates/footer.php");
-  ?>
+?>

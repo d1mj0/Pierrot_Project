@@ -24,7 +24,6 @@
         $articlePost->addArticle();
     }
 ?>
-
 <main>
     <div class="container-fluid px-4">
         <h1 class="mt-4">Publication Articles Blog</h1>

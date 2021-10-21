@@ -14,7 +14,6 @@
     $tmstp = strtotime($d);
     $dfr = strftime('%A %d %B %Y', $tmstp);
 ?>
-
 <main>
     <section>
       <br>
@@ -58,7 +57,6 @@
     <br>
     <br>
 </main>
-
 <?php
     require_once("./templates/footer.php");
 ?>

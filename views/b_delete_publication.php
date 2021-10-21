@@ -30,8 +30,6 @@ echo '<div class="alert alert-danger>
 }
 
 ?>
-
-
 <?php
     require_once('../views/templates/b_footer.php');
 ?>
