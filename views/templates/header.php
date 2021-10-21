@@ -16,13 +16,11 @@
     <link rel="shortut icon" href="../views/assets/img/eversion.ico">
    
     <title>
-        <?php
-            echo "$title";
-        ?>
+<?php
+    echo "$title";
+?>
     </title>
 </head>
-
-
 <body>
     <header>
         <div class="container-fluid">

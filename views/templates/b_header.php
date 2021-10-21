@@ -13,7 +13,7 @@
     <link rel="shortut icon" href="../views/assets/img/eversion.ico">
 <title>
 <?php
-        echo "$title";
+  echo "$title";
 ?>
 </title>
 </head>
@@ -77,6 +77,7 @@
                             </nav>
                         </div>
                     </div>
-                </nav>
-            </div>
-            <div id="layoutSidenav_content">
+                </div>
+            </nav>
+        </div>
+        <div id="layoutSidenav_content">
