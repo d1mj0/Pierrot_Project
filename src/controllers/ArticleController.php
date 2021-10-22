@@ -45,11 +45,9 @@ class ArticleController {
         ob_end_flush();
     }
 
-    public function deleteArticle(){
+    public function deleteArticle($id){
         $articleModel = new ArticleModel();
-        $articleModel->delete($this->title, $this->description, $this->text, $this->img);
-        header('Location: b_table_article.php');
-        ob_end_flush();
+        $articleModel->delete($this->title, $this->description, $this->text, $this->img, $id);
     }
 
     

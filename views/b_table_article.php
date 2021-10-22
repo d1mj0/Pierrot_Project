@@ -38,11 +38,11 @@
                             <th>Action</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody >
                         <?php foreach($articles as $values): ?>
-                            <tr>
+                            <tr >
                                 <td><?= $values['id_article']; ?></td>
-                                <td><img width="100" height="100" src="<?= $values['img']; ?>" alt=""></td>
+                                <td><img width="100" height="80" src="<?= $values['img']; ?>" alt=""></td>
                                 <td><a href="article.php?id_article=<?= $values['id_article']; ?>"><?= $values['title']; ?></a></td>
                                 <td><?= (strlen($values['description']) > 40) ? substr($values['description'], 0, 40)."..." : ($values['description'])?></td>
                                 <td><?= (strlen($values['text']) > 40) ? substr($values['text'], 0, 40)."..." : ($values['text']) ;?></td>
