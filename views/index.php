@@ -148,8 +148,8 @@
                         </div>
                         <div class="col-lg-8">
                             <a href="publication.php?id=<?= $values['id_publi']; ?>"><h3><?= $values['title']; ?></h3></a>
-                            <?= substr($value['text'], 0, 1000) . "...</p>"; ?>
-                            <a href="publication.php?id=<?= $value['id_publi']; ?>">Lire la suite >>></a>
+                            <?= substr($values['text'], 0, 1000) . "...</p>"; ?>
+                            <a href="publication.php?id=<?= $values['id_publi']; ?>">Lire la suite >>></a>
                         </div>
                     </div>
                     <br>
@@ -157,7 +157,7 @@
                     <div class="row">
                         <div class="col-lg-8">
                             <a href="publication.php?id=<?= $values['id_publi']; ?>"><h3><?= $values['title']; ?></h3></a>
-                            <?= substr($value['text'], 0, 1000) . "...</p>"; ?>
+                            <?= substr($values['text'], 0, 1000) . "...</p>"; ?>
                             <a href="publication.php?id=<?= $values['id_publi']; ?>">Lire la suite >>></a>
                         </div>
                         <div class="col-lg-4">

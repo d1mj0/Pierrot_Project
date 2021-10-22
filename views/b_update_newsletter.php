@@ -1,50 +1,39 @@
 <?php
+    ini_set("display_errors", 1);
+    error_reporting(E_ALL);
 
-$title =  "Mise à jour d'inscription";
+    $title =  "Mise à jour d'inscription";
 
-require_once('../views/templates/b_header.php'); 
-require_once('../src/models/NewsletterModel.php'); 
-require_once('../src/controllers/NewsletterController.php');
+    require_once('../views/templates/b_header.php'); 
+    require_once('../src/models/NewsletterModel.php'); 
+    require_once('../src/controllers/NewsletterController.php');
 
+    $newsletter = new NewsletterModel;
+    $newsletterR = $newsletter->getOne($_GET['id']);
 
-
-
-
-
-
-$newsletter = new NewsletterModel;
-$newsletterR = $newsletter->getOne($_GET['id']);
-
-
-if(isset($_POST['id']) && isset($_POST['newsUpdate'])){
-if(!empty($_POST['name']) && !empty($_POST['lastName']) && !empty($_POST['email'])){
-$newsUpdate = new NewsletterController($_POST['name'], $_POST['lastName'], $_POST['email']);
-$newsUpdate->updateNewsletter();
-
-if(!$newsUpdate){
-echo '<div class="alert alert-success>
-<button type="button" class="close" data-dismiss="alert-success">
-<strong>"L article a été mis à jour"</strong>
-</div>';
-
-}
-
-else{
-echo '<div class="alert alert-danger>
-<button type="button" class="close" data-dismiss="alert-danger">
-<strong>"L article n a pas été mis a jour"</strong>
-</div>';
-
-}
-
-}
-}
-
-
+    if(isset($_POST['id']) && isset($_POST['newsUpdate'])){
+        if(!empty($_POST['name']) && !empty($_POST['lastName']) && !empty($_POST['email'])){
+            $newsUpdate = new NewsletterController($_POST['name'], $_POST['lastName'], $_POST['email']);
+            $newsUpdate->updateNewsletter();
+            if(!$newsUpdate){
+                echo '<div class="alert alert-success>
+                <button type="button" class="close" data-dismiss="alert-success">
+                <strong>"L article a été mis à jour"</strong>
+                </div>';
+            }
+            else{
+                echo '<div class="alert alert-danger>
+                <button type="button" class="close" data-dismiss="alert-danger">
+                <strong>"L article n a pas été mis a jour"</strong>
+                </div>';
+            }
+        }
+    }
 ?>
+
 <main>
     <div class="container-fluid px-4">
-        <h1 class="mt-4">Mise à jour de l'article <?= $newsletterR[0]['title']; ?></h1>
+        <h1 class="mt-4">Mise à jour de l'insription pour <?= $newsletterR[0]['name']; ?> <?= $newsletterR[0]['lastname']; ?></h1>
         <ol class="breadcrumb mb-4">
             <li class="breadcrumb-item"><a href="index.html">Administration</a></li>
             <li class="breadcrumb-item active">Mise à jour d'inscription Newsletter</li>
@@ -56,23 +45,23 @@ echo '<div class="alert alert-danger>
                     <div class="row justify-content-center">
                         <div class="col-lg-5">
                             <div class="card shadow-lg border-0 rounded-lg mt-5">
-                                <div class="card-header"><h3 class="text-center font-weight-light my-4">Mise à jour de <br><?= $newsletterR[0]['name']; ?><?= " ".$newsletterR[0]['name']; ?></h3></div>
+                                <div class="card-header"><h3 class="text-center font-weight-light my-4">Mise à jour de l'inscription pour <br><?= $newsletterR[0]['name']; ?><?= " ".$newsletterR[0]['lastname']; ?></h3></div>
                                     <div class="card-body">
                                         <form enctype="multipart/form-data" action="b_update_article.php?<?= $newsletterR[0]['id']; ?>"  method="POST">
                                         <input type="hidden" name="id" value="<?= $newsletterR[0]['id']; ?>" />
-                                            <label class="form-label" for="title">Titre</label>
+                                            <label class="form-label" for="title">Prénom</label>
                                             <div class="form-floating mb-3">
-                                                <input  id="editTitle" class="form-control" name="title"  type="text" value="<?= $newsletterR[0]['name']; ?>" required/>
+                                                <input id="editName" class="form-control" name="name" type="text" value="<?= $newsletterR[0]['name']; ?>" required/>
                                             </div>
                                             <br>            
-                                            <label class="form-label" for="description">Description</label>
+                                            <label class="form-label" for="description">Nom</label>
                                             <div class="form-floating mb-3">
-                                                <textarea  id="editDescription" class="form-control" name="description"  type="text" required ><?= $newsletterR[0]['lastname']; ?></textarea>
+                                                <input id="editLastName" class="form-control" name="lastname" type="text" value="<?= $newsletterR[0]['lastname']; ?>" required/>
                                             </div>
                                             <br>
-                                            <label class="form-label" for="text">Texte</label>
+                                            <label class="form-label" for="text">Email</label>
                                             <div class="form-floating mb-3">
-                                                <textarea id="editText" class="form-control" name="text" type="text" cols="40" rows="10" required><?= $newsletterR[0]['email']; ?></textarea>
+                                                <input id="editEmail" class="form-control" name="email" type="text" value="<?= $newsletterR[0]['email']; ?>" required/>
                                             </div>
                                             <br>
                                             <br>
@@ -91,6 +80,7 @@ echo '<div class="alert alert-danger>
         </div>
     </div>
 </main>
+
 <?php
     require_once('../views/templates/b_footer.php');
 ?>

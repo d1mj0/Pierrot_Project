@@ -23,10 +23,10 @@
             $result = $request->fetchAll(PDO::FETCH_ASSOC);
             return $result;
         }
-        public function getOne($email){
-            $request = $this->connection->prepare('SELECT * FROM newsletter WHERE email = :email');
+        public function getOne($id){
+            $request = $this->connexion->prepare('SELECT * FROM newsletter WHERE id_request = :id');
             $request->execute([
-                ':email'=>$email,
+                ':id'=>$id,
             ]);
             $result = $request->fetchAll(PDO::FETCH_ASSOC);
             return $result;
