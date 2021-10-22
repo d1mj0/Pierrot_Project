@@ -34,16 +34,22 @@ class ArticleController {
     public function addArticle(){
         $articleModel = new ArticleModel();
         $articleModel->create($this->title, $this->description, $this->text, $this->img);
+        header('Location: b_table_article.php');
+        ob_end_flush();
     }
 
     public function updateArticle($id){
         $articleModel = new ArticleModel();
         $articleModel->update($this->title, $this->description, $this->text, $this->img, $id);
+        header('Location: b_table_article.php');
+        ob_end_flush();
     }
 
     public function deleteArticle(){
         $articleModel = new ArticleModel();
         $articleModel->delete($this->title, $this->description, $this->text, $this->img);
+        header('Location: b_table_article.php');
+        ob_end_flush();
     }
 
     
@@ -111,5 +117,4 @@ class ArticleController {
     }
 
 }
-
 ?>

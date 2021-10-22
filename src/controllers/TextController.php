@@ -16,7 +16,5 @@
             $html = implode("\n", $html_arr);
             return $html;
         }
-    }
-
-    
+    } 
 ?>

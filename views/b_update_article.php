@@ -27,7 +27,6 @@ if(isset($_POST['articleUpdate']) && !empty($_POST['title']) && !empty($_POST['d
     $html = $txtCtrl->txt2html($text);
     $articleUpdate = new ArticleController($_POST['title'], $_POST['description'], $html, $uploadfile);
     $articleUpdate->updateArticle($id);
-    header('location: b_table_article.php' );
 
 }
 

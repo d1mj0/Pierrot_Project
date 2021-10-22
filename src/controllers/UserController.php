@@ -55,7 +55,7 @@ class UserController {
             if(isset($this->password) && isset($this->email) && isset($this->rank)){
                 $userModel = new UserModel();
                 $userModel->add($this->password,  $this->email, $this->rank);
-                header('Location: index.php');
+                
 
             }
         }
