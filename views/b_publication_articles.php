@@ -19,10 +19,8 @@
     }
 
     if(!empty($_POST['title']) && !empty($_POST['description']) && !empty($_POST['text'])&& isset($uploadfile)){
-        $text = $_POST['text'];
-        $txtCtrl = new TextController();
-        $html = $txtCtrl->txt2html($text);
-        $articlePost = new ArticleController($_POST['title'], $_POST['description'], $html, $uploadfile);
+        
+        $articlePost = new ArticleController($_POST['title'], $_POST['description'], $_POST['text'], $uploadfile);
         $articlePost->addArticle();
     }
 ?>

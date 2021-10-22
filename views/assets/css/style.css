@@ -146,8 +146,41 @@ p{
 
 
 .text{
-  margin: 2rem 2rem;
+  margin: 0rem 2rem;
 }
+
+.tnPublicationL{
+  margin-left: 2rem;
+}
+
+h3.tnPublicationL{
+  margin-bottom: 1.5rem;
+  margin-top: -1rem;
+}
+
+.tnPublicationR{
+  margin-right: 2rem;
+}
+
+h3.tnPublicationR{
+  margin-bottom: 1.5rem;
+  margin-top: -1rem;
+}
+
+
+div.textTnPubliR p.text{
+  margin-bottom: 0.7rem;
+  margin-left: 0rem;
+  
+}
+
+div.textTnPubli p.text{
+  margin-bottom: 0.7rem;
+  margin-right: 0rem;
+  
+}
+
+
 
 /*<---------------------------------------------Header--------------------------------------------->*/
 

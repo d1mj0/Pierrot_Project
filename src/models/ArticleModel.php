@@ -87,7 +87,10 @@ class ArticleModel {
            
     
         $result = $request -> fetchAll(PDO::FETCH_ASSOC);
+        header('Location: b_table_article.php');
+        ob_end_flush();
         return $result;
+        
         // Delete
         // cette méthode va permettre de supprimer les données en base de données. 
     }

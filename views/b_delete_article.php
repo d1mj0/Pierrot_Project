@@ -1,9 +1,6 @@
 <?php
     ob_start();
 
-    ini_set("display_errors", 1);
-    error_reporting(E_ALL);
-
     $title =  "Suppression d'article";
 
     require_once('../views/templates/b_header.php'); 
@@ -54,32 +51,39 @@
     */
 ?>
 
+
+
 <main>
+
     <section class="text-center">
         <br>
         <br>
         <h2 class="mb-5">Voulez-vous vraiment supprimer cette article?</h2>
-        <div class="container-fluid">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 col-md-12">
-                    <form action="b_delete_article.php?<?= $_GET['id']; ?>" method="POST">   
-                        <input type="hidden" name="id" value="<?= $_GET['id']; ?>">
-                        <div class="card m-4 ">
-                            <div class="bg-image">
-                                <img class="img-fluid" src="<?= $articleR[0]['img']; ?>" alt="">
+
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-md-12">
+                        <form action="b_delete_article.php?<?= $_GET['id']; ?>" method="POST">   
+                            <input type="hidden" name="idArticle" value="<?= $_GET['id']; ?>">
+                            <div class="card m-4 ">
+                                <div class="bg-image">
+                                    <img class="img-fluid" src="<?= $articleR[0]['img']; ?>" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title"><?= $articleR[0]['title']; ?></h5> 
+                                </div>
+                                <div>
+                                    <input type="submit"  name="deleteArticle"  value="delete">
+                                </div>
+
                             </div>
-                            <div class="card-body">
-                                <h5 class="card-title"><?= $articleR[0]['title']; ?></h5> 
-                            </div>
-                            <div>
-                                <input type="submit" class="btn btn-primary" name="articleDelete"  value="Supprimer">
-                            </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
     </section>
+
+
 <main>
 
 <?php
