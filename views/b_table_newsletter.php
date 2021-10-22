@@ -43,7 +43,7 @@
                                 <td><?= $values['name']; ?></td>
                                 <td><?= $values['lastname'];?></td>
                                 <td><?= $values['email'];?></td>
-                                <td><form action="b_update_newsletter.php"><a href="b_update_newsletter.php?id=<?= $values['id_request']; ?>" name="newsUpdate"><i class="fas fa-edit"></i></a></form> <form action="b_delete_newsletter.php" method="POST"><input type="hidden" name="idNewsletter" value="<?= $values['id_request']; ?>"><input type="submit"  name="deleteNews"  value="delete"></form></td>
+                                <td><a href="b_update_newsletter.php?id=<?= $values['id_request']; ?>" name="newsUpdate"><i class="fas fa-edit mx-2"></i></a> <a href="b_delete_newsletter.php?id=<?= $values['id_request']; ?>" name="newsDelete"><i class="fas fa-trash mx-2"></i></td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>

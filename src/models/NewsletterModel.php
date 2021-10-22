@@ -31,18 +31,18 @@
             $result = $request->fetchAll(PDO::FETCH_ASSOC);
             return $result;
         }
-        public function update($name, $lastname, $email){
-            $request = $this->connexion->prepare('UPDATE newsletter SET email = :email WHERE name = :name AND lastname = :lastname');
+        public function update($name, $lastname, $email, $id){
+            $request = $this->connexion->prepare('UPDATE newsletter SET email = :email, name = :name, lastname = :lastname WHERE id_request=:id');
             $request->execute([
                 ':email'=>$email,
                 ':name'=>$name,
                 ':lastname'=>$lastname,
+                ':id'=>$id
             ]);
         }
         public function delete($id){
             $request = $this->connexion->prepare('DELETE FROM newsletter WHERE id_request = :id');
             $request->execute([':id'=>$id]);
-
             $result = $request->fetchAll(PDO::FETCH_ASSOC);
             return $result;
         }

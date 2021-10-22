@@ -7,13 +7,10 @@
     require_once("./templates/b_header.php");
     require_once("../src/controllers/PublicationController.php");
 
-    
-
-    $publicController = new PublicationController(NULL, NULL, NULL, NULL);
-    $publicSelect = $publicController->listPublication();
-    $publicUpdate = $publicController->updatePublication();
-    $publicDelete = $publicController->deletePublication();
+    $publiCtrl = new PublicationController(NULL, NULL, NULL, NULL);
+    $publiRqst = $publiCtrl->listPublication();
 ?>
+
 <main>
     <div class="container-fluid px-4">
         <h1 class="mt-4">Tableau publications</h1>
@@ -40,7 +37,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach($publicSelect as $values): ?>
+                        <?php foreach($publiRqst as $values): ?>
                             <tr>
                                 <td><?= $values['id_publi']; ?></td>
                                 <td><?= $values['img']; ?></td>
@@ -48,7 +45,7 @@
                                 <td><?= substr($values['description'], 0, 100);?></td>
                                 <td><?= substr($values['text'], 0, 250);?></td>
                                 <td><?= $values['date_time_publi'];?></td>
-                                <td><form action="b_update_publication.php"><a href="b_update_publication.php?id=<?= $values['id_publi']; ?>" name="publicUpdate"><i class="fas fa-edit"></i></a></form> <form action="b_delete_publication.php" method="POST"><input type="hidden" name="idPublication" value="<?= $values['id_publi']; ?>"><input type="submit"  name="deletePublic"  value="delete"></form></td>
+                                <td><a href="b_update_publication.php?id=<?= $values['id_publi']; ?>" name="publiUpdate"><i class="fas fa-edit mx-2"></i></a> <a href="b_delete_publication.php?id=<?= $values['id_publi']; ?>" name="publiDelete"><i class="fas fa-trash mx-2"></i> <a href="b_view_publication.php?id=<?= $values['id_publi']; ?>" name="publiView"><i class="far fa-eye mx-2"></i></td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>
@@ -57,6 +54,7 @@
         </div>
     </div>
 </main>
+
 <?php
     require_once('../views/templates/b_footer.php');
 ?>
