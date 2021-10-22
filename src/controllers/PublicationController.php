@@ -15,14 +15,20 @@
         public function addPublication(){
             $publicModel = new PublicationModel();
             $publicModel->create($this->title, $this->description, $this->text, $this->img);
+            header('Location: b_table_publication.php');
+            ob_end_flush();
         }
-        public function updatePublication(){
+        public function updatePublication($id){
             $publicModel = new PublicationModel();
-            $publicModel->update($this->title, $this->description, $this->text, $this->img);
+            $publicModel->update($this->title, $this->description, $this->text, $this->img, $id);
+            header('Location: b_table_publication.php');
+            ob_end_flush();
         }
         public function deletePublication(){
             $publicModel = new PublicationModel();
             $publicModel->delete($this->title, $this->description, $this->text, $this->img);
+            header('Location: b_table_publication.php');
+            ob_end_flush();
         }
         public function listPublication(){
             $publicModel = new PublicationModel();

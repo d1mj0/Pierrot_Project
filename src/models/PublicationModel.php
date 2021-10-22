@@ -28,13 +28,14 @@
             $result = $request->fetchAll(PDO::FETCH_ASSOC);
             return $result;
         }
-        public function update($title, $description, $text, $img){
-            $request = $this->connexion->prepare('UPDATE `publication` SET `title`=:title, `description`=:description, `text`=:text, `img`=:img');
+        public function update($title, $description, $text, $img, $id){
+            $request = $this->connexion->prepare('UPDATE `publication` SET `title`=:title, `description`=:description, `text`=:text, `img`=:img WHERE `id_publi`=:id');
             $request->execute([
                 ':title'=>$title,
                 ':description'=>$description,
                 ':text'=>$text,
-                ':img'=>$img
+                ':img'=>$img,
+                ':id'=>$id
             ]);
             $result = $request->fetchAll(PDO::FETCH_ASSOC);
             return $result;
