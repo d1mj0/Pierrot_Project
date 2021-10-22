@@ -118,11 +118,15 @@ main a:hover{
     font-style: italic;
 }
 
-.btn-primary{
+
+.btn-primary {
   margin-top: 1rem;
   background-color: rgba(255, 255, 255, 0);
   font-weight: bold;
   border-color: #7a2b2b;
+  color: #fff;
+  background-color: #7a2b2b;
+  border: 0.1rem solid #7a2b2b;
 }
 
 .btn-primary:hover {
@@ -130,6 +134,13 @@ main a:hover{
   background-color: #7a2b2b;
   border-color: #7a2b2b;
 }
+.btn-check:focus + .btn-primary, .btn-primary:focus {
+  color: #fff;
+  background-color: #7a2b2b;
+  border-color: #5f2020;
+  box-shadow: 0 0 0 0.25rem rgba(233, 44, 44, 0.5);
+}
+
 
 p{
   font-size: 1.25rem;
