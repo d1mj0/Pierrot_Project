@@ -1,40 +1,65 @@
 <?php
-ob_start();
-$title =  "Suppression d'article";
+    ob_start();
 
-require_once('../views/templates/b_header.php'); 
-require_once('../src/models/ArticleModel.php'); 
+    $title =  "Suppression d'article";
 
-$id= 0;
+    require_once('../views/templates/b_header.php'); 
+    require_once('../src/models/ArticleModel.php'); 
+    require_once('../src/controllers/ArticleController.php'); 
 
-$articles = new ArticleModel;
-$articleR = $articles->getOne($_GET['id']);
+    $id = 0;
 
+    $articles = new ArticleModel();
+    $articleR = $articles->getOne($_GET['id']);
 
-if(isset($_POST['deleteArticle'])){
-    $id = $_POST['idArticle'];
+    if(isset($_FILES['img']) && $_FILES['img']['error'] === 0){
+        $uploaddir = "./assets/img/";
+        $uploadfile = $uploaddir . basename($_FILES['img']['name']);
+        move_uploaded_file($_FILES['img']['tmp_name'], $uploadfile);
+    }
 
-$articleDelete = new ArticleModel;
-$articleD = $articleDelete->delete($id);
+    if(isset($_POST['articleDelete']) && !empty($_POST['title']) && !empty($_POST['description']) && !empty($_POST['text']) && isset($uploadfile)){
+        $id = $_POST['id'];
+        
+        $text = $_POST['text'];
+        $txtCtrl = new TextController();
+        $html = $txtCtrl->txt2html($text);
+        $articleDelete = new ArticleController($_POST['title'], $_POST['description'], $html, $uploadfile);
+        $articleDelete->deleteArticle($id);
 
-if($articleD){
-echo '<div class="alert alert-success>
-<button type="button" class="close" data-dismiss="alert-success">
-<strong>"L article a été supprimé"</strong>
-</div>';
-}
-else{
-echo '<div class="alert alert-danger>
-<button type="button" class="close" data-dismiss="alert-danger">
-<strong>"L article n a pas été supprimé"</strong>
-</div>';
-}
-}
+    }
+    /*
+    if(isset($_POST['deleteArticle'])){
+        $id = $_POST['idArticle'];
+
+    $articleDelete = new ArticleModel;
+    $articleD = $articleDelete->delete($id);
+
+    if($articleD){
+    echo '<div class="alert alert-success>
+    <button type="button" class="close" data-dismiss="alert-success">
+    <strong>"L article a été supprimé"</strong>
+    </div>';
+    }
+    else{
+    echo '<div class="alert alert-danger>
+    <button type="button" class="close" data-dismiss="alert-danger">
+    <strong>"L article n a pas été supprimé"</strong>
+    </div>';
+    }
+    }
+    */
 ?>
+
+
+
+<main>
+
     <section class="text-center">
         <br>
         <br>
         <h2 class="mb-5">Voulez-vous vraiment supprimer cette article?</h2>
+
             <div class="container-fluid">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-md-12">
@@ -50,12 +75,17 @@ echo '<div class="alert alert-danger>
                                 <div>
                                     <input type="submit"  name="deleteArticle"  value="delete">
                                 </div>
+
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
     </section>
+
+
+<main>
+
 <?php
     require_once('../views/templates/b_footer.php');
 ?>
