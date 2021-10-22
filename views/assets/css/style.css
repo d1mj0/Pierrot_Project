@@ -134,7 +134,7 @@ main a:hover{
   background-color: #7a2b2b;
   border-color: #7a2b2b;
 }
-.btn-check:focus + .btn-primary, .btn-primary:focus {
+.btn-check:focus + .btn-primary, .btn-primary:focus, .btn-primary:active {
   color: #fff;
   background-color: #7a2b2b;
   border-color: #5f2020;

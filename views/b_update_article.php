@@ -75,8 +75,8 @@ if(isset($_POST['articleUpdate']) && !empty($_POST['title']) && !empty($_POST['d
                                             <br>
                                             <br>
                                             <div class="d-flex align-items-center justify-content-center mt-4 mb-0">
-                                                <button  name='articleUpdate' id="articleUpdate" class="btn btn-success">Mise à jour de l'article</button>
-                                                <a href="b_table_article.php" class="btn btn-danger"> CANCEL </a>
+                                                <button  name='articleUpdate' id="articleUpdate" class="btn btn-primary m-2">Mise à jour de l'article</button>
+                                                <a href="b_table_article.php" class="btn btn-primary m-2">Annuler</a>
                                             </div>
                                         </form>
                                     </div>
