@@ -2,6 +2,8 @@
     ini_set("display_errors", 1);
     error_reporting(E_ALL);
 
+    ob_start();
+
     $title = "Publication Article";
 
     require_once('../views/templates/b_header.php');
@@ -61,8 +63,8 @@
                                                 <input type="file" name="img" id="img" class="form-control">
                                             </div>
                                             <br>
-                                            <div class="d-flex align-items-center justify-content-center mt-4 mb-0 alert alert-success">
-                                                <button  data-dismiss="alert"  >Ajouter un Article</button>
+                                            <div class="d-flex align-items-center justify-content-center mt-4 mb-0">
+                                                <button  class="btn btn-primary"  >Ajouter un Article</button>
                                             </div>
                                         </form>
                                     </div>

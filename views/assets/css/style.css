@@ -118,18 +118,27 @@ main a:hover{
     font-style: italic;
 }
 
-.btn-primary{
-  margin-top: 1rem;
-  background-color: rgba(255, 255, 255, 0);
-  font-weight: bold;
-  border-color: #7a2b2b;
-}
 
-.btn-primary:hover {
+.btn-primary:not(:disabled):not(.disabled):active{
+  box-shadow: 0 0 0 0.25rem rgba(233, 44, 44, 0.5);
+}
+.btn-primary {
   color: #fff;
   background-color: #7a2b2b;
   border-color: #7a2b2b;
 }
+.btn-primary:hover {
+  color: #fff;
+  background-color: #5c2121;
+  border-color: #5c2121;
+}
+.btn-check:focus + .btn-primary, .btn-primary:focus, .btn-primary:active{
+  color: #fff;
+  background-color: #7a2b2b;
+  border-color: #5f2020;
+  box-shadow: 0 0 0 0.25rem rgba(233, 44, 44, 0.5);
+}
+
 
 p{
   font-size: 1.25rem;

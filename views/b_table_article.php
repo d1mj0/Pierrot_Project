@@ -15,7 +15,7 @@
 ?>
 <main>
     <div class="container-fluid px-4">
-        <h1 class="mt-4">Article</h1>
+        <h1 class="mt-4">Articles</h1>
         <ol class="breadcrumb mb-4">
             <li class="breadcrumb-item"><a href="tables.php">Administration</a></li>
             <li class="breadcrumb-item active">Tableau articles</li>
@@ -28,7 +28,7 @@
             <div class="card-body ">
                 <table id="datatablesSimple" class="container-fluid">
                     <thead>
-                        <tr>
+                        <tr class="tr">
                             <th>Id Article</th>
                             <th>Illustration</th>
                             <th>Titre</th>
@@ -47,7 +47,7 @@
                                 <td><?= (strlen($values['description']) > 40) ? substr($values['description'], 0, 40)."..." : ($values['description'])?></td>
                                 <td><?= (strlen($values['text']) > 40) ? substr($values['text'], 0, 40)."..." : ($values['text']) ;?></td>
                                 <td><?= $values['date_time_publi']; ?></td>
-                                <td><a href="b_update_article.php?id=<?= $values['id_article']; ?>" name="articleUpdate"><i class="fas fa-edit"></i></a> <a href="b_delete_article.php?id=<?= $values['id_article']; ?>name="articleDelete"><i class="fas fa-trash"></i> <a href="b_view_article.php?id=<?= $values['id_article']; ?>" name="articleDelete"><i class="far fa-eye"></i></td>
+                                <td><a href="b_update_article.php?id=<?= $values['id_article']; ?>" name="articleUpdate"><i class="fas fa-edit mx-2"></i></a> <a href="b_delete_article.php?id=<?= $values['id_article']; ?>" name="articleDelete"><i class="fas fa-trash mx-2"></i> <a href="b_view_article.php?id=<?= $values['id_article']; ?>" name="articleDelete"><i class="far fa-eye mx-2"></i></td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>
