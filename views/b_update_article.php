@@ -1,37 +1,25 @@
 <?php
-ob_start();
-$title =  "Mise à jour de l'article";
-require_once('../views/templates/b_header.php'); 
-require_once('../src/models/ArticleModel.php'); 
-require_once('../src/controllers/ArticleController.php');
-require_once('../src/controllers/TextController.php');
+    ob_start();
+    $title =  "Mise à jour de l'article";
+    require_once('../views/templates/b_header.php'); 
+    require_once('../src/models/ArticleModel.php'); 
+    require_once('../src/controllers/ArticleController.php');
 
+    $articles = new ArticleModel();
+    $articleR = $articles->getOne($_GET['id']);
 
-
-$articles = new ArticleModel;
-$articleR = $articles->getOne($_GET['id']);
-
-
-$id = 0;
-
-if(isset($_FILES['img']) && $_FILES['img']['error'] === 0){
-    $uploaddir = "./assets/img/";
-    $uploadfile = $uploaddir . basename($_FILES['img']['name']);
-    move_uploaded_file($_FILES['img']['tmp_name'], $uploadfile);
-}
-
-if(isset($_POST['articleUpdate']) && !empty($_POST['title']) && !empty($_POST['description']) && !empty($_POST['text']) && isset($uploadfile)){
-    $id = $_POST['id'];
-    
-    
-    $articleUpdate = new ArticleController($_POST['title'], $_POST['description'], $_POST['text'], $uploadfile);
-    $articleUpdate->updateArticle($id);
-
-}
-
-
-
+    if(isset($_FILES['img']) && $_FILES['img']['error'] === 0){
+        $uploaddir = "./assets/img/";
+        $uploadfile = $uploaddir . basename($_FILES['img']['name']);
+        move_uploaded_file($_FILES['img']['tmp_name'], $uploadfile);
+    }
+    if(isset($_POST['articleUpdate']) && !empty($_POST['title']) && !empty($_POST['description']) && !empty($_POST['text']) && isset($uploadfile)){
+        $id = $_POST['id'];
+        $articleUpdate = new ArticleController($_POST['title'], $_POST['description'], $_POST['text'], $uploadfile);
+        $articleUpdate->updateArticle($id);
+    }
 ?>
+
 <main>
     <div class="container-fluid px-4">
         <h1 class="mt-4">Mise à jour de l'article <?= $articleR[0]['title']; ?></h1>
@@ -87,6 +75,7 @@ if(isset($_POST['articleUpdate']) && !empty($_POST['title']) && !empty($_POST['d
         </div>
     </div>
 </main>
+
 <?php
-require_once('../views/templates/b_footer.php');
+    require_once('../views/templates/b_footer.php');
 ?>

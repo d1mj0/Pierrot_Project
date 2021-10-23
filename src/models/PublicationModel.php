@@ -44,6 +44,8 @@
             $request = $this->connexion->prepare('DELETE FROM `publication` WHERE `id_publi`=:id');
             $request->execute([':id'=>$id]);
             $result = $request->fetchAll(PDO::FETCH_ASSOC);
+            header('Location: b_table_publication.php');
+            ob_end_flush();
             return $result;
         }
         //fetch all publications by date in descending order

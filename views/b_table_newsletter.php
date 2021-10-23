@@ -7,12 +7,10 @@
     require_once('../views/templates/b_header.php');
     require_once("../src/controllers/NewsletterController.php");
 
-    
-
     $newsletter = new NewsletterController(NULL, NULL, NULL);
-    $newsSelect = $newsletter->listEmails();
-    
+    $newsSelect = $newsletter->listEmails();    
 ?>
+
 <main>
     <div class="container-fluid px-4">
         <h1 class="mt-4">Tableau Newsletter</h1>
@@ -43,7 +41,10 @@
                                 <td><?= $values['name']; ?></td>
                                 <td><?= $values['lastname'];?></td>
                                 <td><?= $values['email'];?></td>
-                                <td><a href="b_update_newsletter.php?id=<?= $values['id_request']; ?>" name="newsUpdate"><i class="fas fa-edit mx-2"></i></a> <a href="b_delete_newsletter.php?id=<?= $values['id_request']; ?>" name="newsDelete"><i class="fas fa-trash mx-2"></i></td>
+                                <td>
+                                    <a href="b_update_newsletter.php?id=<?= $values['id_request']; ?>" name="newsUpdate"><i class="fas fa-edit mx-2"></i></a> 
+                                    <a href="b_delete_newsletter.php?id=<?= $values['id_request']; ?>" name="newsDelete"><i class="fas fa-trash mx-2"></i></a>
+                                </td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>
@@ -52,6 +53,7 @@
         </div>
     </div>
 </main>
+
 <?php
     require_once('../views/templates/b_footer.php');
 ?>

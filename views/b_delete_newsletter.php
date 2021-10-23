@@ -1,14 +1,10 @@
 <?php
-    ini_set("display_errors", 1);
-    error_reporting(E_ALL);
-
     ob_start();
     $title =  "Suppression d'inscription";
 
     require_once('../views/templates/b_header.php'); 
     require_once('../src/models/NewsletterModel.php');
-    
-    $id = 0;
+
     $newsMdl = new NewsletterModel();
     $newsRqst = $newsMdl->getOne($_GET['id']);
 
@@ -17,19 +13,18 @@
         $newsDlt = $newsMdl->delete($id);
 
         if($newsDlt){
-            echo '<div class="alert alert-success>
-            <button type="button" class="close" data-dismiss="alert-success">
-            <strong>"L article a été supprimé"</strong>
-            </div>';
+            echo    '<div class="alert alert-success>
+                        <button type="button" class="close" data-dismiss="alert-success">
+                        <strong>"L article a été supprimé"</strong>
+                    </div>';
         }
         else{
-            echo '<div class="alert alert-danger>
-            <button type="button" class="close" data-dismiss="alert-danger">
-            <strong>"L article n a pas été supprimé"</strong>
-            </div>';
+            echo    '<div class="alert alert-danger>
+                        <button type="button" class="close" data-dismiss="alert-danger">
+                        <strong>"L article n a pas été supprimé"</strong>
+                    </div>';
         }
     }
-
 ?>
 
 <main>

@@ -1,10 +1,7 @@
 <?php
     $title = $articleR[0]['title'];
-
     require_once("./templates/header.php");
     require_once('../src/models/ArticleModel.php');
-    require_once('../src/controllers/TextController.php');
-    
 
     $articles = new ArticleModel;
     $articleR = $articles->getOne($_GET['id']);
@@ -13,11 +10,8 @@
     $d= $articleR[0]['date_time_publi']; 
     $tmstp = strtotime($d);
     $dfr = strftime('%A %d %B %Y', $tmstp);
-
-    $text = $articleR[0]['text'] ;
-    $txtCtrl = new TextController();
-    $html = $txtCtrl->txt2html($text);
 ?>
+
 <main>
     <section>
       <br>
@@ -53,7 +47,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6 mx-auto text" >
-                    <?=$html; ?>
+                    <?= $articleR[0]['text']; ?>
                 </div>
             </div>
         </div>
@@ -61,6 +55,7 @@
     <br>
     <br>
 </main>
+
 <?php
     require_once("./templates/footer.php");
 ?>
