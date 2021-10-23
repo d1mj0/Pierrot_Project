@@ -101,7 +101,7 @@
         <div class="row">
             <div class="col-lg-7 mx-auto quotesBottom">
                 <figure class="figureb mx-0 p-3">
-                    <a href="./assets/yourfile.pdf" download="newfilename"><blockquote  class="blockquote mx-0 mb-0 text-center"><p>Télécharger la <strong>thèse</strong> en pdf</p></blockquote></a>
+                    <a href="./assets/doc/De_l_eversion_thèse.pdf" download="newfilename"><blockquote  class="blockquote mx-0 mb-0 text-center"><p>Télécharger la <strong>thèse</strong> en pdf</p></blockquote></a>
                 </figure>
             </div>
         </div>
