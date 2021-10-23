@@ -137,7 +137,6 @@
         </div>
         <br>
         <br>    
-        
             <div class="container">
                 <?php foreach($recentPublications as $values): ?>
                     <div class="row my-3">
@@ -147,9 +146,9 @@
                         </div>
                         <div class="col-lg-8">
                                 <a href="publication.php?id=<?= $values['id_publi']; ?>"><h3 class="tnPublicationL"><?= $values['title']; ?></h3></a>
-                            <div class="textTnPubli"><?= (strlen($values['text']) > 250) ? substr($values['text'], 0, 580)."..." : ($values['text'])?></p>
+                            <div class="tnPublicationL"><?= (strlen($values['text']) > 250) ? substr($values['text'], 0, 580)."..." : ($values['text'])?></p>
                             <div>
-                                <a class="tnPublicationL" href="publication.php?id=<?= $values['id_publi']; ?>">Lire la suite >>></a>
+                                <a class="textTnPubliL" href="publication.php?id=<?= $values['id_publi']; ?>">Lire la suite >>></a>
                             </div>
                         </div>
                         <?php else: ?>

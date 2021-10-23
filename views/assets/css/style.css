@@ -163,9 +163,16 @@ h3.tnPublicationL{
   margin-top: -1rem;
 }
 
+div.textTnPubliL p.text{
+  margin-bottom: 0.7rem;
+  margin-left: 0rem;
+  
+}
+
 .tnPublicationR{
   margin-right: 2rem;
 }
+
 
 h3.tnPublicationR{
   margin-bottom: 1.5rem;
@@ -179,11 +186,9 @@ div.textTnPubliR p.text{
   
 }
 
-div.textTnPubli p.text{
-  margin-bottom: 0.7rem;
-  margin-right: 0rem;
-  
-}
+
+
+
 
 
 

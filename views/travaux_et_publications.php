@@ -23,35 +23,36 @@
     </div>
         <br>
     <section>
-        <div class="container-fluid">
-            <?php foreach($recentPublications as $values): ?>
-                <?php if($values['id_publi'] % 2 != 0): ?>
-                    <div class="row">
+    <div class="container">
+                <?php foreach($recentPublications as $values): ?>
+                    <div class="row my-3">
+                        <?php if($values['id_publi'] % 2 != 0): ?>
                         <div class="col-lg-4">
-                            <a href="publication.php?id=<?= $values['id_publi']; ?>"><img src="<?= $values['img']; ?>" alt="<?= $values['title']; ?>"></a>
+                            <a href="publication.php?id=<?= $values['id_publi']; ?>"><img class="img-fluid" src="<?= $values['img'] ?>" alt="<?=  $values['title'] ?>"></a>
                         </div>
                         <div class="col-lg-8">
-                            <a href="publication.php?id=<?= $values['id_publi']; ?>"><h3><?= $values['title']; ?></h3></a>
-                            <?= substr($values['text'], 0, 1000) . "...</p>"; ?>
-                            <a href="publication.php?id=<?= $values['id_publi']; ?>">Lire la suite >>></a>
+                                <a href="publication.php?id=<?= $values['id_publi']; ?>"><h3 class="tnPublicationL"><?= $values['title']; ?></h3></a>
+                            <div class="tnPublicationL"><?= (strlen($values['text']) > 250) ? substr($values['text'], 0, 580)."..." : ($values['text'])?></p>
+                            <div>
+                                <a class="textTnPubliL" href="publication.php?id=<?= $values['id_publi']; ?>">Lire la suite >>></a>
+                            </div>
                         </div>
-                    </div>
-                    <br>
-                <?php else: ?>
-                    <div class="row">
+                        <?php else: ?>
+                        <div class="row my-3">
                         <div class="col-lg-8">
-                            <a href="publication.php?id=<?= $values['id_publi']; ?>"><h3><?= $values['title']; ?></h3></a>
-                            <?= substr($values['text'], 0, 1000) . "...</p>"; ?>
-                            <a href="publication.php?id=<?= $values['id_publi']; ?>">Lire la suite >>></a>
+                            <a href="publication.php?id=<?= $values['id_publi']; ?>"><h3 class="tnPublicationR"><?= $values['title']; ?></h3></a>
+                        <div class="textTnPubliR"><?= substr($values['text'], 0, 585) . "..."; ?></div>
+                        <div>
+                            <a class="tnPublicationR" href="publication.php?id=<?= $values['id_publi']; ?>">Lire la suite >>></a>
+                        </div>
                         </div>
                         <div class="col-lg-4">
-                            <a href="publication.php?id=<?= $values['id_publi']; ?>"><img src="<?= $values['img']; ?>" alt="<?= $values['title']; ?>"></a>
+                            <a href="publication.php?id=<?= $values['id_publi']; ?>"><img class="img-fluid" src="<?= $values['img'] ?>" alt="<?=$values['title'] ?>"></a>
                         </div>
+                        <?php endif; ?>
                     </div>
-                    <br>
-                <?php endif; ?>
-            <?php endforeach; ?>
-        </div>
+                <?php endforeach; ?>
+            </div>
     </section>
     <br>
     <br>
