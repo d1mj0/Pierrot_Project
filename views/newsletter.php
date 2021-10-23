@@ -1,19 +1,14 @@
 <?php
-    ini_set("display_errors", 1);
-    error_reporting(E_ALL);
-
     $title = "Newsletter";
-
     require_once('./templates/header.php');
-    require_once("../src/controllers/NewsletterController.php");
-    
-    
+    require_once("../src/controllers/NewsletterController.php");    
 
     if(!empty($_POST['name']) && !empty($_POST['lastname']) && !empty($_POST['email'])){
-        $newsletter = new NewsletterController($_POST['name'], $_POST['lastname'], $_POST['email']);
-        $newsletter->addEmail();
+        $newsCtrl = new NewsletterController($_POST['name'], $_POST['lastname'], $_POST['email']);
+        $newsCtrl->addEmail();
     }
 ?>
+
 <main>
     <div id="layoutContact">
         <div id="layoutContact_content">
@@ -57,6 +52,7 @@
     <br>
     <br>
 </main>
+
 <?php
     require_once("./templates/footer.php");
 ?>

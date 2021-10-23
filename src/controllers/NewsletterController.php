@@ -19,13 +19,17 @@
                 $newsletterModel = new NewsletterModel();
                 return $newsletterModel->getAll();
             }        
-            public function deleteNewsletter(){
+            public function deleteNewsletter($id){
                 $newsletterModel = new NewsletterModel();
-                return $newsletterModel->delete($this->name, $this->lastname, $this->email);
+                $newsletterModel->delete($id);
+                header('Location: b_table_newsletter.php');
+                ob_end_flush();
             }
-            public function updateNewsletter(){
+            public function updateNewsletter($id){
                 $newsletterModel = new NewsletterModel();
-                return $newsletterModel->update($this->name, $this->lastname, $this->email);
+                $newsletterModel->update($this->name, $this->lastname, $this->email, $id);
+                header('Location: b_table_newsletter.php');
+                ob_end_flush();
             }
     
             //setters

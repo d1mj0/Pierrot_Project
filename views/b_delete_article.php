@@ -1,36 +1,37 @@
 <?php
-ob_start();
-$title =  "Suppression d'article";
+    ini_set("display_errors", 1);
+    error_reporting(E_ALL);
 
-require_once('../views/templates/b_header.php'); 
-require_once('../src/models/ArticleModel.php'); 
+    ob_start();
 
-$id= 0;
+    $title =  "Suppression d'article";
 
-$articles = new ArticleModel;
-$articleR = $articles->getOne($_GET['id']);
+    require_once('../views/templates/b_header.php'); 
+    require_once('../src/models/ArticleModel.php');
 
+    $articleMdl = new ArticleModel();
+    $articleRqst = $articleMdl->getOne($_GET['id']);
 
-if(isset($_POST['deleteArticle'])){
-    $id = $_POST['idArticle'];
+    if(isset($_POST['deleteArticle'])){
+        $id = $_POST['idArticle'];
+        $articleDlt = $articleMdl->delete($id);
 
-$articleDelete = new ArticleModel;
-$articleD = $articleDelete->delete($id);
-
-if($articleD){
-echo '<div class="alert alert-success>
-<button type="button" class="close" data-dismiss="alert-success">
-<strong>"L article a été supprimé"</strong>
-</div>';
-}
-else{
-echo '<div class="alert alert-danger>
-<button type="button" class="close" data-dismiss="alert-danger">
-<strong>"L article n a pas été supprimé"</strong>
-</div>';
-}
-}
+        if($articleDlt){
+            echo    '<div class="alert alert-success>
+                        <button type="button" class="close" data-dismiss="alert-success">
+                        <strong>"L\'article a été supprimé"</strong>
+                    </div>';
+        }
+        else{
+            echo    '<div class="alert alert-danger>
+                        <button type="button" class="close" data-dismiss="alert-danger">
+                        <strong>"L\'article n\'a pas été supprimé"</strong>
+                    </div>';
+        }
+    }
 ?>
+
+<main>
     <section class="text-center">
         <br>
         <br>
@@ -42,13 +43,13 @@ echo '<div class="alert alert-danger>
                             <input type="hidden" name="idArticle" value="<?= $_GET['id']; ?>">
                             <div class="card m-4 ">
                                 <div class="bg-image">
-                                    <img class="img-fluid" src="<?= $articleR[0]['img']; ?>" alt="">
+                                    <img class="img-fluid" src="<?= $articleRqst[0]['img']; ?>" alt="">
                                 </div>
                                 <div class="card-body">
-                                    <h5 class="card-title"><?= $articleR[0]['title']; ?></h5> 
+                                    <h5 class="card-title"><?= $articleRqst[0]['title']; ?></h5> 
                                 </div>
                                 <div>
-                                    <input type="submit"  name="deleteArticle"  value="delete">
+                                    <input type="submit" name="deleteArticle" value="delete">
                                 </div>
                             </div>
                         </form>
@@ -56,6 +57,8 @@ echo '<div class="alert alert-danger>
                 </div>
             </div>
     </section>
+<main>
+
 <?php
     require_once('../views/templates/b_footer.php');
 ?>
