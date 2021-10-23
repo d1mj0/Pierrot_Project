@@ -6,7 +6,7 @@
     require_once('../src/controllers/NewsletterController.php');
 
     $newsMdl = new NewsletterModel();
-    $newsletterR = $newsMdl->getOne($_GET['id']);
+    $newsRqst = $newsMdl->getOne($_GET['id']);
 
     if(isset($_POST['newsUpdate']) && !empty($_POST['name']) && !empty($_POST['lastname']) && !empty($_POST['email'])){
         $id = $_POST['id'];
@@ -17,7 +17,7 @@
 
 <main>
     <div class="container-fluid px-4">
-        <h1 class="mt-4">Mise à jour de l'insription pour <?= $newsletterR[0]['name']; ?> <?= $newsletterR[0]['lastname']; ?></h1>
+        <h1 class="mt-4">Mise à jour de l'insription pour <?= $newsRqst[0]['name']; ?> <?= $newsRqst[0]['lastname']; ?></h1>
         <ol class="breadcrumb mb-4">
             <li class="breadcrumb-item"><a href="index.html">Administration</a></li>
             <li class="breadcrumb-item active">Mise à jour d'inscription Newsletter</li>
@@ -29,23 +29,23 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-5">
                             <div class="card shadow-lg border-0 rounded-lg mt-5">
-                                <div class="card-header"><h3 class="text-center font-weight-light my-4">Mise à jour de l'inscription pour <br><?= $newsletterR[0]['name']; ?><?= " ".$newsletterR[0]['lastname']; ?></h3></div>
+                                <div class="card-header"><h3 class="text-center font-weight-light my-4">Mise à jour de l'inscription pour <br><?= $newsRqst[0]['name']; ?><?= " ".$newsRqst[0]['lastname']; ?></h3></div>
                                     <div class="card-body">
-                                        <form enctype="multipart/form-data" action="b_update_newsletter.php?<?= $newsletterR[0]['id_request']; ?>"  method="POST">
-                                        <input type="hidden" name="id" value="<?= $newsletterR[0]['id_request']; ?>" />
+                                        <form enctype="multipart/form-data" action="b_update_newsletter.php?<?= $newsRqst[0]['id_request']; ?>"  method="POST">
+                                        <input type="hidden" name="id" value="<?= $newsRqst[0]['id_request']; ?>" />
                                             <label class="form-label" for="title">Prénom</label>
                                             <div class="form-floating mb-3">
-                                                <input id="editName" class="form-control" name="name" type="text" value="<?= $newsletterR[0]['name']; ?>" required/>
+                                                <input id="editName" class="form-control" name="name" type="text" value="<?= $newsRqst[0]['name']; ?>" required/>
                                             </div>
                                             <br>            
                                             <label class="form-label" for="description">Nom</label>
                                             <div class="form-floating mb-3">
-                                                <input id="editLastName" class="form-control" name="lastname" type="text" value="<?= $newsletterR[0]['lastname']; ?>" required/>
+                                                <input id="editLastName" class="form-control" name="lastname" type="text" value="<?= $newsRqst[0]['lastname']; ?>" required/>
                                             </div>
                                             <br>
                                             <label class="form-label" for="text">Email</label>
                                             <div class="form-floating mb-3">
-                                                <input id="editEmail" class="form-control" name="email" type="text" value="<?= $newsletterR[0]['email']; ?>" required/>
+                                                <input id="editEmail" class="form-control" name="email" type="text" value="<?= $newsRqst[0]['email']; ?>" required/>
                                             </div>
                                             <br>
                                             <br>

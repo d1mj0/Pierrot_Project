@@ -1,18 +1,17 @@
 <?php
-$title =  "Afficher l'article";
-require_once('../views/templates/b_header.php'); 
-require_once('../src/models/ArticleModel.php'); 
+    $title =  "Afficher l'article";
+    require_once('../views/templates/b_header.php'); 
+    require_once('../src/models/ArticleModel.php'); 
 
+    $articleMdl = new ArticleModel();
+    $articleRqstqst = $articleMdl->getOne($_GET['id']);
 
-$articles = new ArticleModel;
-$articleR = $articles->getOne($_GET['id']);
-
-setlocale(LC_TIME, ['fr', 'fra', 'fr_FR']);
-    $d= $articleR[0]['date_time_publi']; 
+    setlocale(LC_TIME, ['fr', 'fra', 'fr_FR']);
+    $d = $articleRqst[0]['date_time_publi']; 
     $tmstp = strtotime($d);
     $dfr = strftime('%A %d %B %Y', $tmstp);
-
 ?>
+
 <main>
     <section>
       <br>
@@ -20,7 +19,7 @@ setlocale(LC_TIME, ['fr', 'fra', 'fr_FR']);
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h1 class="titleA"><?=$articleR[0]['title']; ?></h1>
+                    <h1 class="titleA"><?= $articleRqst[0]['title']; ?></h1>
                 </div>
             </div>
         </div>
@@ -29,8 +28,8 @@ setlocale(LC_TIME, ['fr', 'fra', 'fr_FR']);
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6  mx-auto">
-                    <img src="<?=$articleR[0]['img']; ?>" class="img-fluid " alt=""><br>
-                    <p>Publié le <?=$dfr ; ?> </p>
+                    <img src="<?= $articleRqst[0]['img']; ?>" class="img-fluid " alt=""><br>
+                    <p>Publié le <?= $dfr ; ?> </p>
                 </div>
             </div>
         </div>
@@ -39,7 +38,7 @@ setlocale(LC_TIME, ['fr', 'fra', 'fr_FR']);
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6 mx-auto">
-                    <h3><?=$articleR[0]['description']; ?></h3>
+                    <h3><?= $articleRqst[0]['description']; ?></h3>
                 </div>
             </div>
         </div>
@@ -48,7 +47,7 @@ setlocale(LC_TIME, ['fr', 'fra', 'fr_FR']);
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6 mx-auto text" >
-                    <?=$articleR[0]['text']; ?>
+                    <?= $articleRqst[0]['text']; ?>
                 </div>
             </div>
         </div>
@@ -56,6 +55,7 @@ setlocale(LC_TIME, ['fr', 'fra', 'fr_FR']);
     <br>
     <br>
 </main>
+
 <?php
     require_once('../views/templates/b_footer.php');
 ?>

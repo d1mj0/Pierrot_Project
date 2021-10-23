@@ -1,16 +1,8 @@
 <?php
-    ini_set("display_errors", 1);
-    error_reporting(E_ALL);
-
     ob_start();
-
     $title = "Publication Article";
-
     require_once('../views/templates/b_header.php');
-    require_once('../src/controllers/ArticleController.php');
-    require_once('../src/controllers/TextController.php');
-
-    
+    require_once('../src/controllers/ArticleController.php');  
 
     if(isset($_FILES['img']) && $_FILES['img']['error'] === 0){
         $uploaddir = "./assets/img/";
@@ -24,6 +16,7 @@
         $articlePost->addArticle();
     }
 ?>
+
 <main>
     <div class="container-fluid px-4">
         <h1 class="mt-4">Publication Articles Blog</h1>
@@ -62,7 +55,7 @@
                                             </div>
                                             <br>
                                             <div class="d-flex align-items-center justify-content-center mt-4 mb-0">
-                                                <button  class="btn btn-primary"  >Ajouter un Article</button>
+                                                <button  class="btn btn-primary" >Ajouter un Article</button>
                                             </div>
                                         </form>
                                     </div>
@@ -75,6 +68,7 @@
         </div>
     </div>
 </main>
+
 <?php
     require_once('../views/templates/b_footer.php');
 ?>

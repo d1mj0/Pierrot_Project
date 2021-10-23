@@ -41,7 +41,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6 mx-auto">
-                    <h3><?=$publiRqst[0]['description']; ?></h3>
+                    <h3><?= $publiRqst[0]['description']; ?></h3>
                 </div>
             </div>
         </div>
@@ -50,7 +50,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6 mx-auto text" >
-                    <?=$publiRqst[0]['text']; ?>
+                    <?= $publiRqst[0]['text']; ?>
                 </div>
             </div>
         </div>

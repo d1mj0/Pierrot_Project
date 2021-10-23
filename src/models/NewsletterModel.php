@@ -44,6 +44,8 @@
             $request = $this->connexion->prepare('DELETE FROM newsletter WHERE id_request = :id');
             $request->execute([':id'=>$id]);
             $result = $request->fetchAll(PDO::FETCH_ASSOC);
+            header('Location: b_table_newsletter.php');
+            ob_flush_end();
             return $result;
         }
     }

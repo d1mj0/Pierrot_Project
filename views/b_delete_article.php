@@ -1,65 +1,41 @@
 <?php
+    ini_set("display_errors", 1);
+    error_reporting(E_ALL);
+
     ob_start();
 
     $title =  "Suppression d'article";
 
     require_once('../views/templates/b_header.php'); 
-    require_once('../src/models/ArticleModel.php'); 
-    require_once('../src/controllers/ArticleController.php'); 
+    require_once('../src/models/ArticleModel.php');
 
-    $id = 0;
+    $articleMdl = new ArticleModel();
+    $articleRqst = $articleMdl->getOne($_GET['id']);
 
-    $articles = new ArticleModel();
-    $articleR = $articles->getOne($_GET['id']);
-
-    if(isset($_FILES['img']) && $_FILES['img']['error'] === 0){
-        $uploaddir = "./assets/img/";
-        $uploadfile = $uploaddir . basename($_FILES['img']['name']);
-        move_uploaded_file($_FILES['img']['tmp_name'], $uploadfile);
-    }
-
-    if(isset($_POST['articleDelete']) && !empty($_POST['title']) && !empty($_POST['description']) && !empty($_POST['text']) && isset($uploadfile)){
-        $id = $_POST['id'];
-        
-        $text = $_POST['text'];
-        $txtCtrl = new TextController();
-        $html = $txtCtrl->txt2html($text);
-        $articleDelete = new ArticleController($_POST['title'], $_POST['description'], $html, $uploadfile);
-        $articleDelete->deleteArticle($id);
-
-    }
-    /*
     if(isset($_POST['deleteArticle'])){
         $id = $_POST['idArticle'];
+        $articleDlt = $articleMdl->delete($id);
 
-    $articleDelete = new ArticleModel;
-    $articleD = $articleDelete->delete($id);
-
-    if($articleD){
-    echo '<div class="alert alert-success>
-    <button type="button" class="close" data-dismiss="alert-success">
-    <strong>"L article a été supprimé"</strong>
-    </div>';
+        if($articleDlt){
+            echo    '<div class="alert alert-success>
+                        <button type="button" class="close" data-dismiss="alert-success">
+                        <strong>"L\'article a été supprimé"</strong>
+                    </div>';
+        }
+        else{
+            echo    '<div class="alert alert-danger>
+                        <button type="button" class="close" data-dismiss="alert-danger">
+                        <strong>"L\'article n\'a pas été supprimé"</strong>
+                    </div>';
+        }
     }
-    else{
-    echo '<div class="alert alert-danger>
-    <button type="button" class="close" data-dismiss="alert-danger">
-    <strong>"L article n a pas été supprimé"</strong>
-    </div>';
-    }
-    }
-    */
 ?>
 
-
-
 <main>
-
     <section class="text-center">
         <br>
         <br>
         <h2 class="mb-5">Voulez-vous vraiment supprimer cette article?</h2>
-
             <div class="container-fluid">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-md-12">
@@ -67,23 +43,20 @@
                             <input type="hidden" name="idArticle" value="<?= $_GET['id']; ?>">
                             <div class="card m-4 ">
                                 <div class="bg-image">
-                                    <img class="img-fluid" src="<?= $articleR[0]['img']; ?>" alt="">
+                                    <img class="img-fluid" src="<?= $articleRqst[0]['img']; ?>" alt="">
                                 </div>
                                 <div class="card-body">
-                                    <h5 class="card-title"><?= $articleR[0]['title']; ?></h5> 
+                                    <h5 class="card-title"><?= $articleRqst[0]['title']; ?></h5> 
                                 </div>
                                 <div>
-                                    <input type="submit"  name="deleteArticle"  value="delete">
+                                    <input type="submit" name="deleteArticle" value="delete">
                                 </div>
-
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
     </section>
-
-
 <main>
 
 <?php
