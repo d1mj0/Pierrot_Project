@@ -39,7 +39,7 @@
                                                     <label for="message">Entrez le code suivant :</label>
                                                 </div> 
                                                 <div class="d-flex align-items-center justify-content-center mt-4 mb-0">
-                                                    <a class="btn submit" type="submit" value="Submit" name="submit" href="mailto:maxeuhma@gmail.com">Envoyer</a>
+                                                    <a class="btn button submit btn-primary" type="submit" value="Submit" name="submit" href="mailto:maxeuhma@gmail.com">Envoyer</a>
                                                 </div>
                                             </form>
                                         </div>

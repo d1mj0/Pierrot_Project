@@ -4,7 +4,7 @@ $title =  "Mise à jour de l'article";
 require_once('../views/templates/b_header.php'); 
 require_once('../src/models/ArticleModel.php'); 
 require_once('../src/controllers/ArticleController.php');
-require_once('../src/controllers/TextController.php');
+
 
 
 
@@ -22,8 +22,6 @@ if(isset($_FILES['img']) && $_FILES['img']['error'] === 0){
 
 if(isset($_POST['articleUpdate']) && !empty($_POST['title']) && !empty($_POST['description']) && !empty($_POST['text']) && isset($uploadfile)){
     $id = $_POST['id'];
-    
-    
     $articleUpdate = new ArticleController($_POST['title'], $_POST['description'], $_POST['text'], $uploadfile);
     $articleUpdate->updateArticle($id);
 

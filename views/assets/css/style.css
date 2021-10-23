@@ -73,10 +73,15 @@ h3{
     color: #ffffff;
 }
 
+h4.blog{
+  color: #7a2b2b;
+}
+
  a {
     
     text-decoration: none;
 }
+
 
 
 .titleI h2{
@@ -366,7 +371,7 @@ top: 20px; }
 
 .carousel-inner{
 	border-radius: 5rem;
-  /*<---------------------------------------------check how to make circle gradient border--------------------------------------------->*/
+  
 }
 
 .carousel-indicators{
@@ -472,6 +477,8 @@ box-shadow:  -20px 20px 31px #8c8c8c,
   background: #ffffff;
   box-shadow:  -35px 35px 70px #666666,
                35px 35px 70px #666666;
+  border-top-left-radius: 5rem 5rem;
+  border-top-right-radius: 5rem 5rem;
 }
 
 .card-body{
@@ -488,8 +495,43 @@ box-shadow:  -20px 20px 31px #8c8c8c,
     color:#ffffff;
 }
 
+div.card-header:first-child{
+  border-top-left-radius: 5rem 5rem;
+  border-top-right-radius: 5rem 5rem;
+}
+
 .card-header{
   border: 0.2rem solid #5a5a5a;
+}
+
+/*<---------------------------------------------blog--------------------------------------------->*/
+a.page-link{
+  color: #7a2b2b;
+}
+
+a.page-link:hover{
+  color: #7a2b2b;
+}
+
+
+
+a.page-link:hover{
+  color: #7a2b2b;
+}
+
+.page-item.active .page-link{
+  background-color: #7a2b2b;
+  border-color: #7a2b2b;
+}
+
+.page-item.active .page-link:not(:disabled):not(.disabled):active{
+  box-shadow: 0 0 0 0.25rem rgba(233, 44, 44, 0.5);
+  color: #7a2b2b;
+}
+
+.page-item .page-link:not(:disabled):not(.disabled):active{
+  box-shadow: 0 0 0 0.25rem rgba(233, 44, 44, 0.5);
+  color: #7a2b2b;
 }
 
 

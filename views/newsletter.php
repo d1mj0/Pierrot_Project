@@ -42,7 +42,7 @@
                                                     <label class="form-check-label"  for="checkInput">J'accepte de recevoir vos e-mails et confirme avoir pris connaissance de votre politique de confidentialité et mentions légales.</label>
                                                 </div>
                                                 <div class="d-flex align-items-center justify-content-center mt-4 mb-0">
-                                                    <input type="submit" class="btn submit" id="submit" value="Envoyer"/>
+                                                    <input type="submit" class="btn button submit btn-primary" id="submit" value="Envoyer"/>
                                                 </div>
                                             </form>
                                         </div>

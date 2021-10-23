@@ -5,6 +5,7 @@
     require_once('./templates/header.php');
     require_once('../src/controllers/ArticleController.php');
     require_once("../src/controllers/PublicationController.php");
+    require_once('../src/controllers/TextController.php');
 
     
 
