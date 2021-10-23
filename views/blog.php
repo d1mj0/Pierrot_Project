@@ -5,7 +5,7 @@
     //Appel template header
     require_once("./templates/header.php");
     require_once('../src/controllers/ArticleController.php');
-    require_once('../src/controllers/TextController.php');
+    
 
     $articleSelect = new ArticleController(NULL, NULL, NULL, NULL);
     $articles = $articleSelect->listArticles();
@@ -14,13 +14,13 @@
       <div class="container-fluid">
         <div class="row">
           <div class="title col-12 p-2">
-              <h2>Blog</h2>
+              <h2 >Blog</h2>
           </div>
         </div>
       </div>
       <br>
       <section class="text-center">
-        <h4 class="mb-5"><strong>Derniers articles</strong></h4>
+        <h4 class="mb-5 blog"><strong>Derniers articles</strong></h4>
           <div class="album py-5">
             <div class="container-fluid">
               <div class="row ">
@@ -47,15 +47,15 @@
       </section>
       <nav class="my-4" aria-label="...">     <!-- Pagination -->
         <ul class="pagination pagination-circle justify-content-center">
-          <li class="page-item">
-            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Précédent</a>
+          <li class="page-item active">
+            <a class="page-link btn " href="#" tabindex="-1" aria-disabled="true">Précédent</a>
           </li>
           <li class="page-item"><a class="page-link" href="#">1</a></li>
           <li class="page-item active" aria-current="page">
             <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
           </li>
           <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item">
+          <li class="page-item active">
             <a class="page-link" href="#">Suivant</a>
           </li>
         </ul>
