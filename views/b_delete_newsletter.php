@@ -2,6 +2,7 @@
     ob_start();
     $title =  "Suppression d'inscription";
 
+
     require_once('../views/templates/b_header.php'); 
     require_once('../src/models/NewsletterModel.php');
 

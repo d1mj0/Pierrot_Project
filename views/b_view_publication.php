@@ -6,6 +6,9 @@
     require_once('../views/templates/b_header.php');
     require_once('../src/models/PublicationModel.php');
 
+
+   
+
     $publiMdl = new PublicationModel();
     $publiRqst = $publiMdl->getOne($_GET['id']);
 

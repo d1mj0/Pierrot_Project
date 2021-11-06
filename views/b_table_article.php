@@ -48,7 +48,7 @@
                                 <td>
                                     <a href="b_update_article.php?id=<?= $values['id_article']; ?>" name="articleUpdate"><i class="fas fa-edit mx-2"></i></a> 
                                     <a href="b_delete_article.php?id=<?= $values['id_article']; ?>" name="articleDelete"><i class="fas fa-trash mx-2"></i></a> 
-                                    <a href="b_view_article.php?id=<?= $values['id_article']; ?>" name="articleDelete"><i class="far fa-eye mx-2"></i></a>
+                                    <a href="b_view_article.php?id=<?= $values['id_article']; ?>" name="articleView"><i class="far fa-eye mx-2"></i></a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>

@@ -7,8 +7,6 @@ require_once('../src/models/ArticleModel.php');
 require_once('../src/controllers/ArticleController.php');
 
 
-
-
 $articles = new ArticleModel;
 $articleR = $articles->getOne($_GET['id']);
 

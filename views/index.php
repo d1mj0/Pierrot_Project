@@ -10,6 +10,7 @@
 
     $publicController = new PublicationController(NULL, NULL, NULL, NULL);
     $recentPublications = $publicController->listPubliChronoDesc();
+    session_start();
 ?>
 
 <main>
@@ -49,7 +50,7 @@
                                 <h5 class="mb-3"><?= $values['title'];?></h5>
                                 <p><?= $values['description']; ?></p>
                                 <br>
-                                <a href="article.php?id=<?= $values['id_article']; ?>" class="button btn-lg btn-primary">Lire l'article</a>
+                                <a href="../views/article.php?id=<?= $values['id_article']; ?>" class="button btn-lg btn-primary">Lire l'article</a>
                             </div>
                         </div>
                         <?php $i++; } ?>
@@ -72,7 +73,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="titleI col-lg-12 p-3">
-                    <a href="pensee_globale.php"><h2>PENSÉE GLOBALE</h2></a>
+                    <a href="../views/pensee_globale.php"><h2>PENSÉE GLOBALE</h2></a>
                 </div>
             </div>
             <br>
@@ -131,7 +132,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="titleI col-lg-12 p-3">
-                    <a href="travaux_et_publications.php"><h2>TRAVAUX ET PUBLICATIONS</h2></a>
+                    <a href="../views/travaux_et_publications.php"><h2>TRAVAUX ET PUBLICATIONS</h2></a>
                 </div>
             </div>
         </div>
@@ -148,13 +149,13 @@
                                 <a href="publication.php?id=<?= $values['id_publi']; ?>"><h3 class="tnPublicationL"><?= $values['title']; ?></h3></a>
                             <div class="tnPublicationL"><?= (strlen($values['text']) > 250) ? substr($values['text'], 0, 580)."..." : ($values['text'])?></p>
                             <div>
-                                <a class="textTnPubliL" href="publication.php?id=<?= $values['id_publi']; ?>">Lire la suite >>></a>
+                                <a class="textTnPubliL" href="../views/publication.php?id=<?= $values['id_publi']; ?>">Lire la suite >>></a>
                             </div>
                         </div>
                         <?php else: ?>
                         <div class="row my-3">
                         <div class="col-lg-8">
-                            <a href="publication.php?id=<?= $values['id_publi']; ?>"><h3 class="tnPublicationR"><?= $values['title']; ?></h3></a>
+                            <a href="../views/publication.php?id=<?= $values['id_publi']; ?>"><h3 class="tnPublicationR"><?= $values['title']; ?></h3></a>
                         <div class="textTnPubliR"><?= substr($values['text'], 0, 585) . "..."; ?></div>
                         <div>
                             <a class="tnPublicationR" href="publication.php?id=<?= $values['id_publi']; ?>">Lire la suite >>></a>

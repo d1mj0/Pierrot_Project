@@ -4,7 +4,7 @@
     require_once('../views/templates/b_header.php'); 
     require_once('../src/models/NewsletterModel.php'); 
     require_once('../src/controllers/NewsletterController.php');
-
+   
     $newsMdl = new NewsletterModel();
     $newsRqst = $newsMdl->getOne($_GET['id']);
 

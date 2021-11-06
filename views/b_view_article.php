@@ -4,7 +4,7 @@
     require_once('../src/models/ArticleModel.php'); 
 
     $articleMdl = new ArticleModel();
-    $articleRqstqst = $articleMdl->getOne($_GET['id']);
+    $articleRqst = $articleMdl->getOne($_GET['id']);
 
     setlocale(LC_TIME, ['fr', 'fra', 'fr_FR']);
     $d = $articleRqst[0]['date_time_publi']; 

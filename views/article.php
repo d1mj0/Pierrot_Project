@@ -2,10 +2,12 @@
     $title = $articleR[0]['title'];
     require_once("./templates/header.php");
     require_once('../src/models/ArticleModel.php');
+    require_once('../src/controllers/TextController.php');
 
     $articles = new ArticleModel;
     $articleR = $articles->getOne($_GET['id']);
 
+    
     setlocale(LC_TIME, ['fr', 'fra', 'fr_FR']);
     $d= $articleR[0]['date_time_publi']; 
     $tmstp = strtotime($d);

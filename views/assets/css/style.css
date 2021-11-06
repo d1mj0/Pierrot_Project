@@ -218,7 +218,7 @@ nav .container-fluid{
 
 
 .navbar-nav{
-  margin-top: 1rem;
+  padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
@@ -285,8 +285,9 @@ nav ul{
  * @site https://jonsuh.com/hamburgers
  * @link https://github.com/jonsuh/hamburgers
  */
+
 .hamburger {
-padding: 15px 15px;
+padding: 0.7rem 0.7rem;
 display: inline-block;
 cursor: pointer;
 transition-property: opacity, filter;
@@ -376,6 +377,7 @@ top: 20px; }
 
 .carousel-inner{
 	border-radius: 5rem;
+  overflow: hidden;
   
 }
 
@@ -397,7 +399,10 @@ top: 20px; }
   background: radial-gradient(circle, rgba(170,80,80,1) 17%, rgba(122,43,43,1) 73%);
   
 }
-
+.carousel-item.active{
+  max-width: 100%;
+  height: auto;
+}
 
 .carouselI{
 padding: 4rem;

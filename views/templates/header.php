@@ -23,36 +23,35 @@
     <header>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-xl-12 d-none d-md-block d-lg-block">
-                    <a href="index.php"><img src="../views/assets/img/design_header.jpg" class="img-fluid" /></a>
+                <div class="col-xl-12 d-none d-sm-none d-md-block">
+                    <a href="../views/index.php"><img src="../views/assets/img/design_header.jpg" class="img-fluid" /></a>
                 </div>
             </div>
         </div>
         <nav class="navbar navbar-expand-lg py-0">
             <div class="container-fluid">
-                    <a class="navbar-brand m-0 p-0" href="#"><img src="../views/assets/img/design_header.jpg"  class="img-fluid mx-auto pt-0 d-block d-md-none d-lg-none navbar-img" /></a>
-                <button class="navbar-toggler hamburger hamburger--slider-r is-active d-block d-md-none d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerContent" aria-controls="navbarTogglerContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <a class="navbar-brand m-0 p-0" href="../views/index.php"><img src="../views/assets/img/design_header.jpg"  class="img-fluid mx-auto pt-0 d-block d-md-none d-lg-none navbar-img" /></a>
+                <button class="navbar-toggler hamburger hamburger--slider-r is-active d-block d-sm-block d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerContent" aria-controls="navbarTogglerContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="hamburger-box">
                     <span class="hamburger-inner"></span>
                     </span>
                 </button>
-
                 <div class="collapse navbar-collapse" id="navbarTogglerContent">
                     <ul class="navbar-nav container-fluid  mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link-menu col-lg-4 " href="index.php">ACCUEIL</a>
+                            <a class="nav-link-menu col-lg-4 " href="../views/index.php">ACCUEIL</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link-menu col-lg-4" href="pensee_globale.php">PENSÉE GLOBALE</a>
+                            <a class="nav-link-menu col-lg-4" href="../views/pensee_globale.php">PENSÉE GLOBALE</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link-menu col-lg-4" href="travaux_et_publications.php">TRAVAUX ET PUBLICATIONS</a>
+                            <a class="nav-link-menu col-lg-4" href="../views/travaux_et_publications.php">TRAVAUX ET PUBLICATIONS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link-menu col-lg-4" href="blog.php">BLOG</a>
+                            <a class="nav-link-menu col-lg-4" href="../views/blog.php">BLOG</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link-menu col-lg-4" href="a_propos.php">&#xC0; PROPOS</a>
+                            <a class="nav-link-menu col-lg-4" href="../views/a_propos.php">&#xC0; PROPOS</a>
                         </li>
                     </ul>
                 </div>

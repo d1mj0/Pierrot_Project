@@ -4,6 +4,7 @@
     require_once('../views/templates/b_header.php');
     require_once('../src/controllers/PublicationController.php');  
 
+
     if(isset($_FILES['img']) && $_FILES['img']['error'] === 0){
         $uploaddir = "./assets/img/";
         $uploadfile = $uploaddir . basename($_FILES['img']['name']);

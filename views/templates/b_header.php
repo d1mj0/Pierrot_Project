@@ -1,5 +1,16 @@
 <?php
- ob_start();
+session_start();
+if(!isset($_SESSION['user'])){
+    //Message d'erreur
+    $msg = "Login ou mot de passe incorrect.";
+    
+    //Redirection
+    header("location:" . "../views/login.php?msg=$msg");
+    exit;
+}
+    
+    $_SESSION['user'];
+    ob_start();
 ?>
 <!DOCTYPE html>
 <html lang="fr">

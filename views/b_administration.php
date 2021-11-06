@@ -4,6 +4,7 @@ $title =  "Administration";
 
 require_once('../views/templates/b_header.php'); 
 
+
 ?>
 <main class="my-5">
       <div class="container-fluid">
