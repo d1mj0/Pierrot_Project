@@ -287,6 +287,7 @@ nav ul{
  */
 
 .hamburger {
+
 padding: 0.7rem 0.7rem;
 display: inline-block;
 cursor: pointer;
@@ -298,7 +299,7 @@ color: inherit;
 text-transform: none;
 background-color: transparent;
 border: 0;
-margin: 0;
+margin: 0.3rem;
 overflow: visible; }
 
 .hamburger:hover {
@@ -313,6 +314,7 @@ opacity: 0.7; }
 background-color: #000; }
 
 .hamburger-box {
+margin-left: 0.25rem;
 width: 40px;
 height: 24px;
 display: inline-block;
@@ -324,8 +326,8 @@ top: 50%;
 margin-top: -2px; }
 
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-width: 40px;
-height: 4px;
+width: 2.5rem;
+height: 0.25rem;
 background-color: #000;
 border-radius: 4px;
 position: absolute;
@@ -471,7 +473,7 @@ box-shadow:  -20px 20px 31px #8c8c8c,
 }
 
 .blockquote p{
-    font-size: xxx-large;
+    font-size: 3rem;
 }
 
 .carousel-inner{

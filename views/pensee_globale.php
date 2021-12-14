@@ -19,7 +19,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-3 mx-auto">
-                    <img src="../views/assets/img/de l'eversion title header.svg" alt="">
+                    <img class="img-fluid" src="../views/assets/img/de l'eversion title header.svg" alt="">
                 </div>
             </div>
         </div>

@@ -39,7 +39,7 @@
         <br>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-6 mx-auto">
+                <div class="col-lg-6 col-md-9 col-10 mx-auto">
                     <h3><?=$articleR[0]['description']; ?></h3>
                 </div>
             </div>
@@ -48,7 +48,7 @@
         <br>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-6 mx-auto text" >
+                <div class="col-lg-6 col-md-9 col-10 mx-auto" >
                     <?= $articleR[0]['text']; ?>
                 </div>
             </div>

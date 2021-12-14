@@ -56,7 +56,7 @@
                                             </div>
                                             <br>
                                             <div class="d-flex align-items-center justify-content-center mt-4 mb-0">
-                                                <button  class="btn btn-primary" >Ajouter un Article</button>
+                                                <button  class="btn btn-primary">Ajouter un Article</button>
                                             </div>
                                         </form>
                                     </div>
