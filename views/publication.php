@@ -27,7 +27,7 @@
         <br>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-6  mx-auto">
+                <div class="col-lg-6 mx-auto">
                     <img src="<?= $publication[0]['img']; ?>" class="img-fluid " alt="">
                     <p>Publié le <?= $dfr; ?> </p>
                 </div>
@@ -37,7 +37,7 @@
         <br>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-6 mx-auto">
+                <div class="col-lg-6 col-md-9 col-10 mx-auto">
                     <h3><?= $publication[0]['description']; ?></h3>
                 </div>
             </div>
@@ -46,8 +46,8 @@
         <br>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-6 mx-auto text" >
-                    <?= $publication[0]['text']; ?>
+                <div class="col-lg-6 col-md-9 col-10 mx-auto" >
+                    <p class=""><?= $publication[0]['text']; ?></p>
                 </div>
             </div>
         </div>
