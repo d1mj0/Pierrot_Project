@@ -52,3 +52,4 @@ function resetField(f){
     hamburger.classList.toggle("is-active");
     
   });
+
