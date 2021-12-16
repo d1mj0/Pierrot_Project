@@ -38,7 +38,7 @@
                                                 </div>
                                                 <div class="h-captcha" data-sitekey="00444aed-7125-4159-bf73-48bcd3055823"></div>
                                                 <div class="d-flex align-items-center justify-content-center mt-4 mb-0">
-                                                    <input type="submit" class="btn button submit btn-primary" id="submit" value="Envoyer"/>
+                                                    <input type="submit" class="btn button submit btn-primary" id="submit" value="Envoyer" onclick="return callValidation();"/>
                                                 </div>
                                             </form>
                                         </div>

@@ -45,11 +45,17 @@ function resetField(f){
 
 
 
-  var hamburger = document.querySelector(".hamburger");
+var hamburger = document.querySelector(".hamburger");
+hamburger.addEventListener("click", function() {
+hamburger.classList.toggle("is-active");
 
-  hamburger.addEventListener("click", function() {
-   
-    hamburger.classList.toggle("is-active");
-    
-  });
+});
 
+
+function callValidation(){
+if(hcaptcha.getResponse().length == 0){
+    alert('Cliquez le hCAPTCHA');
+    return false;
+}
+return true;
+}

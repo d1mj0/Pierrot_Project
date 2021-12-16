@@ -34,7 +34,7 @@
                                             </div>
                                             <div class="h-captcha" data-sitekey="00444aed-7125-4159-bf73-48bcd3055823"></div>
                                             <div class="d-flex align-items-center justify-content-center mt-4 mb-0">
-                                                <button type="submit">Se connecter</button>
+                                                <button type="submit" onclick="return callValidation();">Se connecter</button>
                                             </div>
                                         </form>
                                     </div>
