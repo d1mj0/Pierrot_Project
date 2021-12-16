@@ -28,8 +28,7 @@
                                                     <label for="inputLastName">Prénom</label>
                                                 </div>
                                                 <div class="form-floating mb-3">
-                                                    <textarea class="form-control" id="inputTextArea"  type="textarea" name="textArea" placeholder="Votre message" pattern="^[a-zA-Z-' ]*$" rows="10" cols="33" required value="">                              
-                                                    </textarea>
+                                                    <textarea class="form-control" id="inputTextArea"  type="textarea" name="textArea" placeholder="Votre message" pattern="^[a-zA-Z-' ]*$" rows="10" cols="33" required value=""></textarea>                            
                                                     <label for="inputTextArea">Votre message...</label>
                                                 </div>
                                                 <div class="h-captcha" data-sitekey="00444aed-7125-4159-bf73-48bcd3055823"></div>

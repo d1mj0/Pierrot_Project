@@ -54,7 +54,7 @@ hamburger.classList.toggle("is-active");
 
 function callValidation(){
 if(hcaptcha.getResponse().length == 0){
-    alert('Cliquez le hCAPTCHA');
+    alert('Veuillez valider le hCAPTCHA');
     return false;
 }
 return true;
