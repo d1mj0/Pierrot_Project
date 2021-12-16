@@ -3,7 +3,6 @@
     $title = "Contact";
     //Appel template header
     require_once('./templates/header.php');
-    require_once('./captcha_code_file.php')
 ?>
 <main>
     <div id="layoutContact">
@@ -15,7 +14,7 @@
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
                                     <div class="card-header "><h3 class=" text-center card-title my-4">Contact</h3></div>
                                         <div class="card-body">
-                                            <form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>"> 
+                                            <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method = "POST" > 
                                                 <div class="form-floating mb-3">
                                                     <input class="form-control" id="inputEmail" type="email" placeholder="name@example.com" name="email" required value="" />
                                                     <label for="inputEmail">Email</label>
@@ -29,17 +28,12 @@
                                                     <label for="inputLastName">Prénom</label>
                                                 </div>
                                                 <div class="form-floating mb-3">
-                                                    <textarea class="form-control" id="inputTextArea"  type="textarea" name="textArea" placeholder="Votre message" pattern="^[a-zA-Z-' ]*$" rows="10" cols="33" required value="">                              
-                                                    </textarea>
+                                                    <textarea class="form-control" id="inputTextArea"  type="textarea" name="textArea" placeholder="Votre message" pattern="^[a-zA-Z-' ]*$" rows="10" cols="33" required value=""></textarea>                            
                                                     <label for="inputTextArea">Votre message...</label>
                                                 </div>
-                                                <div class="form-floating mb-3">
-                                                    <img src="captcha_code_file.php?rand=<?=  rand(); ?>" id="captchaimg" >            
-                                                    <input id="6_letters_code" name="6_letters_code" type="text">
-                                                    <label for="message">Entrez le code suivant :</label>
-                                                </div> 
+                                                <div class="h-captcha" data-sitekey="00444aed-7125-4159-bf73-48bcd3055823"></div>
                                                 <div class="d-flex align-items-center justify-content-center mt-4 mb-0">
-                                                    <a class="btn button submit btn-primary" type="submit" value="Submit" name="submit" href="mailto:maxeuhma@gmail.com">Envoyer</a>
+                                                    <button class="btn button submit btn-primary" type="submit" value="Submit" name="submit" onclick="return callValidation();">Envoyer</button>
                                                 </div>
                                             </form>
                                         </div>

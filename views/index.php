@@ -117,7 +117,7 @@
             <br>
             <div class="container justify-content-center">
                 <div class="row">
-                    <div class="col-lg-10 mx-auto  quotesLeft">
+                    <div class="col-lg-10 mx-auto quotesLeft">
                         <figure class="py-1">
                             <blockquote  class="blockquote m-5 "><p class="text"><i class="fas fa-quote-left fa-lg  me-2"></i>La révolution de la <strong>pensée</strong> est la seule à laquelle nous devons nous préparer.<i class="fas fa-quote-right fa-lg  me-2"></i></p></blockquote>
                         </figure>
@@ -161,12 +161,20 @@
                         </div>
                         <?php else: ?>
                         <div class="row my-3">
-                        <div class="col-lg-8">
-                            <a href="../views/publication.php?id=<?= $values['id_publi']; ?>"><h3 class="tnPublicationR"><?= $values['title']; ?></h3></a>
-                        <div class="textTnPubliR"><?= substr($values['text'], 0, 585) . "..."; ?></div>
-                        <div>
-                            <a class="tnPublicationR" href="publication.php?id=<?= $values['id_publi']; ?>">Lire la suite >>></a>
+                            <div class="col-lg-8 d-none d-lg-block">
+                                    <a href="../views/publication.php?id=<?= $values['id_publi']; ?>"><h3 class="tnPublicationR"><?= $values['title']; ?></h3></a>
+                                <div class="textTnPubliR"><?= substr($values['text'], 0, 585) . "..."; ?></div>
+                                <div>
+                                    <a class="tnPublicationR" href="publication.php?id=<?= $values['id_publi']; ?>">Lire la suite >>></a>
+                                </div>
+                            </div>
                         </div>
+                        <div class="col-lg-8 d-block d-lg-none">
+                                <a href="publication.php?id=<?= $values['id_publi']; ?>"><h3><?= $values['title']; ?></h3></a>
+                            <div><?= (strlen($values['text']) > 250) ? substr($values['text'], 0, 580)."..." : ($values['text'])?></p></div>
+                            <div>
+                                <a class="textTnPubliL" href="../views/publication.php?id=<?= $values['id_publi']; ?>">Lire la suite >>></a>
+                            </div>
                         </div>
                         <div class="col-lg-4">
                             <a href="publication.php?id=<?= $values['id_publi']; ?>"><img class="img-fluid" src="<?= $values['img'] ?>" alt="<?=$values['title'] ?>"></a>
