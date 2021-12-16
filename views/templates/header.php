@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../views/assets/css/style.css">
     <script defer src="../views/assets/js/script.js"></script>
     <link rel="shortut icon" href="../views/assets/img/eversion.ico">
+    <script src="https://www.hCaptcha.com//1/api.js" async defer></script>
     <title>
 <?php
     echo "$title";
