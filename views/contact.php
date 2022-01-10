@@ -26,13 +26,8 @@
                             </div>
                         </div>
                     </div>
-            </section>
+                </section>
+            </div>
         </div>
-    </div>
-    <br>
-    <br>
-</main>
-<?php
-    //Appel template footer
-    require_once("./templates/footer.php");
-?>
+        <br>
+        <br>
