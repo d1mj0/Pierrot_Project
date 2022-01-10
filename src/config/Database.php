@@ -2,8 +2,8 @@
     class Database{
         private $host = "localhost"; 
         private $dbname = "eversiondb2"; 
-        private $username = "admin_eversion";
-        private $pass = "De1ever5!0n";
+        private $username = "root";
+        private $pass = "";
 
         public function getPDO(){
             try{
