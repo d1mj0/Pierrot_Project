@@ -1,10 +1,6 @@
 <?php
-    ob_start();
-    $title =  "Mise à jour de la publication";
-    require_once('../views/templates/b_header.php'); 
     require_once('../src/models/PublicationModel.php'); 
     require_once('../src/controllers/PublicationController.php');
-
 
     $publiMdl = new PublicationModel();
     $publiRqst = $publiMdl->getOne($_GET['id']);
@@ -21,12 +17,11 @@
         $publiCtrl->updatePublication($id);
     }
 ?>
-
 <main>
     <div class="container-fluid px-4">
         <h1 class="mt-4">Mise à jour de la publication <?= $publiRqst[0]['title']; ?></h1>
         <ol class="breadcrumb mb-4">
-            <li class="breadcrumb-item"><a href="index.html">Administration</a></li>
+            <li class="breadcrumb-item"><a href="/views/b_index.php?page=administration">Administration</a></li>
             <li class="breadcrumb-item active">Mise à jour de la publication</li>
         </ol>
         <div id="layoutArticle">
@@ -64,7 +59,7 @@
                                             <br>
                                             <div class="d-flex align-items-center justify-content-center mt-4 mb-0">
                                                 <button  name='publiUpdate' id="publiUpdate" class="btn btn-primary m-2">Mettre à jour</button>
-                                                <a href="b_table_publication.php" class="btn btn-primary m-2">Annuler</a>
+                                                <a href="/views/b_index.php?page=table_publication" class="btn btn-primary m-2">Annuler</a>
                                             </div>
                                         </form>
                                     </div>
@@ -77,7 +72,3 @@
         </div>
     </div>
 </main>
-
-<?php
-    require_once('../views/templates/b_footer.php');
-?>

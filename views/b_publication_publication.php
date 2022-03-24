@@ -14,7 +14,7 @@
     <div class="container-fluid px-4">
         <h1 class="mt-4">Publication Publication</h1>
         <ol class="breadcrumb mb-4">
-            <li class="breadcrumb-item"><a href="index.php">Administration</a></li>
+            <li class="breadcrumb-item"><a href="/views/b_index.php?page=administration">Administration</a></li>
             <li class="breadcrumb-item active">Publication Publication</li>
         </ol>
         <div id="layoutArticle">

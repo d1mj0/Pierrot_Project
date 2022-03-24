@@ -7,7 +7,7 @@
     <div class="container-fluid px-4">
         <h1 class="mt-4">Tableau Newsletter</h1>
         <ol class="breadcrumb mb-4">
-            <li class="breadcrumb-item"><a href="tables.php">Administration</a></li>
+            <li class="breadcrumb-item"><a href="/views/b_index.php?page=administration">Administration</a></li>
             <li class="breadcrumb-item active">Tableau Newsletter</li>
         </ol>
         <div class="card mb-4">

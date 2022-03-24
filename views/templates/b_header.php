@@ -29,13 +29,13 @@ if(!isset($_SESSION['user'])){
 <body class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <!-- Navbar Brand-->
-        <a class="navbar-brand ps-3" href="b_administration.php"><img class="img-fluid" src="../views/assets/img/title_header.svg" alt=""></a>
+        <a class="navbar-brand ps-3" href="/views/b_index.php?page=administration"><img class="img-fluid" src="../views/assets/img/title_header.svg" alt=""></a>
         <!-- Navbar-->
         <ul class="navbar-nav ms-auto ms-md-0 me-3">
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="b_deconnexion.php">Déconnection</a></li>
+                    <li><a class="dropdown-item" href="/views/b_index.php?page=deconnexion">Déconnexion</a></li>
                 </ul>
             </li>
         </ul>
@@ -62,31 +62,12 @@ if(!isset($_SESSION['user'])){
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 Tableau newsletter
                             </a>
-                        <a class="nav-link" href="/views/b_index.php?page=table_publi">
+                            <a class="nav-link" href="/views/b_index.php?page=table_publi">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 Tableau publication
                             </a>
-                        <div class="sb-sidenav-menu-heading">Interface</div>
-                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
-                            <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                            Pages
-                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                        </a>
-                        <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
-                            <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
-                                    Authentication
-                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                                </a>
-                                <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
-                                    <nav class="sb-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="login.php">Login</a>
-                                    </nav>
-                                </div>
-                            </nav>
                         </div>
                     </div>
                 </div>
             </nav>
-        </div>
         <div id="layoutSidenav_content">

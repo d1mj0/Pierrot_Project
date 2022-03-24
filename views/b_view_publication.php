@@ -1,13 +1,7 @@
 <?php
-    ini_set("display_errors", 1);
-    error_reporting(E_ALL);
-
     $title = "Afficher la publication";
     require_once('../views/templates/b_header.php');
     require_once('../src/models/PublicationModel.php');
-
-
-   
 
     $publiMdl = new PublicationModel();
     $publiRqst = $publiMdl->getOne($_GET['id']);
@@ -17,7 +11,6 @@
     $tmstp = strtotime($d);
     $dfr = strftime('%A %d %B %Y', $tmstp);
 ?>
-
 <main>
     <section>
       <br>

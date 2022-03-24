@@ -1,7 +1,7 @@
 <?php
     $title =  "Mise à jour d'inscription";
 
-    require_once('../views/templates/b_header.php'); 
+
     require_once('../src/models/NewsletterModel.php'); 
     require_once('../src/controllers/NewsletterController.php');
    
@@ -14,7 +14,6 @@
         $newsCtrl->updateNewsletter($id);
     }
 ?>
-
 <main>
     <div class="container-fluid px-4">
         <h1 class="mt-4">Mise à jour de l'insription pour <?= $newsRqst[0]['name']; ?> <?= $newsRqst[0]['lastname']; ?></h1>
@@ -64,7 +63,3 @@
         </div>
     </div>
 </main>
-
-<?php
-    require_once('../views/templates/b_footer.php');
-?>

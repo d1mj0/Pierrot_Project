@@ -1,16 +1,20 @@
 <?php
-    $title = $publication[0]['title'];
-
-    require_once("./templates/header.php");
+    require_once("../src/controllers/TextController.php");
     require_once("../src/models/PublicationModel.php");
-
+    
     $publicModel = new PublicationModel();
     $publication = $publicModel->getOne($_GET['id']);
+
+    $title = $publication[0]['title'];
+    require_once("./templates/header.php");
 
     setlocale(LC_TIME, ['fr', 'fra', 'fr_FR']);
     $d= $publication[0]['date_time_publi']; 
     $tmstp = strtotime($d);
     $dfr = strftime('%A %d %B %Y', $tmstp);
+
+    $textCVRT = new TextController();
+    $textC = $textCVRT->txt2html(($publication[0]['text']));
 ?>
 <main>
     <section>
@@ -47,7 +51,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6 col-md-9 col-10 mx-auto" >
-                    <p class=""><?= $publication[0]['text']; ?></p>
+                    <p class=""><?= $textC; ?></p>
                 </div>
             </div>
         </div>
@@ -56,5 +60,5 @@
     <br>
 </main>
 <?php
-    require_once("./templates/footer.php");
+    require_once("./templates/footer.html");
 ?>

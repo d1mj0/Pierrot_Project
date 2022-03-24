@@ -8,8 +8,7 @@
                     continue;
                 }
                 else{
-                    $html_p = "<p class=\"text\">" . $line . "</p>"; /* le p glisse dans le code apparament  */
-                    
+                    $html_p = "<p class=\"text mb-4\">" . $line . "</p>"; 
                     array_push($html_arr, $html_p);
                 }
             }

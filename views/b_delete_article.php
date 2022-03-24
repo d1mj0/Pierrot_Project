@@ -1,10 +1,5 @@
 <?php
-    ini_set("display_errors", 1);
-    error_reporting(E_ALL);
-
-
     ob_start();
-
     $title =  "Suppression d'article";
 
     require_once('../views/templates/b_header.php'); 
@@ -31,7 +26,6 @@
         }
     }
 ?>
-
 <main>
     <section class="text-center">
         <br>

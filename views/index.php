@@ -45,7 +45,7 @@
                 require_once('travaux_et_publications.php');
                 break;
             case 'pensee_globale':
-                require_once('pensee_globale.html');
+                require_once('penseeglobale.html');
                 break;
             case 'travaux':
                 require_once('travaux_et_publications.php');

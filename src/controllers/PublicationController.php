@@ -15,19 +15,19 @@
         public function addPublication(){
             $publicModel = new PublicationModel();
             $publicModel->create($this->title, $this->description, $this->text, $this->img);
-            header('Location: b_table_publication.php');
+            header('Location: /views/b_index.php?table_publication');
             ob_end_flush();
         }
         public function updatePublication($id){
             $publicModel = new PublicationModel();
             $publicModel->update($this->title, $this->description, $this->text, $this->img, $id);
-            header('Location: b_table_publication.php');
+            header('Location: /views/b_index.php?table_publication');
             ob_end_flush();
         }
         public function deletePublication(){
             $publicModel = new PublicationModel();
             $publicModel->delete($this->title, $this->description, $this->text, $this->img);
-            header('Location: b_table_publication.php');
+            header('Location: /views/b_index.php?table_publication');
             ob_end_flush();
         }
         public function listPublication(){

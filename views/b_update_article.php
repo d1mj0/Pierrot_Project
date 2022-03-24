@@ -26,7 +26,7 @@ require_once('../src/controllers/ArticleController.php');
     <div class="container-fluid px-4">
         <h1 class="mt-4">Mise à jour de l'article <?= $articleR[0]['title']; ?></h1>
         <ol class="breadcrumb mb-4">
-            <li class="breadcrumb-item"><a href="index.html">Administration</a></li>
+            <li class="breadcrumb-item"><a href="/views/b_index.php?page=administration">Administration</a></li>
             <li class="breadcrumb-item active">Mise à jour d'article</li>
         </ol>
         <div id="layoutArticle">

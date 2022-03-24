@@ -7,7 +7,7 @@
     <div class="container-fluid px-4">
         <h1 class="mt-4">Tableau publications</h1>
         <ol class="breadcrumb mb-4">
-            <li class="breadcrumb-item"><a href="tables.php">Administration</a></li>
+            <li class="breadcrumb-item"><a href="/views/b_index.php?page=administration">Administration</a></li>
             <li class="breadcrumb-item active">Tableau publications</li>
         </ol>
         <div class="card mb-4">
@@ -50,9 +50,9 @@
                                     <?= $values['date_time_publi'];?>
                                 </td>
                                 <td>
-                                    <a href="/views/b_index.php?page=update_publication?id=<?= $values['id_publi']; ?>" name="publiUpdate"><i class="fas fa-edit mx-2"></i></a> 
-                                    <a href="/views/b_index.php?page=delete_publication?id=<?= $values['id_publi']; ?>" name="publiDelete"><i class="fas fa-trash mx-2"></i></a> 
-                                    <a href="/views/b_index.php?page=view_publication?id=<?= $values['id_publi']; ?>" name="publiView"><i class="far fa-eye mx-2"></i></a>
+                                    <a href="/views/b_index.php?page=update_publi?id=<?= $values['id_publi']; ?>" name="publiUpdate"><i class="fas fa-edit mx-2"></i></a> 
+                                    <a href="b_delete_publication.php?id=<?= $values['id_publi']; ?>" name="publiDelete"><i class="fas fa-trash mx-2"></i></a> 
+                                    <a href="b_view_publication.php?id=<?= $values['id_publi']; ?>" name="publiView"><i class="far fa-eye mx-2"></i></a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>
