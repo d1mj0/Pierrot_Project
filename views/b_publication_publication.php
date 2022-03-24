@@ -1,16 +1,10 @@
 <?php
-    ob_start();
-    $title = "Publication Publication";
-    require_once('../views/templates/b_header.php');
     require_once('../src/controllers/PublicationController.php');  
-
-
     if(isset($_FILES['img']) && $_FILES['img']['error'] === 0){
         $uploaddir = "./assets/img/";
         $uploadfile = $uploaddir . basename($_FILES['img']['name']);
         move_uploaded_file($_FILES['img']['tmp_name'], $uploadfile);
     }
-
     if(!empty($_POST['title']) && !empty($_POST['description']) && !empty($_POST['text'])&& isset($uploadfile)){
         $publiCtrl = new PublicationController($_POST['title'], $_POST['description'], $_POST['text'], $uploadfile);
         $publiCtrl->addPublication();
@@ -67,6 +61,3 @@
         </div>
     </div>
 </main>
-<?php
-    require_once('../views/templates/b_footer.php');
-?>

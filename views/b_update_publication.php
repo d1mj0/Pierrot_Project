@@ -6,8 +6,6 @@
     require_once('../src/controllers/PublicationController.php');
 
 
- 
-
     $publiMdl = new PublicationModel();
     $publiRqst = $publiMdl->getOne($_GET['id']);
 

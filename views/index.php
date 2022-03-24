@@ -28,6 +28,9 @@
             case 'mentions_legales':
                 $title = 'Mentions legales';
                 break;
+                case 'login':
+                    $title = 'Login';
+                    break;
         }
     }
     else{
@@ -64,6 +67,9 @@
                 break;
             case 'mentions_legales':
                 require_once('mentions_legales.html');
+                break;
+            case 'login':
+                require_once('login.php');
                 break;
         }
     }

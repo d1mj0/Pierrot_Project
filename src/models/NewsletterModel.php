@@ -45,7 +45,7 @@
             $request->execute([':id'=>$id]);
             $result = $request->fetchAll(PDO::FETCH_ASSOC);
             header('Location: b_table_newsletter.php');
-            ob_flush_end();
+            ob_end_flush();
             return $result;
         }
     }

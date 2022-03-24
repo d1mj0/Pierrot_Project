@@ -11,11 +11,8 @@ require_once('../src/models/UserModel.php');
 // - Les failles de sécurité (faille XSS)
 
 class UserController {
-
     private $email;
-
     private $password;
-
     private $rank;
 
     public function __construct($email, $password, $rank){
@@ -23,43 +20,19 @@ class UserController {
         $this->setPass($password);
         $this->setRank($rank);
     }
-
-    
     public function login(){
-       
         $data = $this->checkMail($this->email);
-        
         if(count($data) === 1){
-            
-            // password_verify() permet de faire correspondre un mot de passe et mot de passe hashé.
-                
-                // La variable prédéfinie $_SESSION permet de persister les données de page en page.
-                // Il ne faut surtout pas oublier session_start() en début de fichier. 
                 $_SESSION['user'] = [
                     'email' => $data[0]['email'],
                     'rank' => $data[0]['rank'],
                 ];var_dump($data[0]);
                 if($data[0]['rank'] == "admin"){
-                    
                     header('Location: b_administration.php');
+                    exit();
                 }
-                
-            
             }
         }
-    
-
-    
-    public function inscription(){
-        if(count($this->checkMail($this->mail)) === 0){
-            if(isset($this->password) && isset($this->email) && isset($this->rank)){
-                $userModel = new UserModel();
-                $userModel->add($this->password,  $this->email, $this->rank);
-                
-
-            }
-        }
-    }
 
     public function checkMail($email){
         $userModel = new UserModel();

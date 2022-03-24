@@ -7,27 +7,6 @@ require_once('../src/models/ArticleModel.php');
 require_once('../src/controllers/ArticleController.php');
 
 
-$articles = new ArticleModel;
-$articleR = $articles->getOne($_GET['id']);
-
-
-$id = 0;
-
-if(isset($_FILES['img']) && $_FILES['img']['error'] === 0){
-    $uploaddir = "./assets/img/";
-    $uploadfile = $uploaddir . basename($_FILES['img']['name']);
-    move_uploaded_file($_FILES['img']['tmp_name'], $uploadfile);
-}
-
-if(isset($_POST['articleUpdate']) && !empty($_POST['title']) && !empty($_POST['description']) && !empty($_POST['text']) && isset($uploadfile)){
-    $id = $_POST['id'];
-    $articleUpdate = new ArticleController($_POST['title'], $_POST['description'], $_POST['text'], $uploadfile);
-    $articleUpdate->updateArticle($id);
-
-}
-
-
-
     $articles = new ArticleModel();
     $articleR = $articles->getOne($_GET['id']);
 

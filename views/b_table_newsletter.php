@@ -1,16 +1,8 @@
 <?php
-    ini_set("display_errors", 1);
-    error_reporting(E_ALL);
-
-    $title = "Tableau newsletter";
-    
-    require_once('../views/templates/b_header.php');
     require_once("../src/controllers/NewsletterController.php");
-
     $newsletter = new NewsletterController(NULL, NULL, NULL);
     $newsSelect = $newsletter->listEmails();    
 ?>
-
 <main>
     <div class="container-fluid px-4">
         <h1 class="mt-4">Tableau Newsletter</h1>
@@ -53,7 +45,3 @@
         </div>
     </div>
 </main>
-
-<?php
-    require_once('../views/templates/b_footer.php');
-?>

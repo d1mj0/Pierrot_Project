@@ -1,14 +1,9 @@
 <?php
-    $title = "Tableau articles"; 
-
-    require_once('../views/templates/b_header.php'); 
     require_once('../src/controllers/ArticleController.php');
-    require_once('../src/models/ArticleModel.php'); 
 
     $articleSelect = new ArticleController(NULL, NULL, NULL, NULL);
     $articles = $articleSelect->listArticles();
 ?>
-
 <main>
     <div class="container-fluid px-4">
         <h1 class="mt-4">Articles</h1>
@@ -46,9 +41,9 @@
                                     <?= $values['date_time_publi']; ?>
                                 </td>
                                 <td>
-                                    <a href="b_update_article.php?id=<?= $values['id_article']; ?>" name="articleUpdate"><i class="fas fa-edit mx-2"></i></a> 
-                                    <a href="b_delete_article.php?id=<?= $values['id_article']; ?>" name="articleDelete"><i class="fas fa-trash mx-2"></i></a> 
-                                    <a href="b_view_article.php?id=<?= $values['id_article']; ?>" name="articleView"><i class="far fa-eye mx-2"></i></a>
+                                    <a href="/views/b_index.php?page=update_article?id=<?= $values['id_article']; ?>" name="articleUpdate"><i class="fas fa-edit mx-2"></i></a> 
+                                    <a href="/views/b_index.php?page=delete_article?id=<?= $values['id_article']; ?>" name="articleDelete"><i class="fas fa-trash mx-2"></i></a> 
+                                    <a href="/views/b_index.php?page=view_article?id=<?= $values['id_article']; ?>" name="articleView"><i class="far fa-eye mx-2"></i></a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>
@@ -58,6 +53,3 @@
         </div>
     </div>
 </main>            
-<?php
-    require_once('../views/templates/b_footer.php');
-?>

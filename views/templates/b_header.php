@@ -1,16 +1,11 @@
 <?php
 session_start();
 if(!isset($_SESSION['user'])){
-    //Message d'erreur
-    $msg = "Login ou mot de passe incorrect.";
-    
-    //Redirection
-    header("location:" . "../views/login.php?msg=$msg");
+    header("location: ../views/index.php?page=login");
     exit;
-}
-    
+}else{
     $_SESSION['user'];
-    ob_start();
+}  
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -51,23 +46,23 @@ if(!isset($_SESSION['user'])){
                 <div class="sb-sidenav-menu">
                     <div class="nav">
                         <div class="sb-sidenav-menu-heading">Administration</div>
-                            <a class="nav-link" href="b_publication_articles.php">
+                            <a class="nav-link" href="/views/b_index.php?page=publi_article">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Publication articles
                             </a>
-                            <a class="nav-link" href="b_publication_publication.php">
+                            <a class="nav-link" href="/views/b_index.php?page=publi_publi">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Publication publication
                             </a>
-                            <a class="nav-link" href="b_table_article.php">
+                            <a class="nav-link" href="/views/b_index.php?page=table_article">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 Tableau articles
                             </a>
-                            <a class="nav-link" href="b_table_newsletter.php">
+                            <a class="nav-link" href="/views/b_index.php?page=table_newsletter">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 Tableau newsletter
                             </a>
-                            <a class="nav-link" href="b_table_publication.php">
+                        <a class="nav-link" href="/views/b_index.php?page=table_publi">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 Tableau publication
                             </a>

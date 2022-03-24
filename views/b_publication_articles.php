@@ -1,10 +1,5 @@
 <?php
-    ob_start();
-    $title = "Publication Article";
-    require_once('../views/templates/b_header.php');
     require_once('../src/controllers/ArticleController.php');  
-
-
     if(isset($_FILES['img']) && $_FILES['img']['error'] === 0){
         $uploaddir = "./assets/img/";
         $uploadfile = $uploaddir . basename($_FILES['img']['name']);
@@ -17,7 +12,6 @@
         $articlePost->addArticle();
     }
 ?>
-
 <main>
     <div class="container-fluid px-4">
         <h1 class="mt-4">Publication Articles Blog</h1>
@@ -50,7 +44,7 @@
                                                 <textarea id="text" class="form-control" name="text" type="text" cols="40" rows="10"></textarea>
                                             </div>
                                             <br>
-                                            <label class="form-label" for="img">Photo</label>
+                                            <label class="form-label" for="img">Illustration</label>
                                             <div class="form-floating mb-3">
                                                 <input type="file" name="img" id="img" class="form-control">
                                             </div>
@@ -69,7 +63,3 @@
         </div>
     </div>
 </main>
-
-<?php
-    require_once('../views/templates/b_footer.php');
-?>

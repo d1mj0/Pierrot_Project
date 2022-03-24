@@ -1,13 +1,8 @@
 <?php
-    $title = "Tableau publications";
-
-    require_once("./templates/b_header.php");
     require_once("../src/controllers/PublicationController.php");
-
     $publiCtrl = new PublicationController(NULL, NULL, NULL, NULL);
     $publiRqst = $publiCtrl->listPublication();
 ?>
-
 <main>
     <div class="container-fluid px-4">
         <h1 class="mt-4">Tableau publications</h1>
@@ -55,9 +50,9 @@
                                     <?= $values['date_time_publi'];?>
                                 </td>
                                 <td>
-                                    <a href="b_update_publication.php?id=<?= $values['id_publi']; ?>" name="publiUpdate"><i class="fas fa-edit mx-2"></i></a> 
-                                    <a href="b_delete_publication.php?id=<?= $values['id_publi']; ?>" name="publiDelete"><i class="fas fa-trash mx-2"></i></a> 
-                                    <a href="b_view_publication.php?id=<?= $values['id_publi']; ?>" name="publiView"><i class="far fa-eye mx-2"></i></a>
+                                    <a href="/views/b_index.php?page=update_publication?id=<?= $values['id_publi']; ?>" name="publiUpdate"><i class="fas fa-edit mx-2"></i></a> 
+                                    <a href="/views/b_index.php?page=delete_publication?id=<?= $values['id_publi']; ?>" name="publiDelete"><i class="fas fa-trash mx-2"></i></a> 
+                                    <a href="/views/b_index.php?page=view_publication?id=<?= $values['id_publi']; ?>" name="publiView"><i class="far fa-eye mx-2"></i></a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>
@@ -67,7 +62,3 @@
         </div>
     </div>
 </main>
-
-<?php
-    require_once('../views/templates/b_footer.php');
-?>
