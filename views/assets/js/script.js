@@ -59,3 +59,24 @@ if(hcaptcha.getResponse().length == 0){
 }
 return true;
 }
+
+// Splide----
+
+
+document.addEventListener( 'DOMContentLoaded', function () {
+
+
+    var splide = new Splide( '#index' , {
+        type      : 'fade',
+        rewind    : true,
+        pagination: false,
+        arrows    : true,
+    } );
+var bar    = splide.root.querySelector( '#progress-bar' );  
+
+splide.on( 'mounted move', function () {
+var end = splide.Components.Controller.getEnd() + 1;
+bar.style.width = String( 100 * ( splide.index + 1 ) / end ) + '%';
+} );
+splide.mount();
+});

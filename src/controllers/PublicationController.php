@@ -4,12 +4,10 @@
     class PublicationController{
         private $title;
         private $description;
-        private $text;
         private $img;
-        public function __construct($title, $description, $text, $img){
+        public function __construct($title, $description, $img){
             $this->setTitle($title);
             $this->setDesc($description);
-            $this->setText($text);
             $this->setImg($img);
         }
         public function addPublication(){
@@ -50,9 +48,7 @@
         public function setDesc($description){    
             return $this->description = $description;
         }
-        public function setText($text){
-            return $this->text = $text;
-        }
+
         public function setImg($img){
             return $this->img = $img;
         }
@@ -61,9 +57,6 @@
         }
         public function getDesc(){  
             return $this->description;
-        }
-        public function getText(){
-            return $this->text;
         }
         public function getImg(){
             return $this->img;
