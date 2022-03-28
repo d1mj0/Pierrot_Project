@@ -12,19 +12,17 @@
         }
         public function addPublication(){
             $publicModel = new PublicationModel();
-            $publicModel->create($this->title, $this->description, $this->text, $this->img);
-            header('Location: /views/b_index.php?table_publication');
-            ob_end_flush();
+            $publicModel->create($this->title, $this->description, $this->img);
+            header('Location: /views/b_index.php?publi_text');
         }
         public function updatePublication($id){
             $publicModel = new PublicationModel();
-            $publicModel->update($this->title, $this->description, $this->text, $this->img, $id);
+            $publicModel->update($this->title, $this->description,  $this->img, $id);
             header('Location: /views/b_index.php?table_publication');
-            ob_end_flush();
         }
         public function deletePublication(){
             $publicModel = new PublicationModel();
-            $publicModel->delete($this->title, $this->description, $this->text, $this->img);
+            $publicModel->delete($this->title, $this->description,  $this->img);
             header('Location: /views/b_index.php?table_publication');
             ob_end_flush();
         }

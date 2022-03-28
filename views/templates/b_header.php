@@ -54,6 +54,10 @@ if(!isset($_SESSION['user'])){
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Publication publication
                             </a>
+                            <a class="nav-link" href="/views/b_index.php?page=publi_text">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                Publication Texte publication
+                            </a>
                             <a class="nav-link" href="/views/b_index.php?page=table_article">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 Tableau articles

@@ -10,6 +10,9 @@
             case 'publi_publi':
                 $title = 'Publication et Travaux';
                 break;
+            case 'publi_text':
+                $title = 'Publication Textes';
+                break;
             case 'table_article':
                 $title = 'Table Article';
                 break;
@@ -59,6 +62,9 @@
                 break;
             case 'publi_publi':
                 require_once('b_publication_publication.php');
+                break;
+            case 'publi_text':
+                require_once('b_publication_text.php');
                 break;
             case 'update_article':
                 require_once('b_update_article.php');

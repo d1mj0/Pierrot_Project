@@ -24,9 +24,9 @@
                                                 <input class="form-control" id="password" type="password" name="password" placeholder="Mot de passe" />
                                                 <label for="password">Mot de passe</label>
                                             </div>
-                                            <div class="h-captcha" data-sitekey="00444aed-7125-4159-bf73-48bcd3055823"></div>
+                                            <div class="h-captcha" data-sitekey="158bfbf9-f7ba-4e81-87ee-108240a9d7c3"></div>
                                             <div class="d-flex align-items-center justify-content-center mt-4 mb-0">
-                                                <button name='loginBtn' type="submit" onclick="callValidation();">Se connecter</button>
+                                                <button type="submit" name="loginBtn" onclick="callValidation()">Se connecter</button>
                                             </div>
                                         </form>
                                     </div>

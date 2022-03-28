@@ -1,9 +1,9 @@
 <?php
     require_once("../src/controllers/TextController.php");
-    require_once("../src/models/PublicationModel.php");
+    require_once("../src/controllers/PublicationController.php");
     
-    $publicModel = new PublicationModel();
-    $publication = $publicModel->getOne($_GET['id']);
+    $publicationS = new PublicationController(NULL, NULL, NULL);
+    $publication = $publicationS->getOneById($_GET['id']);
 
     $title = $publication[0]['title'];
     require_once("./templates/header.php");
@@ -13,8 +13,9 @@
     $tmstp = strtotime($d);
     $dfr = strftime('%A %d %B %Y', $tmstp);
 
+
     $textCVRT = new TextController();
-    $textC = $textCVRT->txt2html(($publication[0]['text']));
+    $textC = $textCVRT->txt2html($values);
 ?>
 <main>
     <section>
@@ -41,20 +42,23 @@
         <br>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-6 col-md-9 col-10 mx-auto">
-                    <h3><?= $publication[0]['description']; ?></h3>
+                <div class="col-lg-9 col-md-9 col-10 mx-auto">
+                    <h3 class='intro'><?= $publication[0]['description']; ?></h3>
                 </div>
             </div>
         </div>
         <br>
         <br>
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-6 col-md-9 col-10 mx-auto" >
-                    <p class=""><?= $textC; ?></p>
-                </div>
+                <div class="row">
+                <?php foreach ($publication as $values): ?>
+                            <div class="col-lg-6 col-md-9 col-10 mx-auto" >
+                                <p class="title-part mb-4"><?= $values['title_part']; ?></p>
+                                <p class="text text-publi"><?= $values['text']; ?></p>
+                            </div>           
+                <?php endforeach; ?>
             </div>
-        </div>
+        </div> 
     </section>
     <br>
     <br>

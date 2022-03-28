@@ -19,8 +19,7 @@ class PubliTextController {
     public function addText(){
         $publiText = new PubliTextModel();        
         $publiText->create($this->id_publi, $this->title_part, $this->text);
-        header('Location: b_index.php?page=publi_publi');
-        ob_end_flush();
+        header('Location: b_index.php?page=publi_text');
     }
     public function updateText($id){
         $publiText = new PubliTextModel();

@@ -58,6 +58,26 @@
                 </div>
             </div>
         </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 col-md-9 col-10 mx-auto" >
+                    <p class=""><?= $textC; ?></p>
+                </div>
+                <div class="col-lg-6 col-md-9 col-10 mx-auto" >
+                    <p class=""><?= $textC; ?></p>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 col-md-9 col-10 mx-auto" >
+                    <p class=""><?= $textC; ?></p>
+                </div>
+                <div class="col-lg-6 col-md-9 col-10 mx-auto" >
+                    <p class=""><?= $textC; ?></p>
+                </div>
+            </div>
+        </div>
     </section>
     <br>
     <br>

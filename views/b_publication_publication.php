@@ -5,8 +5,8 @@
         $uploadfile = $uploaddir . basename($_FILES['img']['name']);
         move_uploaded_file($_FILES['img']['tmp_name'], $uploadfile);
     }
-    if(!empty($_POST['title']) && !empty($_POST['description']) && !empty($_POST['text'])&& isset($uploadfile)){
-        $publiCtrl = new PublicationController($_POST['title'], $_POST['description'], $_POST['text'], $uploadfile);
+    if(!empty($_POST['title']) && !empty($_POST['description']) && isset($uploadfile)){
+        $publiCtrl = new PublicationController($_POST['title'], $_POST['description'],  $uploadfile);
         $publiCtrl->addPublication();
     }
 ?>
@@ -36,13 +36,7 @@
                                             <div class="form-floating mb-3">
                                                 <textarea id="description" class="form-control" name="description" type="text" cols="40" rows="6" maxlength="1000"></textarea>
                                             </div>
-                                            <br>
-                                            <label class="form-label" for="text">Text</label>
-                                            <div class="form-floating mb-3">
-                                                <textarea id="text" class="form-control" name="text" type="text" cols="40" rows="10" maxlength="10000"></textarea>
-                                            </div>
-                                            <br>
-                                            <label class="form-label" for="img">Photo</label>
+                                            <label class="form-label" for="img">Illustration</label>
                                             <div class="form-floating mb-3">
                                                 <input type="file" name="img" id="img" class="form-control">
                                             </div>

@@ -1,9 +1,4 @@
 <?php
-
-$title =  "Administration";
-
-require_once('../views/templates/b_header.php'); 
-
 session_start();
 if(!isset($_SESSION['user'])){
     header("location: ../views/login.php");
@@ -11,8 +6,6 @@ if(!isset($_SESSION['user'])){
 }else{
     $_SESSION['user'];
 }  
-
-
 ?>
 <main class="my-5">
       <div class="container-fluid">
