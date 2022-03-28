@@ -25,9 +25,9 @@ if(!empty($_POST['id_publi']) && !empty($_POST['titlePart']) && !empty($_POST['t
                         <div class="row justify-content-center">
                             <div class="col-lg-5">
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
-                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Série</h3></div>
+                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Texte</h3></div>
                                         <div class="card-body">
-                                            <form enctype="multipart/form-data" action="<?= htmlspecialchars("b_index.php?page=publi_text"); ?>"  method="POST">
+                                            <form enctype="multipart/form-data" action=""  method="POST">
                                                 <label for="id_gallery">Texte</label>
                                                 <select name="id_publi" id="id_publi">
                                                     <?php foreach($publiS as $values): ?>

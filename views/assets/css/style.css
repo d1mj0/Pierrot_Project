@@ -23,7 +23,13 @@ aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu,
 
 @font-face {
   font-family: 'typerighter';
-  src: url('/views/assets/fonts/typerighter-old.regular.ttf') format('truetype');
+  src: url('/views/assets/fonts/typerighter.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'SpecialEliteRegular';
+  src: url('/views/assets/fonts/SpecialEliteRegular.ttf') format('truetype');
   font-weight: normal;
 }
 
@@ -492,7 +498,7 @@ display: flex;
 
 .title-part{
   font-weight: bolder;
-  text-transform: capitalize;
+  text-transform: uppercase;
 }
 
 .intro{

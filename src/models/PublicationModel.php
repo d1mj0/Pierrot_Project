@@ -16,7 +16,7 @@
             ]);
         }
         public function getAll(){
-            $request = $this->connexion->prepare('SELECT publication.title, publication.description, publication.img, publi_texts.id_publi, publi_texts.title_part, publi_texts.text FROM publication  INNER JOIN publi_texts ON publi_texts.id_publi=publication.id_publi');
+            $request = $this->connexion->prepare('SELECT publication.id_publi, publication.title, publication.description, publication.img, publication.date_time_publi, publi_texts.id_publi, publi_texts.title_part, publi_texts.text FROM publication  INNER JOIN publi_texts ON publi_texts.id_publi=publication.id_publi');
             $request->execute();
             $result = $request->fetchAll(PDO::FETCH_ASSOC);
             return $result;
