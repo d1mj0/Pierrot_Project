@@ -36,7 +36,7 @@ class UserController {
                     'rank' => $data[0]['rank'],
                 ];
                 if($data[0]['rank'] == "admin"){
-                header("Location: b_index.php?page=administration");
+                header("Location: ../views/b_index.php?page=administration");
                 exit();
                 }  
             }
@@ -89,11 +89,4 @@ class UserController {
     }
 
 }
-
-
-
-
-
-
-
 ?>

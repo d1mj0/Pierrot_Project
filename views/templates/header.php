@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Pierre-André Jarillot Anthropologue anthropologie Anarchisme">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
@@ -13,12 +14,11 @@
     <link rel="stylesheet" href="../views/assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Special+Elite&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://use.typekit.net/rex3rek.css">
     <link rel="stylesheet" href="../views/assets/css/splide.min.css">
     <link rel="shortut icon" href="../views/assets/img/eversion.ico">
-    <script src="https://www.hCaptcha.com//1/api.js" async defer></script>
-    <title>
-        <?= "$title"; ?>
-    </title>
+    <script src="https://www.hCaptcha.com//1/api.js" ></script>
+    <title><?php echo "$title"; ?></title>
 </head>
 <body>
     <header>

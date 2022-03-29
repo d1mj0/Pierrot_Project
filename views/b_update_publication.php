@@ -45,10 +45,16 @@
                                                 <textarea  id="editDescription" class="form-control" name="description"  type="text" required ><?= $publiRqst[0]['description']; ?></textarea>
                                             </div>
                                             <br>
+                                            <?php foreach ($publication as $values): ?>
+                                                <label class="form-label" for="text">Titre Partie</label>
+                                            <div class="form-floating mb-3">
+                                                <input id="editText" class="form-control" name="text" type="text" cols="40" rows="10" required value="<?= $values['title_part']; ?>"/>
+                                            </div>
                                             <label class="form-label" for="text">Texte</label>
                                             <div class="form-floating mb-3">
-                                                <textarea id="editText" class="form-control" name="text" type="text" cols="40" rows="10" required><?= $publiRqst[0]['text']; ?></textarea>
+                                                <textarea id="editText" class="form-control" name="text" type="text" cols="40" rows="10" required><?= $values['text']; ?></textarea>
                                             </div>
+                                            <?php endforeach; ?>
                                             <br>
                                             <br>
                                             <label class="form-label" for="img">Illustration</label>

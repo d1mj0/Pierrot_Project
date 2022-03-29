@@ -6,6 +6,12 @@
     } 
 ?>
 <main>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <div id="layoutContact">
         <div id="layoutContact_content">
             <section>
@@ -15,7 +21,7 @@
                             <div class="card shadow-lg border-0 rounded-lg mt-5">
                                 <div class="card-header"><h3 class="text-center card-title my-4">Login</h3></div>
                                     <div class="card-body">
-                                        <form action="/views/index.php?page=login" method="POST">
+                                        <form action="" method="POST">
                                             <div class="form-floating mb-3">
                                                 <input class="form-control" id="email" name="email"  type="email" placeholder="name@example.com" />
                                                 <label for="email">Email</label>
@@ -23,8 +29,9 @@
                                             <div class="form-floating mb-3">
                                                 <input class="form-control" id="password" type="password" name="password" placeholder="Mot de passe" />
                                                 <label for="password">Mot de passe</label>
+                                                <?=var_dump($_POST['password']);?>
                                             </div>
-                                            <div class="h-captcha" data-sitekey="158bfbf9-f7ba-4e81-87ee-108240a9d7c3"></div>
+                                            <div class="h-captcha" data-sitekey="00444aed-7125-4159-bf73-48bcd3055823"></div>
                                             <div class="d-flex align-items-center justify-content-center mt-4 mb-0">
                                                 <button type="submit" name="loginBtn" onclick="callValidation()">Se connecter</button>
                                             </div>
@@ -41,5 +48,4 @@
     <br>
     <br>
 </main>
-
 

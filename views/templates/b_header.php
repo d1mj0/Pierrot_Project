@@ -1,12 +1,3 @@
-<?php
-session_start();
-if(!isset($_SESSION['user'])){
-    header("location: ../views/index.php?page=login");
-    exit;
-}else{
-    $_SESSION['user'];
-}  
-?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -21,9 +12,7 @@ if(!isset($_SESSION['user'])){
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
     <link rel="shortut icon" href="../views/assets/img/eversion.ico">
 <title>
-<?php
-  echo "$title";
-?>
+<title><?php echo "$title"; ?></title>
 </title>
 </head>
 <body class="sb-nav-fixed">

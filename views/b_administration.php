@@ -84,6 +84,4 @@ if(!isset($_SESSION['user'])){
             </div>
     </section> 
 </main>
-<?php
-    require_once('../views/templates/b_footer.php');
-?>
+

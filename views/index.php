@@ -36,7 +36,7 @@
     else{
         $title = 'Accueil';
     }
-    require_once('./templates/header.php');
+    require_once('../views//templates/header.php');
     if(isset($_GET['page'])){
         switch($_GET['page']){
             case 'accueil':
@@ -78,4 +78,4 @@
         require_once('pensee_globale.html');
         require_once('travaux_et_publications.php');
     }
-    require_once('./templates/footer.html');
+    require_once('../views/templates/footer.html');

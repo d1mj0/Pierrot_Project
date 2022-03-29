@@ -43,7 +43,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-9 col-md-9 col-10 mx-auto">
-                    <h3 class='intro'><?= $textC=$textCVRT->txt2html($publication[0]['description']); ?></h3>
+                    <div class='intro'><?= $textC=$textCVRT->txt2html($publication[0]['description']); ?></div>
                 </div>
             </div>
         </div>

@@ -57,6 +57,9 @@ h3, .h3 {
 @media (min-width: 1200px) {
   h3, .h3 {
     font-size: 2rem;
+    font-family: effra, sans-serif;
+    font-weight: 300;
+    font-style: normal;
   }
 }
 
@@ -83,6 +86,9 @@ h3{
 
 .title h2{
     color: #ffffff;
+    font-family: effra, sans-serif;
+    font-weight: 300;
+    font-style: normal;
 }
 
 h4.blog{
@@ -117,6 +123,40 @@ h4.blog{
 .titleA h3{
   text-transform: uppercase;
 }
+
+
+
+div.tnPublicationL p{
+  font-family: dico-typewriter, mono;
+  font-style: normal;
+  font-size: 1rem;
+  text-align: justify;
+  
+}
+
+div.textTnPubliR p{
+  font-family: dico-typewriter, mono;
+  font-style: normal;
+  font-size: 1rem;
+  text-align: justify;
+  margin-right: 2rem;
+}
+
+
+
+a.textTnPubliL, a.tnPublicationL, a.tnPublicationR{
+  font-family: dico-typewriter, mono;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+img.img-fluid.img-TnP{
+  object-fit: cover;
+  height: 20vw;
+  width: 100%;
+}
+
 
 main a{
 
@@ -164,7 +204,9 @@ p{
 
 .text{
   margin: 0rem 2rem;
-  font-family: 'Special Elite', cursive;
+  font-family: dico-typewriter, mono;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .tnPublicationL{
@@ -255,7 +297,10 @@ nav ul{
 .nav-item a{
     color: #662222;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
+    font-family: effra, sans-serif;
+    font-weight: 900;
+    font-style: normal;
     font-weight: bold;
     text-shadow:0;
     transition: text-shadow 500ms ease-in-out ;
@@ -512,6 +557,13 @@ p.title-part {
   text-align: justify;
 }
 
+div.intro p{
+  font-family: dico-typewriter, mono;
+  font-weight: 700;
+  font-style: normal;
+
+}
+
 .text-publi{
   margin-left: 3rem;
   margin-right: 3rem;
@@ -528,7 +580,10 @@ p.title-part {
 }
 
 .col-text-publi  p {
-  font-family: 'Special Elite', cursive;
+  font-family: dico-typewriter, mono;
+  font-weight: 500;
+  font-style: normal;
+
 }
 
 
