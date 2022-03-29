@@ -22,7 +22,6 @@ class UserModel {
     }
 
 
-  
     public function getOne($email){
         $request = $this->connexion->prepare('SELECT * FROM member WHERE email=:email');
         $request->execute([

@@ -41,16 +41,16 @@
                                     <?= $values['title']; ?>
                                 </td>
                                 <td>
-                                    <?= (strlen($values['description']) > 100) ? substr($values['description'], 0, 100)."..." : ($values['description'])?>
+                                    <?= (strlen($values['description']) > 50) ? substr($values['description'], 0, 50)."..." : ($values['description'])?>
                                 </td>
                                 <td>
-                                    <?= (strlen($values['text']) > 250) ? substr($values['text'], 0, 250)."..." : ($values['text'])?>
+                                    <?= (strlen($values['text']) > 50) ? substr($values['text'], 0, 50)."..." : ($values['text'])?>
                                 </td>
                                 <td>
                                     <?= $values['date_time_publi'];?>
                                 </td>
                                 <td>
-                                    <a href="/views/b_index.php?page=update_publi?id=<?= $values['id_publi']; ?>" name="publiUpdate"><i class="fas fa-edit mx-2"></i></a> 
+                                    <a href="b_update_publication.php?id=<?= $values['id_publi']; ?>" name="publiUpdate"><i class="fas fa-edit mx-2"></i></a> 
                                     <a href="b_delete_publication.php?id=<?= $values['id_publi']; ?>" name="publiDelete"><i class="fas fa-trash mx-2"></i></a> 
                                     <a href="b_view_publication.php?id=<?= $values['id_publi']; ?>" name="publiView"><i class="far fa-eye mx-2"></i></a>
                                 </td>
@@ -62,3 +62,4 @@
         </div>
     </div>
 </main>
+

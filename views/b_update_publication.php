@@ -1,9 +1,8 @@
 <?php
-    require_once('../src/models/PublicationModel.php'); 
     require_once('../src/controllers/PublicationController.php');
 
-    $publiMdl = new PublicationModel();
-    $publiRqst = $publiMdl->getOne($_GET['id']);
+    $publicationS = new PublicationController(NULL, NULL, NULL);
+    $publication = $publicationS->getOneById($_GET['id']);
 
     if(isset($_FILES['img']) && $_FILES['img']['error'] === 0){
         $uploaddir = "./assets/img/";
@@ -16,10 +15,12 @@
         $publiCtrl = new PublicationController($_POST['title'], $_POST['description'], $_POST['text'], $uploadfile);
         $publiCtrl->updatePublication($id);
     }
+
+    require_once("../views/templates/b_header.php");
 ?>
 <main>
     <div class="container-fluid px-4">
-        <h1 class="mt-4">Mise à jour de la publication <?= $publiRqst[0]['title']; ?></h1>
+        <h1 class="mt-4">Mise à jour de la publication <?= $publication[0]['title']; ?></h1>
         <ol class="breadcrumb mb-4">
             <li class="breadcrumb-item"><a href="/views/b_index.php?page=administration">Administration</a></li>
             <li class="breadcrumb-item active">Mise à jour de la publication</li>
@@ -34,15 +35,15 @@
                                 <div class="card-header"><h3 class="text-center font-weight-light my-4">Mise à jour de l'article  <br><?= $publiRqst[0]['title']; ?></h3></div>
                                     <div class="card-body">
                                         <form enctype="multipart/form-data" action="b_update_publication.php?<?= $publiRqst[0]['id']; ?>"  method="POST">
-                                        <input type="hidden" name="id" value="<?= $publiRqst[0]['id_publi']; ?>" />
+                                        <input type="hidden" name="id" value="<?= $publication[0]['id_publi']; ?>" />
                                             <label class="form-label" for="title">Titre</label>
                                             <div class="form-floating mb-3">
-                                                <input  id="editTitle" class="form-control" name="title"  type="text" value="<?= $publiRqst[0]['title']; ?>" required/>
+                                                <input  id="editTitle" class="form-control" name="title"  type="text" value="<?= $publication[0]['title']; ?>" required/>
                                             </div>
                                             <br>            
                                             <label class="form-label" for="description">Description</label>
                                             <div class="form-floating mb-3">
-                                                <textarea  id="editDescription" class="form-control" name="description"  type="text" required ><?= $publiRqst[0]['description']; ?></textarea>
+                                                <textarea  id="editDescription" class="form-control" name="description"  type="text" required ><?= $publication[0]['description']; ?></textarea>
                                             </div>
                                             <br>
                                             <?php foreach ($publication as $values): ?>
@@ -78,3 +79,6 @@
         </div>
     </div>
 </main>
+<?php
+    require_once("../views/templates/b_footer.html");
+?>

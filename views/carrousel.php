@@ -1,8 +1,3 @@
-<?php
-    require_once('../src/controllers/ArticleController.php');
-    $articleSelect = new ArticleController(NULL, NULL, NULL, NULL);
-    $articles = $articleSelect->listArticles3();
-?>
 <main>
     <div id="index" class="splide container-fluid">
         <div class="splide__track row">

@@ -40,6 +40,7 @@
     if(isset($_GET['page'])){
         switch($_GET['page']){
             case 'accueil':
+                require_once('slider.php');
                 require_once('carrousel.php');
                 require_once('pensee_globale.html');
                 require_once('travaux_et_publications.php');
@@ -70,6 +71,7 @@
                 break;
             case 'login':
                 require_once('login.php');
+                require_once('login.html');
                 break;
         }
     }
