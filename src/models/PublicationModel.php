@@ -15,12 +15,20 @@
                 ':img'=>$img
             ]);
         }
-        public function getAll(){
-            $request = $this->connexion->prepare('SELECT publication.id_publi, publication.title, publication.description, publication.img, publication.date_time_publi, publi_texts.id_publi, publi_texts.title_part, publi_texts.text FROM publication  INNER JOIN publi_texts ON publi_texts.id_publi=publication.id_publi');
+
+        public function getAll1(){
+            $request = $this->connexion->prepare('SELECT * FROM publication ');
             $request->execute();
             $result = $request->fetchAll(PDO::FETCH_ASSOC);
             return $result;
         }
+        public function getAll(){
+            $request = $this->connexion->prepare('SELECT publication.id_publi, publication.title, publication.description, publication.img, publication.date_time_publi, publi_texts.id, publi_texts.id_publi, publi_texts.text, COUNT(publi_texts.id_publi)  FROM publication  INNER JOIN publi_texts  ON  publi_texts.id_publi=publication.id_publi  GROUP BY publi_texts.id_publi HAVING COUNT(publi_texts.id_publi) ORDER BY  date_time_publi DESC');;
+            $request->execute();
+            $result = $request->fetchAll(PDO::FETCH_ASSOC);
+            return $result;
+        }
+
         public function getOne($id_publi){
             $request = $this->connexion->prepare('SELECT publication.id_publi, publication.title, publication.description, publication.img, publi_texts.id_publi, publi_texts.title_part, publi_texts.text FROM publication  INNER JOIN publi_texts ON publi_texts.id_publi=publication.id_publi WHERE publication.id_publi=:id_publi');
             $request->execute([':id_publi'=>$id_publi]);

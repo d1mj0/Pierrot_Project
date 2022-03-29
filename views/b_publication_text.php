@@ -2,13 +2,15 @@
 require_once('../src/controllers/PubliTextController.php');  
 require_once('../src/controllers/PublicationController.php');
 
-$publiSelect = new PublicationController(NULL, NULL, NULL);
-$publiS = $publiSelect->listPublication();
+
 
 if(!empty($_POST['id_publi']) && !empty($_POST['titlePart']) && !empty($_POST['text'])){
     $galleryPST = new PubliTextController($_POST['id_publi'], $_POST['titlePart'], $_POST['text']);
     $galleryPST->addText();    
 }
+
+$publiSelect = new PublicationController(NULL, NULL, NULL);
+$publiS = $publiSelect->listPublication1();
 
 ?>
 <main>
@@ -28,7 +30,7 @@ if(!empty($_POST['id_publi']) && !empty($_POST['titlePart']) && !empty($_POST['t
                                     <div class="card-header"><h3 class="text-center font-weight-light my-4">Texte</h3></div>
                                         <div class="card-body">
                                             <form enctype="multipart/form-data" action=""  method="POST">
-                                                <label for="id_gallery">Texte</label>
+                                                <label for="id_publi">Publication</label>
                                                 <select name="id_publi" id="id_publi">
                                                     <?php foreach($publiS as $values): ?>
                                                         <option value="<?= $values['id_publi']; ?>"><?= $values['title']; ?></option>

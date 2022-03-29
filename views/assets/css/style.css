@@ -164,6 +164,7 @@ p{
 
 .text{
   margin: 0rem 2rem;
+  font-family: 'Special Elite', cursive;
 }
 
 .tnPublicationL{
@@ -489,6 +490,8 @@ display: flex;
 
 .titleA{
 	font-weight: bolder;
+  font-family: 'Merriweather', serif;
+  text-transform: uppercase;
 
 }
 
@@ -496,7 +499,10 @@ display: flex;
     text-align: justify;
 }
 
-.title-part{
+
+
+
+p.title-part {
   font-weight: bolder;
   text-transform: uppercase;
 }
@@ -509,9 +515,22 @@ display: flex;
 .text-publi{
   margin-left: 3rem;
   margin-right: 3rem;
-  font-family: 'typerighter';
+  
 
 }
+
+
+
+.col-text-publi h5{
+  font-family: 'Merriweather', serif;
+  text-transform: uppercase;
+  
+}
+
+.col-text-publi  p {
+  font-family: 'Special Elite', cursive;
+}
+
 
 .quotesBottom{
 border-radius: 20px;
@@ -552,14 +571,25 @@ height: auto;
   background: #ffffff;
   box-shadow:  -35px 35px 70px #666666,
                35px 35px 70px #666666;
-  border-top-left-radius: 5rem 5rem;
-  border-top-right-radius: 5rem 5rem;
+  border-bottom-right-radius: .5rem;
+  border-bottom-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+  border-top-left-radius: .5rem;
 }
 
 .card-body{
     background-color: #5a5a5a;
-    border-bottom-left-radius: 0.5rem ;
-    border-bottom-right-radius: 0.5rem ;
+  border-bottom-right-radius: .5rem;
+  border-bottom-left-radius: .5rem;
+}
+
+.bg-image>img.img-fluid{
+  border-top-right-radius: .5rem;
+  border-top-left-radius: .5rem;
+  height: 20vw;
+  object-fit: cover;
+  width: 100%;
+  overflow: hidden;
 }
 
 .card-title{

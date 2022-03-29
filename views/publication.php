@@ -15,7 +15,7 @@
 
 
     $textCVRT = new TextController();
-    $textC = $textCVRT->txt2html($values);
+    
 ?>
 <main>
     <section>
@@ -52,8 +52,8 @@
         <div class="container-fluid">
                 <div class="row">
                 <?php foreach ($publication as $values): ?>
-                            <div class="col-lg-6 col-md-9 col-10 mx-auto" >
-                                <p class="title-part mb-4"><?= $values['title_part']; ?></p>
+                            <div class="col-lg-6 col-md-9 col-10 mx-auto col-text-publi" >
+                                <h5 class="title-part mb-4"><?= $values['title_part']; ?></h5>
                                 <p class="text text-publi"><?= $textC=$textCVRT->txt2html($values['text']); ?></p>
                             </div>           
                 <?php endforeach; ?>

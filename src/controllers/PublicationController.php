@@ -26,6 +26,11 @@
             header('Location: /views/b_index.php?table_publication');
             ob_end_flush();
         }
+        public function listPublication1(){
+            $publicModel = new PublicationModel();
+            return $publicModel->getAll1();
+        }
+
         public function listPublication(){
             $publicModel = new PublicationModel();
             return $publicModel->getAll();
